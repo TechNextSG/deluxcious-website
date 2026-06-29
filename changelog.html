@@ -43,6 +43,25 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="site-sub">Website Changelog</div>
   <div class="gold-bar"></div>
 
+  <!-- v2.0 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v2.0</span>
+      <div>
+        <div class="version-title">Full Interactivity Audit — Ticker, Animations & Button Redesign</div>
+        <div class="version-date">30 June 2026</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag new">New</span><strong>Scrolling ticker on all pages:</strong> The marquee strip (Dining · Spa · Hotel · Heritage · Open) now appears after every hero section across all 8 content pages — previously only on the homepage</li>
+      <li><span class="tag new">New</span><strong>Word-reveal animation on all hero headings:</strong> Each word in every page's hero H1 now rises in with a staggered delay — matching the homepage's cinematic entrance effect</li>
+      <li><span class="tag fix">Fix</span><strong>Hero heading opacity bug fixed:</strong> <code>@keyframes wordRise</code> had <code>opacity:0.20</code> — text was rendering at only 20% opacity. Corrected to <code>opacity:1</code> across all pages</li>
+      <li><span class="tag fix">Fix</span><strong>All transparent buttons replaced with solid fills:</strong> Gold-outline buttons now use solid warm cream <code>#F0EBE0</code>; white-outline buttons use solid <code>#F5F5F1</code> — no semi-transparent or see-through button designs remain</li>
+      <li><span class="tag fix">Fix</span><strong>Spa hero text legibility:</strong> Hero H1 was dark brown <code>#3A2C18</code> — invisible over the hero image. Changed to light cream <code>#FBF6EC</code>; overlay darkened from 20% to 60% opacity to match other pages</li>
+      <li><span class="tag update">Update</span>Scroll-reveal animations (<code>.reveal</code> + IntersectionObserver) and button shimmer CSS confirmed present on all pages via audit</li>
+    </ul>
+  </div>
+
   <!-- v1.9 -->
   <div class="version-block">
     <div class="version-header">

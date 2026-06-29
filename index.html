@@ -37,8 +37,8 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
 .btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
 .btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962 45%,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#846612;color:#846612}
-.btn-og{border:1px solid rgba(201,162,39,.5);color:#846612;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08);border-color:#846612}
+.btn-ow{border:1px solid rgba(58,40,16,.25);color:#3A2C18;background:#F5F5F1}.btn-ow:hover{border-color:#846612;color:#846612;background:#EDE8DC}
+.btn-og{border:1px solid rgba(201,162,39,.5);color:#846612;background:#F0EBE0}.btn-og:hover{background:#E8DFCE;border-color:#C9A227}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 /* Nav */
@@ -88,7 +88,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 /* Hero word reveal */
 .word{display:inline-block;overflow:hidden;vertical-align:bottom}
 .word span{display:inline-block;transform:translateY(110%);opacity:0;animation:wordRise .65s cubic-bezier(.33,1,.68,1) forwards}
-@keyframes wordRise{to{transform:translateY(0);opacity:0.20}}
+@keyframes wordRise{to{transform:translateY(0);opacity:1}}
 /* Footer */
 .footer-link{color:rgba(244,237,223,.62);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#E8C84A}
 /* Chatbot */

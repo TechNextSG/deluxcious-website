@@ -52,7 +52,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
 .btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
 .btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962 45%,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#846612;color:#846612}
+.btn-ow{border:1px solid rgba(58,40,16,.25);color:#3A2C18;background:#F5F5F1}.btn-ow:hover{border-color:#846612;color:#846612;background:#EDE8DC}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 /* Nav */
@@ -77,6 +77,14 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 /* Reveal */
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+.ticker-track{display:flex;animation:tickerScroll 30s linear infinite}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:flex;align-items:center;gap:20px;white-space:nowrap;padding:0 24px}
+.ticker-dot{width:3px;height:3px;border-radius:50%;background:#C9A227;opacity:.6}
+.word{display:inline-block;overflow:hidden;vertical-align:bottom}
+.word span{display:inline-block;transform:translateY(110%);opacity:0;animation:wordRise .65s cubic-bezier(.33,1,.68,1) forwards}
+@keyframes wordRise{to{transform:translateY(0);opacity:1}}
 /* Footer */
 .footer-link{color:rgba(244,237,223,.62);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#E8C84A}
 /* Chatbot */
@@ -158,12 +166,28 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="hero-c py-20 pb-28 px-6 lg:px-12">
     <div class="max-w-7xl mx-auto">
       <p class="text-[11px] tracking-[.28em] uppercase mb-4 font-medium" style="color:rgba(201,162,39,.75);font-family:'Inter',sans-serif">Deluxcious · George Town, Penang</p>
-      <h1 class="font-semibold mb-4" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#FBF6EC;line-height:1.1">The <em class="font-normal italic" style="color:#E8C84A">Gallery</em></h1>
+      <h1 class="font-semibold mb-4" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#FBF6EC;line-height:1.1"><span class="word"><span style="animation-delay:.35s">The</span></span> <span class="word"><span style="animation-delay:.45s"><em class="font-normal italic" style="color:#E8C84A">Gallery</em></span></span></h1>
       <div class="gold-bar mb-5"></div>
       <p class="text-sm max-w-sm" style="color:rgba(255,255,255,.74);font-family:'Inter',sans-serif;line-height:1.7">A visual journey through our restored colonial mansion — dining, wellness, heritage suites and the architecture that holds it all together.</p>
     </div>
   </div>
 </section>
+
+<!-- TICKER -->
+<div style="background:#EBEBE5;border-top:1px solid rgba(201,162,39,.14);border-bottom:1px solid rgba(201,162,39,.14);padding:14px 0;overflow:hidden">
+  <div class="ticker-track">
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
+  </div>
+</div>
 
 <!-- GALLERY -->
 <section style="background:transparent;padding:72px 0 96px">
