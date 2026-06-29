@@ -12,7 +12,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#EFE3CC}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
 .container{max-width:760px;margin:0 auto;padding:80px 24px 80px}
 .back-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.6);text-decoration:none;margin-bottom:48px;transition:color .2s}
-.back-link:hover{color:#9A7A14}
+.back-link:hover{color:#846612}
 .site-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:#3A2C18;margin-bottom:4px}
 .site-sub{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:40px}
 .gold-bar{width:48px;height:2px;background:#C9A227;margin-bottom:48px}
@@ -20,15 +20,15 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .version-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .version-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap}
 .version-badge{font-size:12px;font-weight:600;letter-spacing:.06em;padding:4px 10px;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;border-radius:2px;flex-shrink:0;font-family:'Inter',sans-serif}
-.version-badge.minor{background:rgba(201,162,39,.15);color:#9A7A14}
-.version-date{font-size:12px;color:rgba(58,44,24,.35);font-family:'Inter',sans-serif;margin-top:4px}
+.version-badge.minor{background:rgba(201,162,39,.15);color:#846612}
+.version-date{font-size:12px;color:rgba(58,44,24,.64);font-family:'Inter',sans-serif;margin-top:4px}
 .version-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:#3A2C18;margin-bottom:4px}
 .change-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.change-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(58,44,24,.6);line-height:1.55;font-family:'Inter',sans-serif}
+.change-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(58,44,24,.8);line-height:1.55;font-family:'Inter',sans-serif}
 .change-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;flex-shrink:0;margin-top:5px;opacity:.7}
-.change-list li strong{color:rgba(58,44,24,.85);font-weight:500}
+.change-list li strong{color:rgba(58,44,24,.9);font-weight:500}
 .tag{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:500;margin-right:4px;font-family:'Inter',sans-serif}
-.tag.new{background:rgba(201,162,39,.15);color:#9A7A14}
+.tag.new{background:rgba(201,162,39,.15);color:#846612}
 .tag.fix{background:rgba(74,222,128,.1);color:#4ade80}
 .tag.update{background:rgba(96,165,250,.1);color:#60a5fa}
 </style>
@@ -43,6 +43,22 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="site-sub">Website Changelog</div>
   <div class="gold-bar"></div>
 
+  <!-- v1.2.1 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v1.2.1</span>
+      <div>
+        <div class="version-title">Readability Fix — Text Contrast</div>
+        <div class="version-date">29 June 2026</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag fix">Fix</span>Secondary and caption text was too faint against the cream background. Raised text opacity site-wide (e.g. body copy from <strong>~0.38</strong> to <strong>~0.67</strong> of the dark-brown ink) so it now meets WCAG AA contrast and reads clearly</li>
+      <li><span class="tag update">Update</span>Darkened the accent gold used for eyebrow labels and prices from <strong>#9A7A14</strong> to a deeper antique gold <strong>#846612</strong> for legible contrast on light backgrounds while keeping the brand feel</li>
+      <li><span class="tag update">Update</span>Applied across all 9 pages; heading and primary text were already high-contrast and left unchanged</li>
+    </ul>
+  </div>
+
   <!-- v1.2 -->
   <div class="version-block">
     <div class="version-header">
@@ -54,7 +70,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     </div>
     <ul class="change-list">
       <li><span class="tag update">Update</span>Converted the entire site from the dark "espresso" palette to a warm light theme across all 9 pages. Backgrounds now use cream tones (<strong>#F4E9D4 / #EFE3CC / #F7EEDC</strong>) and body copy uses dark brown (<strong>#3A2C18</strong>) for high legibility</li>
-      <li><span class="tag update">Update</span>Gold accents retained for brand continuity; small gold labels darkened to <strong>#9A7A14</strong> so they stay readable on light backgrounds</li>
+      <li><span class="tag update">Update</span>Gold accents retained for brand continuity; small gold labels darkened to <strong>#846612</strong> so they stay readable on light backgrounds</li>
       <li><span class="tag update">Update</span>Re-themed all structural elements for light mode — video-hero overlay, navigation (transparent on hero, light cream on scroll), image-placeholder cards, ticker, and the chatbot panel with a distinct light bot bubble</li>
       <li><span class="tag new">New</span>Subtle gold batik watermark pattern added to the page background for warmth and texture</li>
       <li><span class="tag update">Update</span>Verified no dark backgrounds or low-contrast text remain; dark-on-gold button text preserved</li>

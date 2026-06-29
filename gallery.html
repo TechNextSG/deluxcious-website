@@ -36,10 +36,10 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .gi-title{font-family:'Playfair Display',serif;font-size:15px;color:#3A2C18;font-weight:500;margin-bottom:3px;line-height:1.3}
 .gi-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.7)}
 /* Filter */
-.filter-tab{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:8px 20px;border:1px solid rgba(58,40,16,.18);background:transparent;color:rgba(58,44,24,.45);cursor:pointer;transition:all .2s;border-radius:2px}
-.filter-tab.active,.filter-tab:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.4);color:#9A7A14}
+.filter-tab{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:8px 20px;border:1px solid rgba(58,40,16,.18);background:transparent;color:rgba(58,44,24,.72);cursor:pointer;transition:all .2s;border-radius:2px}
+.filter-tab.active,.filter-tab:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.4);color:#846612}
 /* Hero */
-.hero-w{position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:flex-end}
+.hero-w{position:relative;overflow:hidden;min-height:max(560px,72vh);display:flex;align-items:flex-end}
 .hero-m{position:absolute;inset:0;z-index:0}
 .hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .hero-m .ph{position:absolute;inset:0;height:100%}
@@ -52,23 +52,23 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
 .btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
 .btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962 45%,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#9A7A14;color:#9A7A14}
+.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#846612;color:#846612}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 /* Nav */
 @keyframes borderPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.15)}}
-.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#9A7A14;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
+.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#846612;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
 .btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s}
 .btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;animation:none;transform:translateY(-1px)}
 #nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s}
 #nav.nav-hidden{transform:translateY(-100%)}
 #nav.nav-light{background:rgba(248,240,225,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(58,40,16,.12)}
-.nav-link{color:rgba(58,44,24,.65);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:#3A2C18}.nav-active{color:#9A7A14!important}
+.nav-link{color:rgba(58,44,24,.82);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:#3A2C18}.nav-active{color:#846612!important}
 #mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
 #mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FBF4E8;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
-.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
+.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.85);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
 .mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2)}
 .mob-card-cta a{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none}
 .gold-bar{width:48px;height:2px;background:#C9A227}
@@ -78,7 +78,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
 /* Footer */
-.footer-link{color:rgba(58,44,24,.38);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#9A7A14}
+.footer-link{color:rgba(58,44,24,.67);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#846612}
 /* Chatbot */
 #chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1)}
 #chat-btn:hover{transform:scale(1.1)}
@@ -89,12 +89,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
 .chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3)}
 .chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;white-space:pre-wrap}
-.chat-msg.bot{background:#EFE2C9;color:rgba(58,44,24,.86);border-radius:2px 12px 12px 12px;align-self:flex-start}
+.chat-msg.bot{background:#EFE2C9;color:rgba(58,44,24,.9);border-radius:2px 12px 12px 12px;align-self:flex-start}
 .chat-msg.user{background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-weight:500;border-radius:12px 2px 12px 12px;align-self:flex-end}
 .chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
 .chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.4);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1);color:#0F0B08}
 .chat-input-row{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid rgba(15,11,8,.1)}
-.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#9A7A14}
+.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#846612}
 .chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}.typing-dots span{width:6px;height:6px;border-radius:50%;background:rgba(201,162,39,.6);animation:typingBounce 1.2s ease-in-out infinite}
 .typing-dots span:nth-child(2){animation-delay:.2s}.typing-dots span:nth-child(3){animation-delay:.4s}
@@ -146,7 +146,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <a href="menu.html" class="mob-card-link" onclick="mobCardClose()">Menu</a>
   <a href="spa.html" class="mob-card-link" onclick="mobCardClose()">Spa</a>
   <a href="hotel.html" class="mob-card-link" onclick="mobCardClose()">Hotel</a>
-  <a href="gallery.html" class="mob-card-link" onclick="mobCardClose()" style="color:#9A7A14">Gallery</a>
+  <a href="gallery.html" class="mob-card-link" onclick="mobCardClose()" style="color:#846612">Gallery</a>
   <a href="contact.html" class="mob-card-link" onclick="mobCardClose()">Contact</a>
   <div class="mob-card-cta"><a href="reservations.html" onclick="mobCardClose()">Reserve a Table</a></div>
 </div>
@@ -170,9 +170,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="hero-c py-20 pb-28 px-6 lg:px-12">
     <div class="max-w-7xl mx-auto">
       <p class="text-[11px] tracking-[.28em] uppercase mb-4 font-medium" style="color:rgba(201,162,39,.75);font-family:'Inter',sans-serif">Deluxcious · George Town, Penang</p>
-      <h1 class="font-semibold mb-4" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#3A2C18;line-height:1.1">The <em class="font-normal italic" style="color:#9A7A14">Gallery</em></h1>
+      <h1 class="font-semibold mb-4" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#3A2C18;line-height:1.1">The <em class="font-normal italic" style="color:#846612">Gallery</em></h1>
       <div class="gold-bar mb-5"></div>
-      <p class="text-sm max-w-sm" style="color:rgba(58,44,24,.5);font-family:'Inter',sans-serif;line-height:1.7">A visual journey through our restored colonial mansion — dining, wellness, heritage suites and the architecture that holds it all together.</p>
+      <p class="text-sm max-w-sm" style="color:rgba(58,44,24,.74);font-family:'Inter',sans-serif;line-height:1.7">A visual journey through our restored colonial mansion — dining, wellness, heritage suites and the architecture that holds it all together.</p>
     </div>
   </div>
 </section>
@@ -414,7 +414,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 
     <!-- No results message -->
     <div id="no-results" style="display:none;text-align:center;padding:60px 0">
-      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.3);letter-spacing:.1em">No photos in this category yet.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.6);letter-spacing:.1em">No photos in this category yet.</p>
     </div>
 
   </div>
@@ -424,7 +424,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     <div class="flex flex-col md:flex-row items-center justify-between gap-6" style="border-top:1px solid rgba(201,162,39,.15);padding-top:40px">
       <div>
         <h3 class="font-semibold text-xl mb-1" style="font-family:'Playfair Display',serif;color:#3A2C18">Visit in Person</h3>
-        <p class="text-sm" style="color:rgba(58,44,24,.4);font-family:'Inter',sans-serif">These images don't do the space justice. Come experience it for yourself.</p>
+        <p class="text-sm" style="color:rgba(58,44,24,.7);font-family:'Inter',sans-serif">These images don't do the space justice. Come experience it for yourself.</p>
       </div>
       <div class="flex gap-4 flex-wrap">
         <a href="reservations.html" class="btn btn-gold text-[11px] tracking-[.15em] uppercase px-8 py-3.5 font-semibold">Reserve a Table</a>
@@ -442,39 +442,39 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
         <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;letter-spacing:.06em;color:#3A2C18;margin-bottom:4px">DELUXCIOUS</div>
         <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div>
         <div class="gold-bar" style="margin-bottom:16px"></div>
-        <p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(58,44,24,.35)">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p>
+        <p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(58,44,24,.64)">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p>
       </div>
       <div>
-        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Explore</h4>
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#846612;margin-bottom:20px">Explore</h4>
         <div style="display:flex;flex-direction:column;gap:10px">
           <a href="about.html" class="footer-link">About Us</a>
           <a href="menu.html" class="footer-link">Menu</a>
           <a href="spa.html" class="footer-link">Spa Experiences</a>
           <a href="hotel.html" class="footer-link">Heritage Suites</a>
-          <a href="gallery.html" class="footer-link" style="color:#9A7A14">Gallery</a>
+          <a href="gallery.html" class="footer-link" style="color:#846612">Gallery</a>
           <a href="reservations.html" class="footer-link">Reservations</a>
         </div>
       </div>
       <div>
-        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Hours</h4>
-        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38)">
-          <div><span style="color:rgba(58,44,24,.58)">Tuesday – Sunday</span><br>12:00pm – 3:00am</div>
-          <div><span style="color:rgba(58,44,24,.58)">Monday</span><br>Closed</div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#846612;margin-bottom:20px">Hours</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.67)">
+          <div><span style="color:rgba(58,44,24,.78)">Tuesday – Sunday</span><br>12:00pm – 3:00am</div>
+          <div><span style="color:rgba(58,44,24,.78)">Monday</span><br>Closed</div>
           <div style="padding-top:8px;border-top:1px solid rgba(58,40,16,.11);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,162,39,.45)">Kitchen until 2am</div>
         </div>
       </div>
       <div>
-        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Contact</h4>
-        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38)">
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#846612;margin-bottom:20px">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.67)">
           <div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div>
-          <a href="tel:+60426110288" style="color:rgba(58,44,24,.38);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">+604-261 0288</a>
-          <a href="https://wa.me/60125151288" target="_blank" style="color:rgba(58,44,24,.38);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'"">+6012-515 1288 (WhatsApp)</a>
-          <a href="mailto:reservations@deluxcioushotel.com.my" style="color:rgba(58,44,24,.38);text-decoration:none;word-break:break-word" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">reservations@deluxcioushotel.com.my</a>
+          <a href="tel:+60426110288" style="color:rgba(58,44,24,.67);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">+604-261 0288</a>
+          <a href="https://wa.me/60125151288" target="_blank" style="color:rgba(58,44,24,.67);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'"">+6012-515 1288 (WhatsApp)</a>
+          <a href="mailto:reservations@deluxcioushotel.com.my" style="color:rgba(58,44,24,.67);text-decoration:none;word-break:break-word" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">reservations@deluxcioushotel.com.my</a>
         </div>
       </div>
     </div>
     <div style="border-top:1px solid rgba(58,40,16,.10);padding-top:24px;display:flex;flex-direction:column;gap:6px" class="md:flex-row md:items-center md:justify-between">
-      <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.52)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p>
       <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.15)">George Town, Penang, Malaysia</p>
     </div>
   </div>
@@ -494,7 +494,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="chat-head">
     <div class="chat-avatar">D</div>
     <div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#3A2C18">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Gallery Guide</div></div>
-    <button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(58,44,24,.4);line-height:1">
+    <button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(58,44,24,.7);line-height:1">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
   </div>
