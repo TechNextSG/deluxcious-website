@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Changelog — Deluxcious Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;min-height:100vh;padding:0;margin:0;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
+.container{max-width:760px;margin:0 auto;padding:80px 24px 80px}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.6);text-decoration:none;margin-bottom:48px;transition:color .2s}
+.back-link:hover{color:#C9A227}
+.site-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:white;margin-bottom:4px}
+.site-sub{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:40px}
+.gold-bar{width:48px;height:2px;background:#C9A227;margin-bottom:48px}
+.version-block{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.version-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.version-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.version-badge{font-size:12px;font-weight:600;letter-spacing:.06em;padding:4px 10px;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;border-radius:2px;flex-shrink:0;font-family:'Inter',sans-serif}
+.version-badge.minor{background:rgba(201,162,39,.15);color:#C9A227}
+.version-date{font-size:12px;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:4px}
+.version-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:white;margin-bottom:4px}
+.change-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.change-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;font-family:'Inter',sans-serif}
+.change-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;flex-shrink:0;margin-top:5px;opacity:.7}
+.change-list li strong{color:rgba(255,255,255,.85);font-weight:500}
+.tag{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:500;margin-right:4px;font-family:'Inter',sans-serif}
+.tag.new{background:rgba(201,162,39,.15);color:#C9A227}
+.tag.fix{background:rgba(74,222,128,.1);color:#4ade80}
+.tag.update{background:rgba(96,165,250,.1);color:#60a5fa}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+    Back to Website
+  </a>
+  <div class="site-title">Deluxcious</div>
+  <div class="site-sub">Website Changelog</div>
+  <div class="gold-bar"></div>
+
+  <!-- v1.0 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v1.0</span>
+      <div>
+        <div class="version-title">Full Site Launch</div>
+        <div class="version-date">29 June 2025</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag new">New</span><strong>index.html</strong> — Full homepage with hero word-reveal animation, about section, menu highlights, spa section, testimonials, reservation CTA, footer</li>
+      <li><span class="tag new">New</span><strong>menu.html</strong> — Complete à la carte menu with category filter tabs (All / Starters / Mains / Pasta & Rice / Grill / Desserts / Drinks), 20+ items with pricing, buffet pricing strip</li>
+      <li><span class="tag new">New</span><strong>spa.html</strong> — Three spa experiences (Deluxcious, Samporna, Qin) with full descriptions, philosophy, package pricing (60/90/120 min), booking CTA</li>
+      <li><span class="tag new">New</span><strong>about.html</strong> — Heritage building history, Chef Keith Khoo biography, brand philosophy, achievements</li>
+      <li><span class="tag new">New</span><strong>hotel.html</strong> — 18 heritage suites across three tiers (Standard / Deluxe / Superior), amenity grid, enquiry CTA</li>
+      <li><span class="tag new">New</span><strong>reservations.html</strong> — Inline booking form (type, date, session, pax, name, phone, notes), alternative contact methods, cancellation policy, hours reminder</li>
+      <li><span class="tag new">New</span><strong>contact.html</strong> — All contact channels (WhatsApp, phone, email, address), map placeholder, opening hours, social links</li>
+      <li><span class="tag new">New</span>AI chatbot widget across all pages — FAQ knowledge base, quick-reply chips, typing indicator</li>
+      <li><span class="tag new">New</span>Adaptive navigation — transparent on hero, light on scroll, hide-on-scroll-down behaviour, mobile card dropdown</li>
+      <li><span class="tag new">New</span>WhatsApp floating action button with pulse animation on all pages</li>
+      <li><span class="tag new">New</span>Button system — btn-gold (shimmer sweep + ripple), btn-og (outlined gold), btn-ow (outlined white), btn-wa (WhatsApp green)</li>
+      <li><span class="tag new">New</span>IntersectionObserver reveal animations (reduced: translateY 12px, 0.55s transition)</li>
+      <li><span class="tag new">New</span>3D card tilt on menu/spa cards (5°, scale 1.01)</li>
+      <li><span class="tag new">New</span>Ticker / marquee banner on homepage</li>
+      <li><span class="tag new">New</span>Bokeh particle system on homepage hero</li>
+      <li><span class="tag update">Update</span>Animation intensity reduced from initial version — glow shadows softened, reveal distance halved (28px → 12px), tilt reduced (14° → 5°), magnetic button effect removed</li>
+      <li><span class="tag new">New</span>Full colour system: espresso dark #0F0B08, gold #C9A227, cream #FBF4E8 throughout</li>
+      <li><span class="tag new">New</span>Fonts: Playfair Display (headings), Cormorant Garamond (editorial italic), Inter (UI)</li>
+      <li><span class="tag new">New</span>Deployed to GitHub Pages at TechNextSG/deluxcious-website</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
