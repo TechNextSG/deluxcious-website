@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gallery — Deluxcious Heritage Hotel, Spa & Restaurant</title>
+<meta name="description" content="A visual journey through Deluxcious — dining, spa, heritage suites and the restored colonial mansion in George Town, Penang."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
+/* Placeholder images */
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#1A1108,#120D06 45%,#1E1508);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.ph-g{position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,39,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.022) 1px,transparent 1px);background-size:32px 32px}
+.ph-f{position:absolute;inset:0;pointer-events:none}
+.ph-f::before{content:'';position:absolute;top:14px;left:14px;width:20px;height:20px;border-top:1px solid rgba(201,162,39,.28);border-left:1px solid rgba(201,162,39,.28)}
+.ph-f::after{content:'';position:absolute;bottom:14px;right:14px;width:20px;height:20px;border-bottom:1px solid rgba(201,162,39,.28);border-right:1px solid rgba(201,162,39,.28)}
+.ph-b{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:20px;height:100%;width:100%}
+.ph-ic{color:rgba(201,162,39,.18)}
+.ph-t{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.28);line-height:1.75}
+.ph-s{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;color:rgba(255,255,255,.1)}
+/* Gallery grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.g2{grid-column:span 2}.g3{grid-column:1 / -1}
+.gallery-item{position:relative;overflow:hidden;cursor:default}
+.gallery-item .ph{transition:transform .55s ease}
+.gallery-item:hover .ph{transform:scale(1.04)}
+.gi-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,11,8,.92) 0%,rgba(15,11,8,.3) 50%,transparent 100%);opacity:0;transition:opacity .35s ease;display:flex;align-items:flex-end;padding:20px 22px;z-index:5}
+.gallery-item:hover .gi-ov{opacity:1}
+.gi-ov-body{transform:translateY(6px);transition:transform .35s ease}
+.gallery-item:hover .gi-ov-body{transform:translateY(0)}
+.gi-title{font-family:'Playfair Display',serif;font-size:15px;color:white;font-weight:500;margin-bottom:3px;line-height:1.3}
+.gi-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.7)}
+/* Filter */
+.filter-tab{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:8px 20px;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.45);cursor:pointer;transition:all .2s;border-radius:2px}
+.filter-tab.active,.filter-tab:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.4);color:#C9A227}
+/* Hero */
+.hero-w{position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:flex-end}
+.hero-m{position:absolute;inset:0;z-index:0}
+.hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero-m .ph{position:absolute;inset:0;height:100%}
+.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.35) 40%,rgba(15,11,8,.82) 100%)}
+.hero-c{position:relative;z-index:3;width:100%}
+.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.12);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
+/* Buttons */
+.btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease,border-color .2s ease}
+.btn::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .5s ease;pointer-events:none;z-index:2}
+.btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
+.btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
+.btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962 45%,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
+.btn-ow{border:1px solid rgba(255,255,255,.55);color:white;background:rgba(255,255,255,.05)}.btn-ow:hover{border-color:#C9A227;color:#C9A227}
+.btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
+@keyframes ripplePop{to{transform:scale(5);opacity:0}}
+/* Nav */
+@keyframes borderPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.15)}}
+.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#C9A227;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
+.btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s}
+.btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;animation:none;transform:translateY(-1px)}
+#nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s}
+#nav.nav-hidden{transform:translateY(-100%)}
+#nav.nav-light{background:rgba(15,11,8,.96)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(0,0,0,.3)}
+.nav-link{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:white}.nav-active{color:#C9A227!important}
+#mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#1A1108;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.5);overflow:hidden;animation:cardIn .22s ease forwards}
+@keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
+#mob-card.open{display:block}
+.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:white}
+.mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2)}
+.mob-card-cta a{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none}
+.gold-bar{width:48px;height:2px;background:#C9A227}
+/* WA FAB */
+@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
+/* Reveal */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+/* Footer */
+.footer-link{color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#C9A227}
+/* Chatbot */
+#chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1)}
+#chat-btn:hover{transform:scale(1.1)}
+#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 16px 60px rgba(15,11,8,.3);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
+#chat-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
+.chat-head{background:linear-gradient(135deg,#0F0B08,#1C1108);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#0F0B08;flex-shrink:0}
+.chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3)}
+.chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;white-space:pre-wrap}
+.chat-msg.bot{background:#0F0B08;color:rgba(255,255,255,.82);border-radius:2px 12px 12px 12px;align-self:flex-start}
+.chat-msg.user{background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-weight:500;border-radius:12px 2px 12px 12px;align-self:flex-end}
+.chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.4);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1);color:#0F0B08}
+.chat-input-row{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid rgba(15,11,8,.1)}
+.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#C9A227}
+.chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}.typing-dots span{width:6px;height:6px;border-radius:50%;background:rgba(201,162,39,.6);animation:typingBounce 1.2s ease-in-out infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes typingBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+/* Responsive */
+@media(max-width:767px){
+  #mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.1)!important;border:1.5px solid rgba(255,255,255,.3)!important}
+  #mob-toggle-btn svg{stroke:white!important}
+  .hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .g2{grid-column:span 2}.g3{grid-column:1 / -1}
+  #chat-panel{width:calc(100vw - 44px);right:22px}
+}
+@media(max-width:480px){
+  .gallery-grid{grid-template-columns:1fr;gap:8px}
+  .g2,.g3{grid-column:span 1}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body style="background:#0F0B08">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-5" id="nav">
+  <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
+    <a href="index.html" style="text-decoration:none">
+      <div class="nav-logo-main font-semibold tracking-[.06em] text-white" style="font-family:'Playfair Display',serif;font-size:1.15rem;transition:color .3s">DELUXCIOUS</div>
+      <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.8);margin-top:1px;transition:color .3s">Heritage · Spa · Restaurant</div>
+    </a>
+    <div class="hidden md:flex items-center justify-center gap-7">
+      <a href="about.html" class="nav-link text-[13px] tracking-wide">About</a>
+      <a href="menu.html" class="nav-link text-[13px] tracking-wide">Menu</a>
+      <a href="spa.html" class="nav-link text-[13px] tracking-wide">Spa</a>
+      <a href="hotel.html" class="nav-link text-[13px] tracking-wide">Hotel</a>
+      <a href="gallery.html" class="nav-link nav-active text-[13px] tracking-wide">Gallery</a>
+      <a href="contact.html" class="nav-link text-[13px] tracking-wide">Contact</a>
+    </div>
+    <div class="flex items-center justify-end gap-3">
+      <a href="reservations.html" class="btn-reserve-nav hidden md:inline-block">Reserve</a>
+      <button id="mob-toggle-btn" onclick="mobCardToggle()" aria-label="Menu">
+        <svg id="mob-bars" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg id="mob-x-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div id="mob-card">
+  <a href="about.html" class="mob-card-link" onclick="mobCardClose()">About</a>
+  <a href="menu.html" class="mob-card-link" onclick="mobCardClose()">Menu</a>
+  <a href="spa.html" class="mob-card-link" onclick="mobCardClose()">Spa</a>
+  <a href="hotel.html" class="mob-card-link" onclick="mobCardClose()">Hotel</a>
+  <a href="gallery.html" class="mob-card-link" onclick="mobCardClose()" style="color:#C9A227">Gallery</a>
+  <a href="contact.html" class="mob-card-link" onclick="mobCardClose()">Contact</a>
+  <div class="mob-card-cta"><a href="reservations.html" onclick="mobCardClose()">Reserve a Table</a></div>
+</div>
+
+<!-- HERO -->
+<section class="hero-w">
+  <div class="hero-m">
+    <!-- Replace with: <source src="assets/video/gallery-hero.mp4" type="video/mp4"> -->
+    <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
+    <div class="ph" style="position:absolute;inset:0;height:100%">
+      <div class="ph-g"></div>
+      <div class="ph-f"></div>
+      <div class="ph-b">
+        <svg class="ph-ic" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        <div class="ph-t">Hero Background Video<br>Gallery — Cinematic Atmosphere Reel</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-o"></div>
+  <div class="vid-note">Background Video — Add Source to Activate</div>
+  <div class="hero-c py-20 pb-28 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-[11px] tracking-[.28em] uppercase mb-4 font-medium" style="color:rgba(201,162,39,.75);font-family:'Inter',sans-serif">Deluxcious · George Town, Penang</p>
+      <h1 class="font-semibold mb-4" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:white;line-height:1.1">The <em class="font-normal italic" style="color:#C9A227">Gallery</em></h1>
+      <div class="gold-bar mb-5"></div>
+      <p class="text-sm max-w-sm" style="color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;line-height:1.7">A visual journey through our restored colonial mansion — dining, wellness, heritage suites and the architecture that holds it all together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="background:#0F0B08;padding:72px 0 96px">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+    <!-- Filter tabs -->
+    <div class="flex flex-wrap gap-2 mb-12 reveal">
+      <button class="filter-tab active" onclick="filterGallery('all',this)">All</button>
+      <button class="filter-tab" onclick="filterGallery('restaurant',this)">Restaurant</button>
+      <button class="filter-tab" onclick="filterGallery('spa',this)">Spa</button>
+      <button class="filter-tab" onclick="filterGallery('hotel',this)">Hotel</button>
+      <button class="filter-tab" onclick="filterGallery('heritage',this)">Heritage</button>
+      <button class="filter-tab" onclick="filterGallery('events',this)">Events</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- 1. Restaurant Main Hall — full width -->
+      <div class="gallery-item g3 reveal" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:21/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Main Dining Hall<br>Colonial Arches · Heritage Mosaic Floor · Candlelit</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Main Dining Hall</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 2. Chef at Work — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:16/10">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Chef Keith Khoo<br>Award-Winning Culinary Craft · The Kitchen</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Chef Keith Khoo at Work</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 3. Signature Crème Brûlée — span 1, portrait -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Signature Crème Brûlée<br>Torched Tableside</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Signature Crème Brûlée</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 4. Rib-Eye plating — square -->
+      <div class="gallery-item reveal" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Black Angus Rib-Eye 280g<br>Grilled to Order</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Black Angus Rib-Eye</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 5. Seafood Aglio Olio — square -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Seafood Aglio Olio<br>Tiger Prawns · Al Dente Linguine</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Seafood Aglio Olio</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 6. Heritage pillars — portrait -->
+      <div class="gallery-item reveal d2" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Dining Pillars<br>Original Colonial Architecture · Restored</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Dining Pillars</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 7. Evening terrace — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:16/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Terrace at Dusk<br>Al Fresco Dining · Jalan Sultan Ahmad Shah</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Terrace at Dusk</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 8. Buffet display — square -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Evening Buffet Spread<br>Three Daily Sessions</div><div class="ph-s">Restaurant</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Evening Buffet Display</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 9. Deluxcious Spa Suite — full width -->
+      <div class="gallery-item g3 reveal" data-cat="spa">
+        <div class="ph" style="aspect-ratio:21/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Deluxcious Spa — Treatment Suite<br>Warm Light · Heritage Textures · Restorative Silence</div><div class="ph-s">Spa</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Deluxcious Spa Suite</div><div class="gi-meta">Spa</div></div></div>
+      </div>
+
+      <!-- 10. Samporna room — portrait -->
+      <div class="gallery-item reveal" data-cat="spa">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Samporna Treatment Room<br>Traditional Malay Healing</div><div class="ph-s">Spa</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Samporna Treatment Room</div><div class="gi-meta">Spa</div></div></div>
+      </div>
+
+      <!-- 11. Qin therapy — span 2 -->
+      <div class="gallery-item g2 reveal d1" data-cat="spa">
+        <div class="ph" style="aspect-ratio:4/3">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Qin — Meridian Therapy<br>Ancient Chinese Tui Na Practice</div><div class="ph-s">Spa</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Qin Meridian Therapy</div><div class="gi-meta">Spa</div></div></div>
+      </div>
+
+      <!-- 12. Botanical aromatics — square -->
+      <div class="gallery-item reveal" data-cat="spa">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">House Botanical Oils<br>Turmeric · Pandan · Lemongrass Blend</div><div class="ph-s">Spa</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Botanical Aromatics</div><div class="gi-meta">Spa</div></div></div>
+      </div>
+
+      <!-- 13. Spa corridor — square -->
+      <div class="gallery-item reveal d1" data-cat="spa">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Spa Corridor<br>Arched Colonial Walkway</div><div class="ph-s">Spa</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Spa Corridor</div><div class="gi-meta">Spa</div></div></div>
+      </div>
+
+      <!-- 14. Superior Suite — full width -->
+      <div class="gallery-item g3 reveal" data-cat="hotel">
+        <div class="ph" style="aspect-ratio:21/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Superior Suite<br>Copper Soaking Tub · Private Verandah · Straits Antiques</div><div class="ph-s">Hotel</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Superior Suite</div><div class="gi-meta">Hotel</div></div></div>
+      </div>
+
+      <!-- 15. Heritage Deluxe room — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="hotel">
+        <div class="ph" style="aspect-ratio:16/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Deluxe Room<br>King Bed · Original Timber Beams · Courtyard View</div><div class="ph-s">Hotel</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Deluxe Room</div><div class="gi-meta">Hotel</div></div></div>
+      </div>
+
+      <!-- 16. En-suite shower — portrait -->
+      <div class="gallery-item reveal d1" data-cat="hotel">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">En-Suite Rainfall Shower<br>Period Fixtures · Premium Bath Amenities</div><div class="ph-s">Hotel</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">En-Suite Rainfall Shower</div><div class="gi-meta">Hotel</div></div></div>
+      </div>
+
+      <!-- 17. Heritage courtyard — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="hotel">
+        <div class="ph" style="aspect-ratio:16/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Heritage Courtyard<br>Original 19th-Century Colonial Courtyard · Private & Serene</div><div class="ph-s">Hotel</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Heritage Courtyard</div><div class="gi-meta">Hotel</div></div></div>
+      </div>
+
+      <!-- 18. Suite details — square -->
+      <div class="gallery-item reveal d1" data-cat="hotel">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Colonial Suite Details<br>Handcrafted Penang Artisan Furniture</div><div class="ph-s">Hotel</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Colonial Suite Details</div><div class="gi-meta">Hotel</div></div></div>
+      </div>
+
+      <!-- 19. Building facade — full width -->
+      <div class="gallery-item g3 reveal" data-cat="heritage">
+        <div class="ph" style="aspect-ratio:21/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Building Facade — Jalan Sultan Ahmad Shah<br>Straits Eclectic Architecture · c. 1880s · UNESCO Heritage Zone</div><div class="ph-s">Heritage</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Building Facade</div><div class="gi-meta">Heritage</div></div></div>
+      </div>
+
+      <!-- 20. Staircase — portrait -->
+      <div class="gallery-item reveal" data-cat="heritage">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">19th Century Staircase<br>Original Carved Timber Balustrades · Fully Restored</div><div class="ph-s">Heritage</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">19th Century Staircase</div><div class="gi-meta">Heritage</div></div></div>
+      </div>
+
+      <!-- 21. Mosaic tiles — square -->
+      <div class="gallery-item reveal d1" data-cat="heritage">
+        <div class="ph" style="aspect-ratio:1/1">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Original Mosaic Floor Tiles<br>Hand-Laid Peranakan Tilework · Uncovered During Restoration</div><div class="ph-s">Heritage</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Original Mosaic Tiles</div><div class="gi-meta">Heritage</div></div></div>
+      </div>
+
+      <!-- 22. Heritage verandah — span 2 -->
+      <div class="gallery-item g2 reveal d2" data-cat="heritage">
+        <div class="ph" style="aspect-ratio:16/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Verandah<br>Upper-Floor Colonial Archways · Afternoon Light</div><div class="ph-s">Heritage</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Verandah</div><div class="gi-meta">Heritage</div></div></div>
+      </div>
+
+      <!-- 23. Private dining setup — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="events">
+        <div class="ph" style="aspect-ratio:16/9">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Private Dining Setup<br>Bespoke Table Arrangements for Corporate & Intimate Occasions</div><div class="ph-s">Events</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dining Setup</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 24. Event florals — portrait -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div class="ph" style="aspect-ratio:4/5">
+          <div class="ph-g"></div><div class="ph-f"></div>
+          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Event Florals & Table Styling<br>Curated Settings for Weddings & Celebrations</div><div class="ph-s">Events</div></div>
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Event Florals & Styling</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+
+    <!-- No results message -->
+    <div id="no-results" style="display:none;text-align:center;padding:60px 0">
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.3);letter-spacing:.1em">No photos in this category yet.</p>
+    </div>
+
+  </div>
+
+  <!-- CTA strip -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-4 reveal">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6" style="border-top:1px solid rgba(201,162,39,.15);padding-top:40px">
+      <div>
+        <h3 class="font-semibold text-xl mb-1" style="font-family:'Playfair Display',serif;color:white">Visit in Person</h3>
+        <p class="text-sm" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif">These images don't do the space justice. Come experience it for yourself.</p>
+      </div>
+      <div class="flex gap-4 flex-wrap">
+        <a href="reservations.html" class="btn btn-gold text-[11px] tracking-[.15em] uppercase px-8 py-3.5 font-semibold">Reserve a Table</a>
+        <a href="hotel.html" class="btn btn-ow text-[11px] tracking-[.15em] uppercase px-8 py-3.5">View Suites</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#0A0705;border-top:1px solid rgba(201,162,39,.12)">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;letter-spacing:.06em;color:white;margin-bottom:4px">DELUXCIOUS</div>
+        <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div>
+        <div class="gold-bar" style="margin-bottom:16px"></div>
+        <p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Explore</h4>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="menu.html" class="footer-link">Menu</a>
+          <a href="spa.html" class="footer-link">Spa Experiences</a>
+          <a href="hotel.html" class="footer-link">Heritage Suites</a>
+          <a href="gallery.html" class="footer-link" style="color:#C9A227">Gallery</a>
+          <a href="reservations.html" class="footer-link">Reservations</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Hours</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)">
+          <div><span style="color:rgba(255,255,255,.58)">Tuesday – Sunday</span><br>12:00pm – 3:00am</div>
+          <div><span style="color:rgba(255,255,255,.58)">Monday</span><br>Closed</div>
+          <div style="padding-top:8px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,162,39,.45)">Kitchen until 2am</div>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)">
+          <div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div>
+          <a href="tel:+60426110288" style="color:rgba(255,255,255,.38);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">+604-261 0288</a>
+          <a href="https://wa.me/60125151288" target="_blank" style="color:rgba(255,255,255,.38);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'"">+6012-515 1288 (WhatsApp)</a>
+          <a href="mailto:reservations@deluxcioushotel.com.my" style="color:rgba(255,255,255,.38);text-decoration:none;word-break:break-word" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.38)'">reservations@deluxcioushotel.com.my</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;flex-direction:column;gap:6px" class="md:flex-row md:items-center md:justify-between">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.15)">George Town, Penang, Malaysia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/60125151288" target="_blank" class="wa-pulse" style="position:fixed;bottom:22px;right:22px;z-index:8000;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
+</a>
+
+<!-- Chatbot -->
+<button id="chat-btn" onclick="chatToggle()" aria-label="Chat with Delux">
+  <svg id="chat-icon-open" width="22" height="22" fill="none" stroke="#0F0B08" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+  <svg id="chat-icon-close" width="18" height="18" fill="none" stroke="#0F0B08" stroke-width="2.2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+</button>
+<div id="chat-panel">
+  <div class="chat-head">
+    <div class="chat-avatar">D</div>
+    <div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:white">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Gallery Guide</div></div>
+    <button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4);line-height:1">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. Browse our gallery above, or ask me anything about Deluxcious.</div></div>
+  <div class="chat-chips" id="chat-chips">
+    <button class="chip" onclick="sendChip(this,'Restaurant photos')">Restaurant</button>
+    <button class="chip" onclick="sendChip(this,'Spa photos')">Spa</button>
+    <button class="chip" onclick="sendChip(this,'How to reserve')">Reserve</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chat-input" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()"/>
+    <button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<script>
+(function(){const nav=document.getElementById('nav');let lastY=0,ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const y=window.scrollY;if(y>lastY&&y>100)nav.classList.add('nav-hidden');else nav.classList.remove('nav-hidden');if(y>60)nav.classList.add('nav-light');else nav.classList.remove('nav-light');lastY=y;ticking=false;});ticking=true;}});})();
+(function(){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('click',e=>{const r=btn.getBoundingClientRect();const rip=document.createElement('span');rip.className='ripple';const sz=Math.max(r.width,r.height)*2;rip.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px;background:rgba(255,255,255,.14)`;btn.appendChild(rip);setTimeout(()=>rip.remove(),700);});});
+let mobOpen=false;
+function mobCardToggle(){mobOpen=!mobOpen;document.getElementById('mob-card').classList.toggle('open',mobOpen);document.getElementById('mob-bars').style.display=mobOpen?'none':'block';document.getElementById('mob-x-icon').style.display=mobOpen?'block':'none';}
+function mobCardClose(){mobOpen=false;document.getElementById('mob-card').classList.remove('open');document.getElementById('mob-bars').style.display='block';document.getElementById('mob-x-icon').style.display='none';}
+document.addEventListener('click',e=>{if(mobOpen&&!e.target.closest('#mob-card')&&!e.target.closest('#mob-toggle-btn'))mobCardClose();});
+function filterGallery(cat,btn){
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const items=document.querySelectorAll('#gallery-grid .gallery-item');
+  let visible=0;
+  items.forEach(item=>{
+    if(cat==='all'||item.dataset.cat===cat){item.style.display='';visible++;}
+    else{item.style.display='none';}
+  });
+  document.getElementById('no-results').style.display=visible===0?'block':'none';
+}
+const KB={
+  restaurant:{k:['restaurant','food','eat','menu','dining','chef','dish'],r:"The main restaurant is open Tue–Sun, 12pm–3am. Kitchen until 2am.\n\nBuffet sessions:\n- Lunch: RM49.90++ (12pm–3pm)\n- Hi-Tea: RM39.90++ (3pm–6pm)\n- Dinner: RM59.90++ (6pm–11pm)\n\nVisit our Menu page for the full a la carte selection."},
+  spa:{k:['spa','massage','treatment','wellness'],r:"Three spa traditions — Deluxcious, Samporna and Qin.\n\nPackages from RM160 (60 min) to RM315 (120 min).\n\nVisit our Spa page for full details and to book."},
+  reserve:{k:['reserv','book','table','seat'],r:"Reserve via:\n1. Our Reservations page\n2. WhatsApp +6012-515 1288\n3. Call +604-261 0288"},
+  hotel:{k:['hotel','suite','room','stay'],r:"18 private heritage suites. From RM320/night (Heritage Standard) to RM750/night (Superior Suite).\n\nContact us directly for availability."}
+};
+let chatOpen=false;
+function chatToggle(){chatOpen=!chatOpen;document.getElementById('chat-panel').classList.toggle('open',chatOpen);document.getElementById('chat-icon-open').style.display=chatOpen?'none':'block';document.getElementById('chat-icon-close').style.display=chatOpen?'block':'none';}
+function addMsg(txt,role){const body=document.getElementById('chat-body');const msg=document.createElement('div');msg.className='chat-msg '+role;msg.textContent=txt;body.appendChild(msg);body.scrollTop=body.scrollHeight;}
+function showTyping(){const body=document.getElementById('chat-body');const d=document.createElement('div');d.className='chat-msg bot';d.id='typing-indicator';d.innerHTML='<div class="typing-dots"><span></span><span></span><span></span></div>';body.appendChild(d);body.scrollTop=body.scrollHeight;}
+function hideTyping(){const t=document.getElementById('typing-indicator');if(t)t.remove();}
+function botReply(q){const ql=q.toLowerCase();let r=null;for(const[,v]of Object.entries(KB)){if(v.k.some(k=>ql.includes(k))){r=v.r;break;}}if(!r)r="For enquiries:\n+604-261 0288\n+6012-515 1288 (WhatsApp)\nreservations@deluxcioushotel.com.my";showTyping();setTimeout(()=>{hideTyping();addMsg(r,'bot');},800+Math.random()*300);}
+function sendMsg(){const i=document.getElementById('chat-input');const t=i.value.trim();if(!t)return;addMsg(t,'user');i.value='';document.getElementById('chat-chips').style.display='none';botReply(t);}
+function sendChip(btn,txt){addMsg(txt,'user');document.getElementById('chat-chips').style.display='none';botReply(txt);}
+</script>
+</body>
+</html>

@@ -3,102 +3,104 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Menu — Deluxcious Heritage Hotel, Spa & Restaurant</title>
-<meta name="description" content="World fusion cuisine helmed by Chef Keith Khoo. Buffet lunch, hi-tea, dinner and à la carte. George Town, Penang."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+<meta name="description" content="Modern Nyonya cuisine crafted by Chef Keith Khoo. Seasonal tasting menus, a la carte, and private dining at Deluxcious, George Town Penang."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{espresso:{'DEFAULT':'#0F0B08','light':'#1C1108'},gold:{'DEFAULT':'#C9A227','light':'#E8C84A'},cream:{'DEFAULT':'#FBF4E8','dark':'#F0E3CC'}},fontFamily:{display:['Playfair Display','serif'],serifcg:['Cormorant Garamond','serif'],sans:['Inter','sans-serif']}}}}</script>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#FBF4E8;color:#1C1C1E;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;overflow-x:hidden;-webkit-font-smoothing:antialiased;margin:0}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
-@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
-.dish-img{transition:transform .5s ease}.dish-card:hover .dish-img{transform:scale(1.05)}
-.gold-bar{width:48px;height:2px;background:#C9A227}
-.btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background-color .25s ease,color .2s ease,border-color .2s ease}
-.btn::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.22) 50%,transparent 80%);transform:skewX(-18deg);transition:left .5s ease;pointer-events:none;z-index:2}
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#1A1108,#120D06 45%,#1E1508);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.ph-g{position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,39,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.022) 1px,transparent 1px);background-size:32px 32px}
+.ph-f{position:absolute;inset:0;pointer-events:none}
+.ph-f::before{content:'';position:absolute;top:14px;left:14px;width:20px;height:20px;border-top:1px solid rgba(201,162,39,.28);border-left:1px solid rgba(201,162,39,.28)}
+.ph-f::after{content:'';position:absolute;bottom:14px;right:14px;width:20px;height:20px;border-bottom:1px solid rgba(201,162,39,.28);border-right:1px solid rgba(201,162,39,.28)}
+.ph-b{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:20px;height:100%;width:100%}
+.ph-ic{color:rgba(201,162,39,.18)}.ph-t{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.28);line-height:1.75}
+.ph-s{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;color:rgba(255,255,255,.1)}
+.hero-w{position:relative;overflow:hidden;min-height:75vh;display:flex;align-items:flex-end}
+.hero-m{position:absolute;inset:0;z-index:0}.hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero-m .ph{position:absolute;inset:0;height:100%}
+.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.3) 40%,rgba(15,11,8,.82) 100%)}
+.hero-c{position:relative;z-index:3;width:100%}
+.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.1);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
+.btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease}
+.btn::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .5s;pointer-events:none;z-index:2}
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
-.btn-gold{background:linear-gradient(135deg,#B8891E 0%,#E8C84A 45%,#C9A227 75%,#A07818 100%);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28),inset 0 1px 0 rgba(255,255,255,.2)}
-.btn-gold:hover{background:linear-gradient(135deg,#E8C84A 0%,#F5D962 45%,#D4AF37 100%);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-og{border:1px solid rgba(201,162,39,.6);color:#C9A227;background:transparent}.btn-og:hover{background:linear-gradient(135deg,#C9A227,#E8C84A);color:#0F0B08;border-color:#C9A227;box-shadow:0 10px 30px rgba(201,162,39,.4)}
-.btn-ow{border:1px solid rgba(255,255,255,.65);color:white;background:rgba(255,255,255,.05)}.btn-ow:hover{border-color:#C9A227;color:#C9A227;background:rgba(201,162,39,.08)}
-.btn-wa{border:1px solid #25D366;color:#25D366;background:transparent}.btn-wa:hover{background:#25D366;color:white}
+.btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
+.btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
+.btn-og{border:1px solid rgba(201,162,39,.5);color:#C9A227;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08)}
+.btn-ow{border:1px solid rgba(255,255,255,.55);color:white;background:rgba(255,255,255,.05)}.btn-ow:hover{border-color:#C9A227;color:#C9A227}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 @keyframes borderPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.15)}}
-.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#C9A227;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s ease;animation:borderPulse 3s ease-in-out infinite}
-.btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s ease}
-.btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;box-shadow:0 6px 24px rgba(201,162,39,.45);animation:none;transform:translateY(-1px)}
-#nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s ease,box-shadow .3s ease}
+.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#C9A227;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
+.btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s}
+.btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;animation:none;transform:translateY(-1px)}
+#nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s}
 #nav.nav-hidden{transform:translateY(-100%)}
-#nav.nav-light{background:rgba(251,244,232,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(15,11,8,.08)}
-#nav.nav-light .nav-logo-main{color:#0F0B08!important}#nav.nav-light .nav-logo-sub{color:#C9A227!important}
-#nav.nav-light .nav-link{color:rgba(15,11,8,.7)!important}#nav.nav-light .nav-link:hover{color:#0F0B08!important}
-#nav.nav-light .nav-active{color:#C9A227!important}
-#nav.nav-light .btn-reserve-nav{border-color:rgba(201,162,39,.7)!important;color:#9E7F1E!important}
-#nav.nav-light .btn-reserve-nav:hover{background:#C9A227!important;color:#0F0B08!important}
-#mob{all:unset!important;display:none!important}
-#mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0;padding:0}
-@media(max-width:767px){#mob-toggle-btn{display:flex}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}}
-#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FBF4E8;border:1px solid rgba(15,11,8,.08);border-radius:4px;box-shadow:0 8px 40px rgba(15,11,8,.18);overflow:hidden;animation:cardIn .22s ease forwards}
+#nav.nav-light{background:rgba(15,11,8,.96)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(0,0,0,.3)}
+.nav-link{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.nav-link:hover{color:white}.nav-active{color:#C9A227!important}
+#mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#1A1108;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.5);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
-.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:#1C1C1E;text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(15,11,8,.07);transition:background .15s,color .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#0F0B08}
-.mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2);background:#FBF4E8}
-.mob-card-cta a{display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#B8891E,#E8C84A,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none;transition:opacity .2s}
-.dark-section{background:#0F0B08;background-image:radial-gradient(ellipse 75% 55% at 50% 105%,rgba(201,162,39,.1) 0%,transparent 60%)}
-.quote-mark{font-family:'Playfair Display',serif;font-size:4.5rem;line-height:.5;color:rgba(201,162,39,.22);display:block;margin-bottom:6px}
-.page-hero{background:#0F0B08;padding:140px 0 72px;position:relative;overflow:hidden}
-.page-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 50% 0%,rgba(201,162,39,.12) 0%,transparent 55%);pointer-events:none}
-.filter-tab{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:8px 20px;border:1px solid rgba(15,11,8,.15);background:transparent;color:rgba(15,11,8,.5);cursor:pointer;transition:all .2s;border-radius:2px}
-.filter-tab.active,.filter-tab:hover{background:#0F0B08;color:#C9A227;border-color:#0F0B08}
-#chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1),box-shadow .25s ease}
-#chat-btn:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(201,162,39,.55)}
-#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 16px 60px rgba(15,11,8,.22);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
+.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:white}
+.mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2)}
+.mob-card-cta a{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none}
+.gold-bar{width:48px;height:2px;background:#C9A227}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+.dish-card{background:linear-gradient(160deg,#160F07,#1E1408);border:1px solid rgba(201,162,39,.1);overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.dish-card:hover{border-color:rgba(201,162,39,.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.menu-section-tab{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;padding:10px 22px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);background:transparent;cursor:pointer;transition:all .25s}
+.menu-section-tab:hover{border-color:rgba(201,162,39,.3);color:rgba(201,162,39,.7)}
+.menu-section-tab.active{border-color:#C9A227;color:#C9A227;background:rgba(201,162,39,.06)}
+.diet-badge{display:inline-block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border:1px solid rgba(201,162,39,.25);color:rgba(201,162,39,.6);margin-right:6px}
+.tasting-step{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.tasting-step:last-child{border-bottom:none}
+.tasting-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:rgba(201,162,39,.18);line-height:1;min-width:40px}
+@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
+.footer-link{color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s;font-size:12px}.footer-link:hover{color:#C9A227}
+#chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1)}
+#chat-btn:hover{transform:scale(1.1)}
+#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 16px 60px rgba(15,11,8,.3);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
 #chat-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
 .chat-head{background:linear-gradient(135deg,#0F0B08,#1C1108);padding:14px 16px;display:flex;align-items:center;gap:10px}
-.chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
-.chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
-.chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3);border-radius:2px}
+.chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#0F0B08;flex-shrink:0}
+.chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}.chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3)}
 .chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;white-space:pre-wrap}
-.chat-msg.bot{background:#0F0B08;color:rgba(255,255,255,.85);border-radius:2px 12px 12px 12px;align-self:flex-start}
+.chat-msg.bot{background:#0F0B08;color:rgba(255,255,255,.82);border-radius:2px 12px 12px 12px;align-self:flex-start}
 .chat-msg.user{background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-weight:500;border-radius:12px 2px 12px 12px;align-self:flex-end}
 .chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
-.chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.45);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1);border-color:#C9A227;color:#0F0B08}
+.chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.4);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1)}
 .chat-input-row{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid rgba(15,11,8,.1)}
 .chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#C9A227}
-.chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s}.chat-input-row button:hover{transform:scale(1.06)}
+.chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}.typing-dots span{width:6px;height:6px;border-radius:50%;background:rgba(201,162,39,.6);animation:typingBounce 1.2s ease-in-out infinite}
 .typing-dots span:nth-child(2){animation-delay:.2s}.typing-dots span:nth-child(3){animation-delay:.4s}
 @keyframes typingBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
-@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.12)!important;border:1.5px solid rgba(255,255,255,.35)!important;align-items:center;justify-content:center}#mob-toggle-btn svg{stroke:white!important;display:block}#nav.nav-light #mob-toggle-btn{background:rgba(15,11,8,.08)!important;border-color:rgba(15,11,8,.25)!important}#nav.nav-light #mob-toggle-btn svg{stroke:#0F0B08!important}#chat-panel{width:calc(100vw - 44px);right:22px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
-.menu-item{transition:background .2s,border-color .2s}
-.menu-item:hover{background:rgba(201,162,39,.04);border-color:rgba(201,162,39,.25)!important}
+@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.1)!important;border:1.5px solid rgba(255,255,255,.3)!important}#mob-toggle-btn svg{stroke:white!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<!-- NAV -->
+
 <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-5" id="nav">
   <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
-    <a href="index.html" style="text-decoration:none">
-      <div class="nav-logo-main font-semibold tracking-[.06em] text-white" style="font-family:'Playfair Display',serif;font-size:1.15rem">DELUXCIOUS</div>
-      <div class="nav-logo-sub tracking-[.22em] uppercase" style="font-family:'Inter',sans-serif;font-size:8px;color:rgba(201,162,39,.85);margin-top:2px">Heritage · Spa · Restaurant</div>
-    </a>
-    <div class="hidden md:flex items-center justify-center gap-8">
-      <a href="about.html" class="text-white/80 hover:text-yellow-400 text-sm tracking-wide transition-colors nav-link" style="font-family:'Inter',sans-serif">About</a>
-      <a href="menu.html" class="text-yellow-400 text-sm tracking-wide nav-link nav-active" style="font-family:'Inter',sans-serif;color:#C9A227">Menu</a>
-      <a href="spa.html" class="text-white/80 hover:text-yellow-400 text-sm tracking-wide transition-colors nav-link" style="font-family:'Inter',sans-serif">Spa</a>
-      <a href="hotel.html" class="text-white/80 hover:text-yellow-400 text-sm tracking-wide transition-colors nav-link" style="font-family:'Inter',sans-serif">Hotel</a>
-      <a href="contact.html" class="text-white/80 hover:text-yellow-400 text-sm tracking-wide transition-colors nav-link" style="font-family:'Inter',sans-serif">Contact</a>
+    <a href="index.html" style="text-decoration:none"><div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:white">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.8);margin-top:1px">Heritage · Spa · Restaurant</div></a>
+    <div class="hidden md:flex items-center justify-center gap-7">
+      <a href="about.html" class="nav-link text-[13px] tracking-wide">About</a>
+      <a href="menu.html" class="nav-link nav-active text-[13px] tracking-wide">Menu</a>
+      <a href="spa.html" class="nav-link text-[13px] tracking-wide">Spa</a>
+      <a href="hotel.html" class="nav-link text-[13px] tracking-wide">Hotel</a>
+      <a href="gallery.html" class="nav-link text-[13px] tracking-wide">Gallery</a>
+      <a href="contact.html" class="nav-link text-[13px] tracking-wide">Contact</a>
     </div>
     <div class="flex items-center justify-end gap-3">
       <a href="reservations.html" class="btn-reserve-nav hidden md:inline-block">Reserve</a>
-      <button id="mob-toggle-btn" onclick="mobCardToggle()" aria-label="Menu">
-        <svg id="mob-bars" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 7h18M3 12h18M3 17h18"/></svg>
-        <svg id="mob-x-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+      <button id="mob-toggle-btn" onclick="mobCardToggle()" aria-label="Menu"><svg id="mob-bars" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 7h18M3 12h18M3 17h18"/></svg><svg id="mob-x-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
     </div>
   </div>
 </nav>
@@ -107,317 +109,134 @@
   <a href="menu.html" class="mob-card-link" onclick="mobCardClose()" style="color:#C9A227">Menu</a>
   <a href="spa.html" class="mob-card-link" onclick="mobCardClose()">Spa</a>
   <a href="hotel.html" class="mob-card-link" onclick="mobCardClose()">Hotel</a>
+  <a href="gallery.html" class="mob-card-link" onclick="mobCardClose()">Gallery</a>
   <a href="contact.html" class="mob-card-link" onclick="mobCardClose()">Contact</a>
-  <div class="mob-card-cta"><a href="reservations.html" onclick="mobCardClose()"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Reserve a Table</a></div>
+  <div class="mob-card-cta"><a href="reservations.html" onclick="mobCardClose()">Reserve a Table</a></div>
 </div>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="absolute top-0 left-0 right-0 h-px" style="background:linear-gradient(to right,transparent 5%,rgba(201,162,39,.25) 50%,transparent 95%)"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
-    <p class="text-[11px] tracking-[.28em] uppercase font-medium mb-4" style="color:rgba(201,162,39,.7);font-family:'Inter',sans-serif">George Town, Penang</p>
-    <h1 class="font-semibold text-4xl lg:text-5xl mb-4" style="color:white;font-family:'Playfair Display',serif">Our <em class="font-normal italic" style="color:#C9A227">Menu</em></h1>
-    <div class="w-12 h-px mx-auto mb-5" style="background:#C9A227"></div>
-    <p class="text-sm max-w-sm mx-auto" style="color:rgba(255,255,255,.55);font-family:'Inter',sans-serif">World fusion cuisine by award-winning Chef Keith Khoo. Served daily, 12pm to 3am.</p>
+<!-- HERO -->
+<section class="hero-w">
+  <div class="hero-m">
+    <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"><!-- Add: <source src="assets/video/menu-hero.mp4" type="video/mp4"> --></video>
+    <div class="ph" style="position:absolute;inset:0;height:100%"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><div class="ph-t">Hero Background Video<br>Chef Plating · Candlelit Table Setting</div></div></div>
+  </div>
+  <div class="hero-o"></div>
+  <div class="vid-note">Background Video — Add Source to Activate</div>
+  <div class="hero-c py-20 pb-28 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+      <p style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,162,39,.75);margin-bottom:16px;font-weight:500">Deluxcious · Restaurant</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:white;line-height:1.1;font-weight:600;margin-bottom:20px">Modern <em class="font-normal italic" style="color:#C9A227">Nyonya</em> Cuisine</h1>
+      <div class="gold-bar" style="margin-bottom:20px"></div>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);max-width:500px">Chef Keith Khoo draws on Peranakan tradition and Le Cordon Bleu technique. Seasonal produce from Penang's heritage farms. Dishes change to reflect what is best on any given week.</p>
+    </div>
   </div>
 </section>
 
-<!-- BUFFET PRICING -->
-<section style="background:#0A0705;border-bottom:1px solid rgba(201,162,39,.15)">
+<!-- SEASONAL NOTE -->
+<section style="background:#0A0705;padding:48px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x" style="border-color:rgba(201,162,39,.15)">
-      <div class="text-center py-6 px-4">
-        <div class="text-[10px] tracking-[.22em] uppercase mb-2" style="color:rgba(201,162,39,.55);font-family:'Inter',sans-serif">Lunch Buffet · 12pm – 3pm</div>
-        <div class="text-2xl font-semibold" style="color:white;font-family:'Playfair Display',serif">RM49.90<span class="text-sm font-normal" style="color:rgba(255,255,255,.35)">++</span></div>
+    <div style="border:1px solid rgba(201,162,39,.2);background:linear-gradient(135deg,rgba(201,162,39,.04),rgba(201,162,39,.02));padding:32px 40px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between" class="reveal">
+      <div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:8px">Seasonal Menu Note</div>
+        <p style="font-family:'Playfair Display',serif;font-size:1.05rem;color:white;line-height:1.6;font-style:italic;max-width:540px">"Our produce arrives daily from Balik Pulau's heritage orchards and the Pasar Chowrasta vendors we have trusted for years. The menu reflects the season, not a fixed schedule."</p>
+        <p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.3);margin-top:10px">Last updated: June 2025</p>
       </div>
-      <div class="text-center py-6 px-4">
-        <div class="text-[10px] tracking-[.22em] uppercase mb-2" style="color:rgba(201,162,39,.55);font-family:'Inter',sans-serif">Hi-Tea Buffet · 3pm – 6pm</div>
-        <div class="text-2xl font-semibold" style="color:white;font-family:'Playfair Display',serif">RM39.90<span class="text-sm font-normal" style="color:rgba(255,255,255,.35)">++</span></div>
+      <a href="reservations.html" class="btn btn-og" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:12px 28px;text-decoration:none;white-space:nowrap">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- TASTING MENU -->
+<section style="background:#0F0B08;padding:96px 0">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">Tasting Experience</p>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:white;line-height:1.15;font-weight:600;margin-bottom:12px">The Heritage <em class="font-normal italic">Tasting Menu</em></h2>
+        <div class="gold-bar reveal d2" style="margin-bottom:24px"></div>
+        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:32px">A seven-course progression that moves from the cool and aromatic to the warm and complex — the full arc of Nyonya flavour in one sitting. Available Tuesday to Sunday, dinner only. Reservation required.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px" class="reveal d3">
+          <div style="padding:10px 20px;border:1px solid rgba(201,162,39,.2);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C9A227">RM 380</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px">Per Person</div></div>
+          <div style="padding:10px 20px;border:1px solid rgba(201,162,39,.2);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#C9A227">RM 580</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px">With Wine Pairing</div></div>
+        </div>
+        <a href="reservations.html" class="btn btn-gold reveal d3" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:14px 32px;font-weight:600;text-decoration:none">Book Tasting Menu</a>
       </div>
-      <div class="text-center py-6 px-4">
-        <div class="text-[10px] tracking-[.22em] uppercase mb-2" style="color:rgba(201,162,39,.55);font-family:'Inter',sans-serif">Dinner Buffet · 6pm – 11pm</div>
-        <div class="text-2xl font-semibold" style="color:white;font-family:'Playfair Display',serif">RM59.90<span class="text-sm font-normal" style="color:rgba(255,255,255,.35)">++</span></div>
+      <div class="reveal d1">
+        <div class="tasting-step"><div class="tasting-num">01</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Amuse-Bouche</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Pandan coconut gel, toasted kerisik, fresh lime</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">A one-bite introduction to the evening — the perfume of pandan, the warmth of toasted coconut, and the lift of lime zest. Seasonally adjusted.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">02</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">First Course</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Jicama kerabu, torch ginger blossom, prawn floss</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Classic Nyonya kerabu reimagined — crisp jicama dressed in our house asam dressing, laid with thread-fine prawn floss and a torch ginger blossom from the courtyard garden.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">03</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Soup Course</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Assam laksa broth, hand-pulled mackerel, penang shrimp paste</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">A clarified version of Penang's most iconic dish. The broth is made over three days from wild mackerel and lemongrass. Served in a small bowl — enough to open the palate without filling it.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">04</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Intermezzo</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Roselle and calamansi sorbet, sea salt crystal</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">A palate cleanser using locally grown roselle, pressed to order. The sea salt crystal is hand-harvested from Kuala Sepetang.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">05</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Main Course</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Slow-braised pork belly, Nyonya buah keluak sauce, steamed jasmine rice</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Chef Khoo's signature. Pork belly braised for eight hours in dark soy and galangal, served with our house buah keluak sauce — the earthy, smoky seed that defines Peranakan cooking at its most complex.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">06</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Pre-Dessert</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Chilled sago, fresh mango, coconut milk</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">The familiar comfort of sago pudding, elevated: Harum Manis mango from Balik Pulau, young coconut milk pressed the same morning.</p></div></div>
+        <div class="tasting-step"><div class="tasting-num">07</div><div><div style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:4px">Dessert</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#C9A227;margin-bottom:8px">Ondeh-ondeh, pandan caramel, toasted sesame</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">A study in the Nyonya dessert tradition. Glutinous rice parcels filled with palm sugar, dusted in toasted coconut, served warm on pandan caramel. Texturally and aromatically, the perfect close.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MENU ITEMS -->
-<section class="py-20 lg:py-28" style="background:#FBF4E8">
+<!-- A LA CARTE -->
+<section style="background:#0A0705;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <!-- Filter tabs -->
-    <div class="flex flex-wrap gap-2 justify-center mb-14">
-      <button class="filter-tab active" onclick="filterMenu('all',this)">All</button>
-      <button class="filter-tab" onclick="filterMenu('starter',this)">Starters</button>
-      <button class="filter-tab" onclick="filterMenu('main',this)">Mains</button>
-      <button class="filter-tab" onclick="filterMenu('pasta',this)">Pasta & Rice</button>
-      <button class="filter-tab" onclick="filterMenu('grill',this)">Grill</button>
-      <button class="filter-tab" onclick="filterMenu('dessert',this)">Desserts</button>
-      <button class="filter-tab" onclick="filterMenu('drink',this)">Drinks</button>
+    <div class="text-center reveal" style="margin-bottom:48px">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:16px">A La Carte</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:white;line-height:1.15;font-weight:600;margin-bottom:10px">The Full <em class="font-normal italic">Menu</em></h2>
+      <div class="gold-bar" style="margin:0 auto 20px"></div>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.38);max-width:440px;margin:0 auto;line-height:1.75">Available for lunch and dinner, seven days a week. All prices are exclusive of 8% service charge and 6% SST.</p>
     </div>
-
-    <!-- Menu grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="menu-grid">
-
-      <!-- STARTERS -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="starter">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Smoked Salmon Salad</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Thinly sliced smoked salmon over mixed greens, capers, dill cream and toasted crostini.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Starter</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM38</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="starter">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Fusion Spring Rolls</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Crispy rolls stuffed with lemongrass chicken, glass noodles and fresh herbs. Served with tamarind dip.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Starter</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM22</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="starter">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Tempura Platter</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Lightly battered prawns, squid rings and seasonal vegetables. Served with ponzu and chilli mayo.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Starter · Share</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM28</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d3 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="starter">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Creamy Tom Yum Soup</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Rich, aromatic Thai-inspired broth with tiger prawns, mushrooms, lemongrass and coconut cream.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Soup</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM22</span></div>
-        </div>
-      </div>
-
-      <!-- MAINS -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="main">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Pan-Fried Salmon</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Atlantic salmon seared golden, resting on local herb cream with seasonal greens and lemon butter.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Seafood · Chef's Pick</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM58</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="main">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Miso Teriyaki Chicken</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Free-range chicken marinated in house miso-teriyaki blend, glazed and served with jasmine rice and pickled vegetables.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Asian Fusion · Main</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM45</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="main">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Black Pepper Lamb</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Tender lamb shoulder slow-braised and tossed in a bold black pepper sauce with roasted root vegetables.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Lamb · Main</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM55</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d3 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="main">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">BBQ Chicken</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Marinated whole chicken leg chargrilled over an open flame, glazed with house BBQ and local spice rub.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Grilled · Main</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM42</span></div>
-        </div>
-      </div>
-
-      <!-- PASTA & RICE -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="pasta">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Seafood Aglio Olio</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Al dente linguine with tiger prawns, squid, fresh garlic, local chilli and extra-virgin olive oil.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Pasta · Seafood</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM42</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="pasta">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Creamy Carbonara</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Spaghetti tossed in a silky egg-cream sauce with smoked chicken strips, parmesan and cracked pepper.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Pasta · Western</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM36</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="pasta">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Hokkien Char</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Thick yellow noodles wok-fried in a rich prawn broth with squid, pork belly and crispy lard crumble.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Local · Noodles</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM34</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d3 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="pasta">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Nasi Goreng Kampung</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Fragrant village-style fried rice with anchovies, egg, crispy shallots and house sambal belacan.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Rice · Local</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM28</span></div>
-        </div>
-      </div>
-
-      <!-- GRILL -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(201,162,39,.2);background:rgba(201,162,39,.02)" data-cat="grill">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-2">
-              <h3 class="font-medium text-lg" style="color:#0F0B08;font-family:'Playfair Display',serif">Black Angus Rib-Eye</h3>
-              <span class="text-[9px] tracking-[.12em] uppercase px-2 py-0.5" style="background:#C9A227;color:#0F0B08;font-family:'Inter',sans-serif;font-weight:600">Signature</span>
-            </div>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">280g premium Black Angus rib-eye, expertly grilled to order, with roasted vegetables and house steak sauce.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Grill · Premium</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM99</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="grill">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Grilled Barramundi</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Whole barramundi char-grilled and basted with lemongrass butter. Served with sambal and steamed rice.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Seafood · Grill</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM62</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="grill">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Lamb Chops</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Two bone-in lamb racks, marinated overnight in rosemary and garlic, grilled and served with mint jus.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Lamb · Grill</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM88</span></div>
-        </div>
-      </div>
-
-      <!-- DESSERTS -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(201,162,39,.2);background:rgba(201,162,39,.02)" data-cat="dessert">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-2">
-              <h3 class="font-medium text-lg" style="color:#0F0B08;font-family:'Playfair Display',serif">Crème Brûlée</h3>
-              <span class="text-[9px] tracking-[.12em] uppercase px-2 py-0.5" style="background:#C9A227;color:#0F0B08;font-family:'Inter',sans-serif;font-weight:600">Legendary</span>
-            </div>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Velvety vanilla custard beneath a perfectly caramelised sugar crust. Our most beloved dessert — served warm.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Dessert · Signature</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM24</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="dessert">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Warm Chocolate Lava Cake</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Dark chocolate sponge with a molten centre, served with Madagascar vanilla ice cream and fresh berries.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Dessert · Chocolate</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM26</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="dessert">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Mango Sorbet</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">House-made Harumanis mango sorbet, naturally sweet and refreshing. Served with coconut foam.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Dessert · Light</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM18</span></div>
-        </div>
-      </div>
-
-      <!-- DRINKS -->
-      <div class="menu-item reveal p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="drink">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Fresh Juices</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Orange, watermelon, carrot-ginger, pineapple-mint or cucumber-lime — pressed to order.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Drinks · Fresh</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM12–15</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d1 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="drink">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Signature Mocktails</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">The Penang Sunset, Lemongrass Fizz or Coconut Colada — crafted from seasonal tropical fruit and botanicals.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Drinks · Signature</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM18–22</span></div>
-        </div>
-      </div>
-
-      <div class="menu-item reveal d2 p-6 border" style="border-color:rgba(15,11,8,.1);background:white" data-cat="drink">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h3 class="font-medium text-lg mb-1" style="color:#0F0B08;font-family:'Playfair Display',serif">Teh Tarik</h3>
-            <p class="text-[13px] leading-relaxed mb-2" style="color:#777;font-family:'Inter',sans-serif">Penang's beloved pulled tea — frothy, full-bodied and perfectly sweetened. Hot or iced.</p>
-            <span class="text-[10px] tracking-[.15em] uppercase" style="color:rgba(201,162,39,.6);font-family:'Inter',sans-serif">Drinks · Local</span>
-          </div>
-          <div class="text-right flex-shrink-0"><span class="font-semibold" style="color:#C9A227;font-family:'Playfair Display',serif;font-size:1.1rem">RM8</span></div>
-        </div>
-      </div>
-
-    </div><!-- /menu-grid -->
-
-    <p class="text-center text-[12px] mt-10" style="color:rgba(15,11,8,.4);font-family:'Inter',sans-serif">All prices in Malaysian Ringgit. ++ subject to service charge and government tax. Menu subject to seasonal changes.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:48px" class="reveal d1">
+      <button class="menu-section-tab active" onclick="menuFilter('all',this)">All</button>
+      <button class="menu-section-tab" onclick="menuFilter('starter',this)">Starters</button>
+      <button class="menu-section-tab" onclick="menuFilter('main',this)">Mains</button>
+      <button class="menu-section-tab" onclick="menuFilter('rice',this)">Rice &amp; Noodle</button>
+      <button class="menu-section-tab" onclick="menuFilter('dessert',this)">Desserts</button>
+      <button class="menu-section-tab" onclick="menuFilter('drink',this)">Drinks</button>
+    </div>
+    <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="dish-card reveal" data-cat="starter"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Jicama Kerabu<br>Heritage Salad · Torch Ginger</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Jicama Kerabu</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 32</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Crisp jicama, torch ginger blossom, prawn floss, house asam dressing</p><div><span class="diet-badge">GF</span><span class="diet-badge">Local</span></div></div></div>
+      <div class="dish-card reveal d1" data-cat="starter"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Popiah Basah<br>Fresh Peranakan Spring Roll</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Popiah Basah</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 28</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Fresh roll, braised jicama and carrot, crispy lard, fermented prawn paste, sweet sauce</p><div><span class="diet-badge">Local</span></div></div></div>
+      <div class="dish-card reveal d2" data-cat="starter"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Assam Laksa Broth<br>Tamarind · Wild Mackerel</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Assam Laksa Broth</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 36</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Three-day wild mackerel broth, lemongrass, tamarind, fresh herbs. Served as a small bowl.</p><div><span class="diet-badge">GF</span><span class="diet-badge">Seasonal</span></div></div></div>
+      <div class="dish-card reveal" data-cat="main"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Signature Pork Belly<br>Buah Keluak · 8-Hour Braise</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Nyonya Pork Belly</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 72</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Eight-hour dark soy and galangal braise, buah keluak sauce, jasmine rice</p><div><span class="diet-badge">Chef's Pick</span><span class="diet-badge">GF</span></div></div></div>
+      <div class="dish-card reveal d1" data-cat="main"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Otak-Otak Sea Bass<br>Coconut Tumis · Torch Ginger</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Otak-Otak Sea Bass</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 88</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Pan-seared sea bass, otak-otak spice crust, coconut tumis, wild petai, torch ginger oil</p><div><span class="diet-badge">GF</span><span class="diet-badge">Seasonal</span></div></div></div>
+      <div class="dish-card reveal d2" data-cat="main"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Ayam Pongteh<br>Nyonya Chicken · Fermented Soybean</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Ayam Pongteh</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 62</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Free-range kampung chicken braised in fermented soybean paste, potatoes, dark sweet soy</p><div><span class="diet-badge">GF</span><span class="diet-badge">Local</span></div></div></div>
+      <div class="dish-card reveal" data-cat="rice"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Heritage Nasi Lemak<br>Pandan Coconut Rice</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Heritage Nasi Lemak</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 58</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Pandan coconut rice, slow-cooked sambal, crisp anchovies, soft-boiled kampung egg, cucumber</p><div><span class="diet-badge">GF</span></div></div></div>
+      <div class="dish-card reveal d1" data-cat="rice"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Heritage Char Koay Teow<br>Wok Hei · Duck Egg</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Heritage Char Koay Teow</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 48</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Wok-hei flat noodle, duck egg, tiger prawn, cockles, chives, house dark soy blend</p><div><span class="diet-badge">Signature</span></div></div></div>
+      <div class="dish-card reveal" data-cat="dessert"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Ondeh-Ondeh<br>Palm Sugar · Pandan Caramel</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Ondeh-Ondeh</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 28</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Glutinous rice parcels, Gula Melaka palm sugar, toasted coconut, pandan caramel</p><div><span class="diet-badge">VG</span><span class="diet-badge">GF</span></div></div></div>
+      <div class="dish-card reveal d1" data-cat="dessert"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Pulut Inti<br>Coconut Rice · Mango</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Pulut Inti</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 26</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Blue butterfly pea glutinous rice, sweetened fresh coconut topping, Harum Manis mango</p><div><span class="diet-badge">VG</span><span class="diet-badge">GF</span></div></div></div>
+      <div class="dish-card reveal" data-cat="drink"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Cendol Deluxcious<br>Pandan Jelly · Palm Sugar</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Cendol Deluxcious</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 22</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Hand-pressed pandan jelly noodles, Gula Melaka syrup, fresh coconut cream, shaved ice</p><div><span class="diet-badge">VG</span><span class="diet-badge">GF</span></div></div></div>
+      <div class="dish-card reveal d1" data-cat="drink"><div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg><div class="ph-t">Heritage Teh Tarik<br>Artisan Pulled Tea</div></div></div><div style="padding:20px"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px"><h3 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;line-height:1.3">Heritage Teh Tarik</h3><span style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#C9A227;white-space:nowrap">RM 14</span></div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:10px">Cameron Highlands single-estate black tea, condensed milk, artisan pulled to order, served hot</p><div><span class="diet-badge">Signature</span></div></div></div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 relative" style="background:#0F0B08">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,162,39,.14) 0%,transparent 58%)"></div>
-  <div class="absolute top-0 left-0 right-0 h-px" style="background:linear-gradient(to right,transparent 5%,rgba(201,162,39,.28) 50%,transparent 95%)"></div>
-  <div class="relative z-10 text-center max-w-xl mx-auto px-6">
-    <h2 class="font-semibold text-3xl mb-4" style="color:white;font-family:'Playfair Display',serif">Ready to <em class="font-normal italic" style="color:#C9A227">Dine?</em></h2>
-    <p class="text-sm mb-8" style="color:rgba(255,255,255,.5);font-family:'Inter',sans-serif">Reserve your table and let Chef Keith Khoo take you on a fusion journey.</p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="reservations.html" class="btn btn-gold text-[11px] tracking-[.15em] uppercase px-8 py-3.5 font-semibold">Reserve a Table</a>
-      <a href="https://wa.me/60125151288" target="_blank" class="btn btn-wa text-[11px] tracking-[.15em] uppercase px-8 py-3.5"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>WhatsApp</a>
+<!-- DIETARY KEY + PRIVATE DINING -->
+<section style="background:#0F0B08;padding:96px 0">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div class="reveal">
+        <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">Dietary Guide</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:white;font-weight:600;margin-bottom:24px">Dietary <em class="font-normal italic">Symbols</em></h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">GF</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">Gluten-free preparation available on request</div></div>
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">VG</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">Suitable for vegetarians</div></div>
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Local</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">Sourced from Penang or northern Peninsular Malaysia</div></div>
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Seasonal</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">Availability varies — confirm with your server</div></div>
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Chef's Pick</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">Chef Khoo's personal recommendation</div></div>
+          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Signature</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.45)">House specialty, available year-round</div></div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.28);line-height:1.75;margin-top:20px">Please inform your server of all dietary requirements or allergies before ordering. We can accommodate most requests with advance notice. Note: This is not a halal-certified establishment.</p>
+      </div>
+      <div class="reveal d1">
+        <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">Private Dining</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:white;font-weight:600;margin-bottom:16px">The Baba <em class="font-normal italic">Room</em></h3>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:20px">A dedicated private dining space on the first floor, seating up to 14 guests. The room retains its original hand-painted ceiling and rosewood furniture, unchanged since the 1880s. Available for corporate dinners, intimate celebrations, and chef's table events.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45)">Capacity</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">Up to 14 guests</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45)">Minimum spend</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">RM 1,800 per session</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45)">Bespoke menus</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">Available on request</span></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45)">Advance notice</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">48 hours minimum</span></div>
+        </div>
+        <a href="reservations.html" class="btn btn-og" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:13px 28px;text-decoration:none">Enquire Private Dining</a>
+      </div>
     </div>
   </div>
 </section>
@@ -425,80 +244,36 @@
 <!-- FOOTER -->
 <footer style="background:#0A0705;border-top:1px solid rgba(201,162,39,.12)">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-      <div>
-        <div class="font-semibold tracking-[.06em] text-white mb-1" style="font-family:'Playfair Display',serif;font-size:1.1rem">DELUXCIOUS</div>
-        <div class="tracking-[.22em] uppercase mb-4" style="font-family:'Inter',sans-serif;font-size:8px;color:rgba(201,162,39,.6)">Heritage · Spa · Restaurant</div>
-        <div class="gold-bar mb-4"></div>
-        <p class="text-[12px] leading-relaxed" style="color:rgba(255,255,255,.38);font-family:'Inter',sans-serif">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p>
-      </div>
-      <div>
-        <h4 class="text-[10px] tracking-[.2em] uppercase font-semibold mb-5" style="color:#C9A227;font-family:'Inter',sans-serif">Explore</h4>
-        <div class="space-y-2.5">
-          <a href="about.html" class="block text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">About Us</a>
-          <a href="menu.html" class="block text-[12px]" style="color:#C9A227;font-family:'Inter',sans-serif;text-decoration:none">Menu</a>
-          <a href="spa.html" class="block text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Spa Experiences</a>
-          <a href="hotel.html" class="block text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Heritage Suites</a>
-          <a href="reservations.html" class="block text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Reservations</a>
-        </div>
-      </div>
-      <div>
-        <h4 class="text-[10px] tracking-[.2em] uppercase font-semibold mb-5" style="color:#C9A227;font-family:'Inter',sans-serif">Hours</h4>
-        <div class="space-y-2 text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif">
-          <div><span style="color:rgba(255,255,255,.6)">Tue – Sun</span><br>12:00pm – 3:00am</div>
-          <div><span style="color:rgba(255,255,255,.6)">Closed</span><br>Mondays</div>
-          <div class="pt-2" style="border-top:1px solid rgba(255,255,255,.07);color:rgba(201,162,39,.5);font-size:10px;text-transform:uppercase;letter-spacing:.1em">Kitchen until 2:00am</div>
-        </div>
-      </div>
-      <div>
-        <h4 class="text-[10px] tracking-[.2em] uppercase font-semibold mb-5" style="color:#C9A227;font-family:'Inter',sans-serif">Contact</h4>
-        <div class="space-y-2 text-[12px]" style="color:rgba(255,255,255,.4);font-family:'Inter',sans-serif">
-          <div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div>
-          <a href="tel:+60426110288" style="display:block;color:rgba(255,255,255,.4);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">+604-261 0288</a>
-          <a href="https://wa.me/60125151288" target="_blank" style="display:block;color:rgba(255,255,255,.4);text-decoration:none" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.4)'">+6012-515 1288 (WhatsApp)</a>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10" style="margin-bottom:40px">
+      <div><div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:4px">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div><div class="gold-bar" style="margin-bottom:16px"></div><p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)">A 19th-century colonial mansion in George Town, Penang — dining, spa and heritage suites.</p></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Explore</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="about.html" class="footer-link">About Us</a><a href="menu.html" class="footer-link">Menu</a><a href="spa.html" class="footer-link">Spa Experiences</a><a href="hotel.html" class="footer-link">Heritage Suites</a><a href="gallery.html" class="footer-link">Gallery</a><a href="reservations.html" class="footer-link">Reservations</a></div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Restaurant Hours</h4><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.9">Lunch: 12:00pm – 3:00pm<br>Dinner: 6:30pm – 10:30pm<br>Closed Mondays</div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
     </div>
-    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style="border-top:1px solid rgba(255,255,255,.06)">
-      <p class="text-[10px]" style="color:rgba(255,255,255,.22);font-family:'Inter',sans-serif">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p>
-      <p class="text-[10px]" style="color:rgba(255,255,255,.18);font-family:'Inter',sans-serif">George Town, Penang, Malaysia</p>
-    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
   </div>
 </footer>
 
-<!-- WhatsApp FAB -->
-<a href="https://wa.me/60125151288" target="_blank" class="wa-pulse fixed flex items-center justify-center rounded-full" style="bottom:22px;right:22px;z-index:8000;width:50px;height:50px;background:#25D366;color:white;text-decoration:none;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-  <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
-</a>
-
-<!-- Chatbot -->
-<button id="chat-btn" onclick="chatToggle()" aria-label="Chat with Delux">
-  <svg id="chat-icon-open" width="22" height="22" fill="none" stroke="#0F0B08" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
-  <svg id="chat-icon-close" width="18" height="18" fill="none" stroke="#0F0B08" stroke-width="2.2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
-</button>
-<div id="chat-panel">
-  <div class="chat-head"><div class="chat-avatar">🍽️</div><div><div class="font-semibold text-sm" style="color:white;font-family:'Playfair Display',serif">Delux</div><div class="text-[11px]" style="color:rgba(201,162,39,.7);font-family:'Inter',sans-serif">Virtual Concierge</div></div></div>
-  <div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi! 👋 Ask me anything about our menu, spa, hotel or reservations.</div></div>
-  <div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'Menu & Prices')">Menu & Prices</button><button class="chip" onclick="sendChip(this,'Buffet hours')">Buffet hours</button><button class="chip" onclick="sendChip(this,'How to Reserve')">Reserve</button></div>
-  <div class="chat-input-row"><input type="text" id="chat-input" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
-</div>
+<a href="https://wa.me/60125151288" target="_blank" class="wa-pulse" style="position:fixed;bottom:22px;right:22px;z-index:8000;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg></a>
+<button id="chat-btn" onclick="chatToggle()" aria-label="Chat"><svg id="chat-icon-open" width="22" height="22" fill="none" stroke="#0F0B08" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg><svg id="chat-icon-close" width="18" height="18" fill="none" stroke="#0F0B08" stroke-width="2.2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+<div id="chat-panel"><div class="chat-head"><div class="chat-avatar">D</div><div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:white">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Restaurant Assistant</div></div><button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4)"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. Ask me about the menu, tasting menu pricing, dietary options, or reservations.</div></div><div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'Tasting menu price')">Tasting menu</button><button class="chip" onclick="sendChip(this,'Vegetarian options')">Vegetarian</button><button class="chip" onclick="sendChip(this,'Booking a table')">Book a table</button></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div></div>
 
 <script>
 (function(){const nav=document.getElementById('nav');let lastY=0,ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const y=window.scrollY;if(y>lastY&&y>100)nav.classList.add('nav-hidden');else nav.classList.remove('nav-hidden');if(y>60)nav.classList.add('nav-light');else nav.classList.remove('nav-light');lastY=y;ticking=false;});ticking=true;}});})();
-(function(){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
-document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('click',e=>{const r=btn.getBoundingClientRect();const rip=document.createElement('span');rip.className='ripple';const sz=Math.max(r.width,r.height)*2;rip.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px;background:rgba(255,255,255,.15)`;btn.appendChild(rip);setTimeout(()=>rip.remove(),700);});});
+(function(){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('click',e=>{const r=btn.getBoundingClientRect();const rip=document.createElement('span');rip.className='ripple';const sz=Math.max(r.width,r.height)*2;rip.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px;background:rgba(255,255,255,.14)`;btn.appendChild(rip);setTimeout(()=>rip.remove(),700);});});
 let mobOpen=false;
 function mobCardToggle(){mobOpen=!mobOpen;document.getElementById('mob-card').classList.toggle('open',mobOpen);document.getElementById('mob-bars').style.display=mobOpen?'none':'block';document.getElementById('mob-x-icon').style.display=mobOpen?'block':'none';}
 function mobCardClose(){mobOpen=false;document.getElementById('mob-card').classList.remove('open');document.getElementById('mob-bars').style.display='block';document.getElementById('mob-x-icon').style.display='none';}
 document.addEventListener('click',e=>{if(mobOpen&&!e.target.closest('#mob-card')&&!e.target.closest('#mob-toggle-btn'))mobCardClose();});
-function filterMenu(cat,btn){document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#menu-grid [data-cat]').forEach(item=>{if(cat==='all'||item.dataset.cat===cat){item.style.display='';setTimeout(()=>{item.style.opacity='1';item.style.transform='translateY(0)';},10);}else{item.style.display='none';}});}
-const KB={menu:{k:['menu','food','eat','dish','cuisine','buffet','lunch','dinner','hi-tea','supper','price','cost','rm'],r:"🍽️ **Our Menu**\n\nBuffet sessions:\n• Lunch RM49.90++ (12pm–3pm)\n• Hi-Tea RM39.90++ (3pm–6pm)\n• Dinner RM59.90++ (6pm–11pm)\n\nSignature à la carte: Black Angus Rib-Eye RM99, Pan-Fried Salmon RM58, Crème Brûlée RM24."},hours:{k:['hour','open','close','time','when'],r:"🕐 **Hours**\n\nTue–Sun: 12pm–3am\nClosed Mondays\nKitchen until 2am"},location:{k:['where','address','find','parking','map'],r:"📍 15-17A, Jalan Sultan Ahmad Shah, George Town, Penang 10300\n\nFree parking available."},spa:{k:['spa','massage','treatment','wellness'],r:"💆 3 spa experiences: Deluxcious, Samporna & Qin.\n\nVisit our Spa page for packages & pricing."},reserve:{k:['reserv','book','table'],r:"📅 Reserve online, WhatsApp +6012-515 1288, or call +604-261 0288."},contact:{k:['contact','phone','email','whatsapp'],r:"📞 +604-261 0288\n📱 +6012-515 1288 (WhatsApp)\n✉️ reservations@deluxcioushotel.com.my"}};
+function menuFilter(cat,btn){document.querySelectorAll('.menu-section-tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('#menu-grid .dish-card').forEach(card=>{card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';});}
+const KB={tasting:{k:['tasting','7 course','seven','prix','menu price','cost'],r:"Heritage Tasting Menu (7 courses):\n— RM 380 per person\n— RM 580 with wine pairing\n\nTuesday – Sunday, dinner only.\nReservation required."},dietary:{k:['vegetarian','vegan','gluten','allergy','dietary','halal','pork'],r:"We have several vegetarian and gluten-free dishes. Please inform your server of all requirements before ordering.\n\nNote: Some dishes contain pork, lard, or shellfish. We are not a halal-certified establishment."},hours:{k:['open','hours','lunch','dinner','close','time'],r:"Restaurant Hours:\nLunch: 12:00pm – 3:00pm\nDinner: 6:30pm – 10:30pm\n\nClosed Mondays."},reserve:{k:['book','reserve','table','reservation','private'],r:"To reserve a table or enquire about private dining in The Baba Room, call +604-261 0288, WhatsApp +6012-515 1288, or use the Reservations page on this website."},};
 let chatOpen=false;
 function chatToggle(){chatOpen=!chatOpen;document.getElementById('chat-panel').classList.toggle('open',chatOpen);document.getElementById('chat-icon-open').style.display=chatOpen?'none':'block';document.getElementById('chat-icon-close').style.display=chatOpen?'block':'none';}
 function addMsg(txt,role){const body=document.getElementById('chat-body');const msg=document.createElement('div');msg.className='chat-msg '+role;msg.textContent=txt;body.appendChild(msg);body.scrollTop=body.scrollHeight;}
 function showTyping(){const body=document.getElementById('chat-body');const d=document.createElement('div');d.className='chat-msg bot';d.id='typing-indicator';d.innerHTML='<div class="typing-dots"><span></span><span></span><span></span></div>';body.appendChild(d);body.scrollTop=body.scrollHeight;}
 function hideTyping(){const t=document.getElementById('typing-indicator');if(t)t.remove();}
-function botReply(q){const ql=q.toLowerCase();let r=null;for(const[,v]of Object.entries(KB)){if(v.k.some(k=>ql.includes(k))){r=v.r;break;}}if(!r)r="I'm not sure. Contact us at +604-261 0288 or WhatsApp +6012-515 1288.";showTyping();setTimeout(()=>{hideTyping();addMsg(r,'bot');},800+Math.random()*300);}
+function botReply(q){const ql=q.toLowerCase();let r=null;for(const[,v]of Object.entries(KB)){if(v.k.some(k=>ql.includes(k))){r=v.r;break;}}if(!r)r="+604-261 0288\n+6012-515 1288 (WhatsApp)\nreservations@deluxcioushotel.com.my";showTyping();setTimeout(()=>{hideTyping();addMsg(r,'bot');},800+Math.random()*300);}
 function sendMsg(){const i=document.getElementById('chat-input');const t=i.value.trim();if(!t)return;addMsg(t,'user');i.value='';document.getElementById('chat-chips').style.display='none';botReply(t);}
 function sendChip(btn,txt){addMsg(txt,'user');document.getElementById('chat-chips').style.display='none';botReply(txt);}
 </script>
