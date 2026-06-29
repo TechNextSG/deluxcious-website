@@ -9,9 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;overflow-x:hidden;-webkit-font-smoothing:antialiased;margin:0}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
-.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#1A1108,#120D06 45%,#1E1508);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-color:#F4E9D4;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'168'%20height%3D'230'%20viewBox%3D'0%200%20168%20230'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.40'%3E%3Cpath%20d%3D'M84%2018%20C128%2044%20147%2076%20137%20116%20C130%20150%20102%20176%2084%20214%20C66%20176%2038%20150%2031%20116%20C21%2076%2040%2044%2084%2018%20Z'%2F%3E%3Cpath%20d%3D'M84%2082%20C98%2099%2098%20128%2084%20147%20C70%20128%2070%2099%2084%2082%20Z'%2F%3E%3Cpath%20d%3D'M84%20147%20C106%20160%20120%20180%20110%20200%20C104%20184%2094%20174%2084%20172%20C74%20174%2064%20184%2058%20200%20C48%20180%2062%20160%2084%20147%20Z'%2F%3E%3Cpath%20d%3D'M84%2042%20C90%2055%2090%2066%2084%2076%20C78%2066%2078%2055%2084%2042%20Z'%2F%3E%3Cpath%20d%3D'M60%20110%20C70%20105%2098%20105%20108%20110'%2F%3E%3Cpath%20d%3D'M60%20124%20C70%20129%2098%20129%20108%20124'%2F%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'5.5'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'%23AE8A33'%20fill-opacity%3D'0.13'%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'2.4'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.32'%3E%3Cpath%20d%3D'M0%20-13%20C6%20-5%206%205%200%2013%20C-6%205%20-6%20-5%200%20-13%20Z'%2F%3E%3Cpath%20d%3D'M-13%200%20C-5%20-6%205%20-6%2013%200%20C5%206%20-5%206%20-13%200%20Z'%2F%3E%3Cpath%20d%3D'M168%20-13%20C174%20-5%20174%205%20168%2013%20C162%205%20162%20-5%20168%20-13%20Z'%2F%3E%3Cpath%20d%3D'M155%200%20C163%20-6%20173%20-6%20181%200%20C173%206%20163%206%20155%200%20Z'%2F%3E%3Cpath%20d%3D'M0%20217%20C6%20225%206%20235%200%20243%20C-6%20235%20-6%20225%200%20217%20Z'%2F%3E%3Cpath%20d%3D'M-13%20230%20C-5%20224%205%20224%2013%20230%20C5%20236%20-5%20236%20-13%20230%20Z'%2F%3E%3Cpath%20d%3D'M168%20217%20C174%20225%20174%20235%20168%20243%20C162%20235%20162%20225%20168%20217%20Z'%2F%3E%3Cpath%20d%3D'M155%20230%20C163%20224%20173%20224%20181%20230%20C173%20236%20163%20236%20155%20230%20Z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:168px 230px;background-position:center top;opacity:1}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#F4E9D4;color:#3A2C18;overflow-x:hidden;-webkit-font-smoothing:antialiased;margin:0}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#EFE3CC}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#F7EEDC,#EFE3CC 45%,#F2E7D1);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
 .ph-g{position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,39,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.022) 1px,transparent 1px);background-size:32px 32px}
 .ph-f{position:absolute;inset:0;pointer-events:none}
 .ph-f::before{content:'';position:absolute;top:14px;left:14px;width:20px;height:20px;border-top:1px solid rgba(201,162,39,.28);border-left:1px solid rgba(201,162,39,.28)}
@@ -21,7 +23,7 @@
 .hero-w{position:relative;overflow:hidden;min-height:75vh;display:flex;align-items:flex-end}
 .hero-m{position:absolute;inset:0;z-index:0}.hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .hero-m .ph{position:absolute;inset:0;height:100%}
-.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.3) 40%,rgba(15,11,8,.82) 100%)}
+.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(244,233,212,.26) 0%,rgba(244,233,212,.14) 40%,rgba(244,233,212,.86) 100%)}
 .hero-c{position:relative;z-index:3;width:100%}
 .vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.1);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
 .btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease}
@@ -29,54 +31,54 @@
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
 .btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
 .btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-og{border:1px solid rgba(201,162,39,.5);color:#C9A227;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08)}
-.btn-ow{border:1px solid rgba(255,255,255,.55);color:white;background:rgba(255,255,255,.05)}.btn-ow:hover{border-color:#C9A227;color:#C9A227}
+.btn-og{border:1px solid rgba(201,162,39,.5);color:#9A7A14;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08)}
+.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#9A7A14;color:#9A7A14}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 @keyframes borderPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.15)}}
-.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#C9A227;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
+.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#9A7A14;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
 .btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s}
 .btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;animation:none;transform:translateY(-1px)}
 #nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s}
 #nav.nav-hidden{transform:translateY(-100%)}
-#nav.nav-light{background:rgba(15,11,8,.96)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(0,0,0,.3)}
-.nav-link{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.nav-link:hover{color:white}.nav-active{color:#C9A227!important}
+#nav.nav-light{background:rgba(248,240,225,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(58,40,16,.12)}
+.nav-link{color:rgba(58,44,24,.65);text-decoration:none;transition:color .2s}.nav-link:hover{color:#3A2C18}.nav-active{color:#9A7A14!important}
 #mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
-#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#1A1108;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.5);overflow:hidden;animation:cardIn .22s ease forwards}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FBF4E8;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
-.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:white}
+.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
 .mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2)}
 .mob-card-cta a{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none}
 .gold-bar{width:48px;height:2px;background:#C9A227}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.in-view{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
-.dir-card{background:linear-gradient(160deg,#160F07,#1E1408);border:1px solid rgba(201,162,39,.1);padding:24px;transition:border-color .25s}
+.dir-card{background:linear-gradient(160deg,#FFFFFF,#F6ECD8);border:1px solid rgba(201,162,39,.1);padding:24px;transition:border-color .25s}
 .dir-card:hover{border-color:rgba(201,162,39,.3)}
-.hours-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(58,40,16,.10)}
 .hours-row:last-child{border-bottom:none}
-.map-placeholder{position:relative;overflow:hidden;background:linear-gradient(145deg,#1A1108,#120D06 45%,#1E1508);border:1px solid rgba(201,162,39,.12)}
+.map-placeholder{position:relative;overflow:hidden;background:linear-gradient(145deg,#F7EEDC,#EFE3CC 45%,#F2E7D1);border:1px solid rgba(201,162,39,.12)}
 @keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
-.footer-link{color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s;font-size:12px}.footer-link:hover{color:#C9A227}
+.footer-link{color:rgba(58,44,24,.38);text-decoration:none;transition:color .2s;font-size:12px}.footer-link:hover{color:#9A7A14}
 #chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1)}
 #chat-btn:hover{transform:scale(1.1)}
-#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 16px 60px rgba(15,11,8,.3);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
+#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 18px 60px rgba(58,40,16,.20);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
 #chat-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
-.chat-head{background:linear-gradient(135deg,#0F0B08,#1C1108);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head{background:linear-gradient(135deg,#FBF1DD,#F0E2C6);border-bottom:1px solid rgba(174,138,51,.25);padding:14px 16px;display:flex;align-items:center;gap:10px}
 .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#0F0B08;flex-shrink:0}
 .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}.chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3)}
 .chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;white-space:pre-wrap}
-.chat-msg.bot{background:#0F0B08;color:rgba(255,255,255,.82);border-radius:2px 12px 12px 12px;align-self:flex-start}
+.chat-msg.bot{background:#EFE2C9;color:rgba(58,44,24,.86);border-radius:2px 12px 12px 12px;align-self:flex-start}
 .chat-msg.user{background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-weight:500;border-radius:12px 2px 12px 12px;align-self:flex-end}
 .chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
 .chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.4);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1)}
 .chat-input-row{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid rgba(15,11,8,.1)}
-.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#C9A227}
+.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#9A7A14}
 .chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}.typing-dots span{width:6px;height:6px;border-radius:50%;background:rgba(201,162,39,.6);animation:typingBounce 1.2s ease-in-out infinite}
 .typing-dots span:nth-child(2){animation-delay:.2s}.typing-dots span:nth-child(3){animation-delay:.4s}
 @keyframes typingBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
-@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.1)!important;border:1.5px solid rgba(255,255,255,.3)!important}#mob-toggle-btn svg{stroke:white!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}}
+@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(58,40,16,.05)!important;border:1.5px solid rgba(58,40,16,.28)!important}#mob-toggle-btn svg{stroke:#3A2C18!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 </head>
@@ -84,7 +86,7 @@
 
 <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-5" id="nav">
   <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
-    <a href="index.html" style="text-decoration:none"><div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:white">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.8);margin-top:1px">Heritage · Spa · Restaurant</div></a>
+    <a href="index.html" style="text-decoration:none"><div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:#3A2C18">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.8);margin-top:1px">Heritage · Spa · Restaurant</div></a>
     <div class="hidden md:flex items-center justify-center gap-7">
       <a href="about.html" class="nav-link text-[13px] tracking-wide">About</a>
       <a href="menu.html" class="nav-link text-[13px] tracking-wide">Menu</a>
@@ -105,7 +107,7 @@
   <a href="spa.html" class="mob-card-link" onclick="mobCardClose()">Spa</a>
   <a href="hotel.html" class="mob-card-link" onclick="mobCardClose()">Hotel</a>
   <a href="gallery.html" class="mob-card-link" onclick="mobCardClose()">Gallery</a>
-  <a href="contact.html" class="mob-card-link" onclick="mobCardClose()" style="color:#C9A227">Contact</a>
+  <a href="contact.html" class="mob-card-link" onclick="mobCardClose()" style="color:#9A7A14">Contact</a>
   <div class="mob-card-cta"><a href="reservations.html" onclick="mobCardClose()">Reserve a Table</a></div>
 </div>
 
@@ -120,15 +122,15 @@
   <div class="hero-c py-20 pb-28 px-6 lg:px-12">
     <div class="max-w-7xl mx-auto">
       <p style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,162,39,.75);margin-bottom:16px;font-weight:500">Deluxcious · Contact</p>
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:white;line-height:1.1;font-weight:600;margin-bottom:20px">Find <em class="font-normal italic" style="color:#C9A227">Us</em></h1>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#3A2C18;line-height:1.1;font-weight:600;margin-bottom:20px">Find <em class="font-normal italic" style="color:#9A7A14">Us</em></h1>
       <div class="gold-bar" style="margin-bottom:20px"></div>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);max-width:460px">We are at 15-17A Jalan Sultan Ahmad Shah in the heart of George Town's UNESCO Heritage Zone. A five-minute walk from the Eastern & Oriental Hotel.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(58,44,24,.5);max-width:460px">We are at 15-17A Jalan Sultan Ahmad Shah in the heart of George Town's UNESCO Heritage Zone. A five-minute walk from the Eastern & Oriental Hotel.</p>
     </div>
   </div>
 </section>
 
 <!-- MAIN CONTACT SECTION -->
-<section style="background:#0F0B08;padding:96px 0">
+<section style="background:transparent;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
@@ -136,148 +138,148 @@
       <div>
         <div class="ph reveal" style="aspect-ratio:4/3;margin-bottom:32px"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Building Exterior Photo<br>Jalan Sultan Ahmad Shah · Daytime</div></div></div>
         <div class="reveal d1" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <div style="background:linear-gradient(145deg,#160F07,#1A1208);border:1px solid rgba(201,162,39,.1);padding:20px">
-            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">Address</div>
-            <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.65);line-height:1.75">15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300<br>Malaysia</div>
+          <div style="background:linear-gradient(145deg,#FFFFFF,#FBF4E8);border:1px solid rgba(201,162,39,.1);padding:20px">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">Address</div>
+            <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.65);line-height:1.75">15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300<br>Malaysia</div>
           </div>
-          <div style="background:linear-gradient(145deg,#160F07,#1A1208);border:1px solid rgba(201,162,39,.1);padding:20px">
-            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">Phone</div>
-            <a href="tel:+60426110288" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.65);text-decoration:none;margin-bottom:6px">+604-261 0288</a>
-            <a href="https://wa.me/60125151288" target="_blank" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.65);text-decoration:none">+6012-515 1288</a>
+          <div style="background:linear-gradient(145deg,#FFFFFF,#FBF4E8);border:1px solid rgba(201,162,39,.1);padding:20px">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">Phone</div>
+            <a href="tel:+60426110288" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.65);text-decoration:none;margin-bottom:6px">+604-261 0288</a>
+            <a href="https://wa.me/60125151288" target="_blank" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.65);text-decoration:none">+6012-515 1288</a>
           </div>
-          <div style="background:linear-gradient(145deg,#160F07,#1A1208);border:1px solid rgba(201,162,39,.1);padding:20px">
-            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">Email</div>
-            <a href="mailto:hello@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.65);text-decoration:none;margin-bottom:4px;word-break:break-all">hello@deluxcioushotel.com.my</a>
-            <a href="mailto:reservations@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;word-break:break-all">reservations@deluxcioushotel.com.my</a>
+          <div style="background:linear-gradient(145deg,#FFFFFF,#FBF4E8);border:1px solid rgba(201,162,39,.1);padding:20px">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">Email</div>
+            <a href="mailto:hello@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.65);text-decoration:none;margin-bottom:4px;word-break:break-all">hello@deluxcioushotel.com.my</a>
+            <a href="mailto:reservations@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.35);text-decoration:none;word-break:break-all">reservations@deluxcioushotel.com.my</a>
           </div>
-          <div style="background:linear-gradient(145deg,#160F07,#1A1208);border:1px solid rgba(201,162,39,.1);padding:20px">
-            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">GPS</div>
-            <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.65);line-height:1.75">5.4195° N<br>100.3346° E</div>
+          <div style="background:linear-gradient(145deg,#FFFFFF,#FBF4E8);border:1px solid rgba(201,162,39,.1);padding:20px">
+            <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">GPS</div>
+            <div style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.65);line-height:1.75">5.4195° N<br>100.3346° E</div>
           </div>
         </div>
       </div>
 
       <!-- RIGHT: Hours + map placeholder -->
       <div>
-        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">Opening Hours</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);color:white;line-height:1.15;font-weight:600;margin-bottom:24px">When to <em class="font-normal italic">Visit</em></h2>
+        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:20px">Opening Hours</p>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">When to <em class="font-normal italic">Visit</em></h2>
         <div style="margin-bottom:32px" class="reveal d2">
           <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Restaurant</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Lunch</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">12:00pm – 3:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Dinner</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">6:30pm – 10:30pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Closed</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45)">Mondays</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Lunch</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">12:00pm – 3:00pm</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Dinner</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">6:30pm – 10:30pm</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Closed</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45)">Mondays</span></div>
         </div>
         <div style="margin-bottom:32px" class="reveal d2">
           <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Spa</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Daily</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">10:00am – 10:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Last appointment</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">8:00pm</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Daily</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">10:00am – 10:00pm</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Last appointment</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">8:00pm</span></div>
         </div>
         <div style="margin-bottom:32px" class="reveal d2">
           <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Hotel</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Front desk</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">24 hours, 7 days</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Check-in</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">From 3:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.55)">Check-out</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:white">By 12:00noon</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Front desk</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">24 hours, 7 days</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Check-in</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">From 3:00pm</span></div>
+          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.55)">Check-out</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">By 12:00noon</span></div>
         </div>
 
         <!-- Map placeholder -->
-        <div class="map-placeholder reveal d3" style="height:220px"><div class="ph-g"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="ph-t">Map Embed<br>15-17A Jalan Sultan Ahmad Shah · Google Maps</div><p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,.2);margin-top:8px">Add iframe embed from Google Maps</p></div></div>
+        <div class="map-placeholder reveal d3" style="height:220px"><div class="ph-g"></div><div class="ph-b"><svg class="ph-ic" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="ph-t">Map Embed<br>15-17A Jalan Sultan Ahmad Shah · Google Maps</div><p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(58,44,24,.2);margin-top:8px">Add iframe embed from Google Maps</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- DIRECTIONS -->
-<section style="background:#0A0705;padding:96px 0">
+<section style="background:#ECDDC2;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center reveal" style="margin-bottom:56px">
-      <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:16px">Getting Here</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:white;line-height:1.15;font-weight:600;margin-bottom:10px">Directions from <em class="font-normal italic">Key Landmarks</em></h2>
+      <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:16px">Getting Here</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:10px">Directions from <em class="font-normal italic">Key Landmarks</em></h2>
       <div class="gold-bar" style="margin:0 auto"></div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal d1">
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">On Foot</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">From E&O Hotel</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">Walk east along Lebuh Farquhar towards the waterfront. Turn right onto Jalan Sultan Ahmad Shah. Deluxcious is on the left after 200m — look for the restored green-shuttered shophouse facade.</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227">5 minutes</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">On Foot</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">From E&O Hotel</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">Walk east along Lebuh Farquhar towards the waterfront. Turn right onto Jalan Sultan Ahmad Shah. Deluxcious is on the left after 200m — look for the restored green-shuttered shophouse facade.</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14">5 minutes</div>
       </div>
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">By Grab / Taxi</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">From Georgetown Ferry Terminal</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">Take a Grab or taxi along Lebuh Light heading north. It becomes Jalan Sultan Ahmad Shah. The fare is typically RM6–8. Drop-off directly in front of the building — tell the driver the address or show them "15-17A Jalan Sultan Ahmad Shah."</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227">8–12 minutes</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">By Grab / Taxi</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">From Georgetown Ferry Terminal</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">Take a Grab or taxi along Lebuh Light heading north. It becomes Jalan Sultan Ahmad Shah. The fare is typically RM6–8. Drop-off directly in front of the building — tell the driver the address or show them "15-17A Jalan Sultan Ahmad Shah."</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14">8–12 minutes</div>
       </div>
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">By Car</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">From Penang Bridge</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">Take the Penang Bridge (Jambatan Pulau Pinang) and follow the expressway into George Town. Exit at Lebuh Chulia and head northwest towards the seafront. Turn left onto Jalan Sultan Ahmad Shah. Nearest parking: KOMTAR (10 min walk) or Gurney Plaza valet (5 min drive).</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227">25–35 minutes from bridge toll</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">By Car</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">From Penang Bridge</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">Take the Penang Bridge (Jambatan Pulau Pinang) and follow the expressway into George Town. Exit at Lebuh Chulia and head northwest towards the seafront. Turn left onto Jalan Sultan Ahmad Shah. Nearest parking: KOMTAR (10 min walk) or Gurney Plaza valet (5 min drive).</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14">25–35 minutes from bridge toll</div>
       </div>
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">From Airport</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">Penang International Airport</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">Grab or airport taxi to the hotel takes approximately 25–35 minutes depending on traffic. We also offer private airport transfers — please contact us at least 24 hours in advance to arrange. Fare: approximately RM50–70 by metered taxi.</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227">25–35 minutes</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">From Airport</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">Penang International Airport</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">Grab or airport taxi to the hotel takes approximately 25–35 minutes depending on traffic. We also offer private airport transfers — please contact us at least 24 hours in advance to arrange. Fare: approximately RM50–70 by metered taxi.</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14">25–35 minutes</div>
       </div>
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">Bus</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">Rapid Penang Bus</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">Rapid Penang Route 101 (Komtar–Teluk Bahang) stops at the E&O Hotel, a 5-minute walk from us. Route 103 serves the Weld Quay area. The CAT (free city bus) runs along Pengkalan Weld and covers most heritage sites.</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227">Varies</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">Bus</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">Rapid Penang Bus</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">Rapid Penang Route 101 (Komtar–Teluk Bahang) stops at the E&O Hotel, a 5-minute walk from us. Route 103 serves the Weld Quay area. The CAT (free city bus) runs along Pengkalan Weld and covers most heritage sites.</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14">Varies</div>
       </div>
       <div class="dir-card">
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:12px">Private Transfer</div>
-        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:white;font-weight:600;margin-bottom:12px">Hotel Transfer Service</h4>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:16px">We can arrange private transfers from Penang International Airport, the ferry terminal, or Butterworth train station. Rates are quoted on request. Please give us at least 24 hours' notice.</p>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#C9A227;cursor:pointer" onclick="window.location.href='https://wa.me/60125151288'">WhatsApp to arrange</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:12px">Private Transfer</div>
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:#3A2C18;font-weight:600;margin-bottom:12px">Hotel Transfer Service</h4>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.45);line-height:1.8;margin-bottom:16px">We can arrange private transfers from Penang International Airport, the ferry terminal, or Butterworth train station. Rates are quoted on request. Please give us at least 24 hours' notice.</p>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:#9A7A14;cursor:pointer" onclick="window.location.href='https://wa.me/60125151288'">WhatsApp to arrange</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT CHANNELS -->
-<section style="background:#0F0B08;padding:80px 0">
+<section style="background:transparent;padding:80px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
-      <div style="background:linear-gradient(160deg,#160F07,#1E1408);border:1px solid rgba(201,162,39,.15);padding:36px;text-align:center">
+      <div style="background:linear-gradient(160deg,#FFFFFF,#F6ECD8);border:1px solid rgba(201,162,39,.15);padding:36px;text-align:center">
         <svg width="28" height="28" fill="none" stroke="rgba(201,162,39,.7)" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 16px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.09 1.22 2 2 0 012.08.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-.81a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16l.19.92z"/></svg>
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">Call</div>
-        <a href="tel:+60426110288" style="display:block;font-family:'Playfair Display',serif;font-size:1.2rem;color:white;text-decoration:none;margin-bottom:6px">+604-261 0288</a>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.35)">Mon–Sun 11am–10pm</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">Call</div>
+        <a href="tel:+60426110288" style="display:block;font-family:'Playfair Display',serif;font-size:1.2rem;color:#3A2C18;text-decoration:none;margin-bottom:6px">+604-261 0288</a>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.35)">Mon–Sun 11am–10pm</div>
       </div>
-      <div style="background:linear-gradient(160deg,#160F07,#1E1408);border:1px solid rgba(201,162,39,.35);padding:36px;text-align:center;position:relative">
+      <div style="background:linear-gradient(160deg,#FFFFFF,#F6ECD8);border:1px solid rgba(201,162,39,.35);padding:36px;text-align:center;position:relative">
         <div style="position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;padding:4px 12px;font-weight:700;white-space:nowrap">Fastest Response</div>
         <svg width="28" height="28" fill="#25D366" viewBox="0 0 24 24" style="margin:0 auto 16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">WhatsApp</div>
-        <a href="https://wa.me/60125151288" target="_blank" style="display:block;font-family:'Playfair Display',serif;font-size:1.2rem;color:white;text-decoration:none;margin-bottom:6px">+6012-515 1288</a>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.35)">Usually replies within 30 min</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">WhatsApp</div>
+        <a href="https://wa.me/60125151288" target="_blank" style="display:block;font-family:'Playfair Display',serif;font-size:1.2rem;color:#3A2C18;text-decoration:none;margin-bottom:6px">+6012-515 1288</a>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.35)">Usually replies within 30 min</div>
       </div>
-      <div style="background:linear-gradient(160deg,#160F07,#1E1408);border:1px solid rgba(201,162,39,.15);padding:36px;text-align:center">
+      <div style="background:linear-gradient(160deg,#FFFFFF,#F6ECD8);border:1px solid rgba(201,162,39,.15);padding:36px;text-align:center">
         <svg width="28" height="28" fill="none" stroke="rgba(201,162,39,.7)" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A227;margin-bottom:8px">Email</div>
-        <a href="mailto:hello@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:white;text-decoration:none;margin-bottom:6px;word-break:break-all">hello@deluxcioushotel.com.my</a>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.35)">Response within 4 hours</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9A7A14;margin-bottom:8px">Email</div>
+        <a href="mailto:hello@deluxcioushotel.com.my" style="display:block;font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18;text-decoration:none;margin-bottom:6px;word-break:break-all">hello@deluxcioushotel.com.my</a>
+        <div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.35)">Response within 4 hours</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#0A0705;border-top:1px solid rgba(201,162,39,.12)">
+<footer style="background:#ECDDC2;border-top:1px solid rgba(201,162,39,.12)">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10" style="margin-bottom:40px">
-      <div><div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:4px">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div><div class="gold-bar" style="margin-bottom:16px"></div><p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)">A 19th-century colonial mansion in George Town, Penang — dining, spa and heritage suites.</p></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Explore</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="about.html" class="footer-link">About Us</a><a href="menu.html" class="footer-link">Menu</a><a href="spa.html" class="footer-link">Spa Experiences</a><a href="hotel.html" class="footer-link">Heritage Suites</a><a href="gallery.html" class="footer-link">Gallery</a><a href="reservations.html" class="footer-link">Reservations</a></div></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Hours</h4><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.9">Restaurant: 12pm–10:30pm<br>Spa: 10am–10pm<br>Hotel: 24h front desk</div></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
+      <div><div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#3A2C18;margin-bottom:4px">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div><div class="gold-bar" style="margin-bottom:16px"></div><p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(58,44,24,.35)">A 19th-century colonial mansion in George Town, Penang — dining, spa and heritage suites.</p></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Explore</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="about.html" class="footer-link">About Us</a><a href="menu.html" class="footer-link">Menu</a><a href="spa.html" class="footer-link">Spa Experiences</a><a href="hotel.html" class="footer-link">Heritage Suites</a><a href="gallery.html" class="footer-link">Gallery</a><a href="reservations.html" class="footer-link">Reservations</a></div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Hours</h4><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38);line-height:1.9">Restaurant: 12pm–10:30pm<br>Spa: 10am–10pm<br>Hotel: 24h front desk</div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
+    <div style="border-top:1px solid rgba(58,40,16,.10);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
   </div>
 </footer>
 
 <a href="https://wa.me/60125151288" target="_blank" class="wa-pulse" style="position:fixed;bottom:22px;right:22px;z-index:8000;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg></a>
 <button id="chat-btn" onclick="chatToggle()" aria-label="Chat"><svg id="chat-icon-open" width="22" height="22" fill="none" stroke="#0F0B08" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg><svg id="chat-icon-close" width="18" height="18" fill="none" stroke="#0F0B08" stroke-width="2.2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
-<div id="chat-panel"><div class="chat-head"><div class="chat-avatar">D</div><div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:white">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Concierge</div></div><button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4)"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. I can help with directions, opening hours, or getting in touch with the team.</div></div><div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'How to get there')">Directions</button><button class="chip" onclick="sendChip(this,'Opening hours')">Hours</button><button class="chip" onclick="sendChip(this,'Airport transfer')">Airport transfer</button></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div></div>
+<div id="chat-panel"><div class="chat-head"><div class="chat-avatar">D</div><div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#3A2C18">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Concierge</div></div><button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(58,44,24,.4)"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. I can help with directions, opening hours, or getting in touch with the team.</div></div><div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'How to get there')">Directions</button><button class="chip" onclick="sendChip(this,'Opening hours')">Hours</button><button class="chip" onclick="sendChip(this,'Airport transfer')">Airport transfer</button></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div></div>
 
 <script>
 (function(){const nav=document.getElementById('nav');let lastY=0,ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const y=window.scrollY;if(y>lastY&&y>100)nav.classList.add('nav-hidden');else nav.classList.remove('nav-hidden');if(y>60)nav.classList.add('nav-light');else nav.classList.remove('nav-light');lastY=y;ticking=false;});ticking=true;}});})();

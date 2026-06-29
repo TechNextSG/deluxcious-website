@@ -9,9 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;overflow-x:hidden;-webkit-font-smoothing:antialiased;margin:0}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
-.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#1A1108,#120D06 45%,#1E1508);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-color:#F4E9D4;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'168'%20height%3D'230'%20viewBox%3D'0%200%20168%20230'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.40'%3E%3Cpath%20d%3D'M84%2018%20C128%2044%20147%2076%20137%20116%20C130%20150%20102%20176%2084%20214%20C66%20176%2038%20150%2031%20116%20C21%2076%2040%2044%2084%2018%20Z'%2F%3E%3Cpath%20d%3D'M84%2082%20C98%2099%2098%20128%2084%20147%20C70%20128%2070%2099%2084%2082%20Z'%2F%3E%3Cpath%20d%3D'M84%20147%20C106%20160%20120%20180%20110%20200%20C104%20184%2094%20174%2084%20172%20C74%20174%2064%20184%2058%20200%20C48%20180%2062%20160%2084%20147%20Z'%2F%3E%3Cpath%20d%3D'M84%2042%20C90%2055%2090%2066%2084%2076%20C78%2066%2078%2055%2084%2042%20Z'%2F%3E%3Cpath%20d%3D'M60%20110%20C70%20105%2098%20105%20108%20110'%2F%3E%3Cpath%20d%3D'M60%20124%20C70%20129%2098%20129%20108%20124'%2F%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'5.5'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'%23AE8A33'%20fill-opacity%3D'0.13'%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'2.4'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.32'%3E%3Cpath%20d%3D'M0%20-13%20C6%20-5%206%205%200%2013%20C-6%205%20-6%20-5%200%20-13%20Z'%2F%3E%3Cpath%20d%3D'M-13%200%20C-5%20-6%205%20-6%2013%200%20C5%206%20-5%206%20-13%200%20Z'%2F%3E%3Cpath%20d%3D'M168%20-13%20C174%20-5%20174%205%20168%2013%20C162%205%20162%20-5%20168%20-13%20Z'%2F%3E%3Cpath%20d%3D'M155%200%20C163%20-6%20173%20-6%20181%200%20C173%206%20163%206%20155%200%20Z'%2F%3E%3Cpath%20d%3D'M0%20217%20C6%20225%206%20235%200%20243%20C-6%20235%20-6%20225%200%20217%20Z'%2F%3E%3Cpath%20d%3D'M-13%20230%20C-5%20224%205%20224%2013%20230%20C5%20236%20-5%20236%20-13%20230%20Z'%2F%3E%3Cpath%20d%3D'M168%20217%20C174%20225%20174%20235%20168%20243%20C162%20235%20162%20225%20168%20217%20Z'%2F%3E%3Cpath%20d%3D'M155%20230%20C163%20224%20173%20224%20181%20230%20C173%20236%20163%20236%20155%20230%20Z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:168px 230px;background-position:center top;opacity:1}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#F4E9D4;color:#3A2C18;overflow-x:hidden;-webkit-font-smoothing:antialiased;margin:0}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#EFE3CC}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#F7EEDC,#EFE3CC 45%,#F2E7D1);display:flex;align-items:center;justify-content:center;width:100%;height:100%}
 .ph-g{position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,39,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.022) 1px,transparent 1px);background-size:32px 32px}
 .ph-f{position:absolute;inset:0;pointer-events:none}
 .ph-f::before{content:'';position:absolute;top:14px;left:14px;width:20px;height:20px;border-top:1px solid rgba(201,162,39,.28);border-left:1px solid rgba(201,162,39,.28)}
@@ -19,12 +21,12 @@
 .ph-b{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:20px;height:100%;width:100%}
 .ph-ic{color:rgba(201,162,39,.18)}
 .ph-t{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.28);line-height:1.75}
-.ph-s{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;color:rgba(255,255,255,.1)}
+.ph-s{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;color:rgba(58,44,24,.1)}
 .hero-w{position:relative;overflow:hidden;min-height:75vh;display:flex;align-items:flex-end}
 .hero-m{position:absolute;inset:0;z-index:0}
 .hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
 .hero-m .ph{position:absolute;inset:0;height:100%}
-.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.3) 40%,rgba(15,11,8,.82) 100%)}
+.hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(244,233,212,.26) 0%,rgba(244,233,212,.14) 40%,rgba(244,233,212,.86) 100%)}
 .hero-c{position:relative;z-index:3;width:100%}
 .vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.1);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
 .btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease}
@@ -32,23 +34,23 @@
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
 .btn-gold{background:linear-gradient(135deg,#B8891E,#E8C84A 45%,#C9A227 75%,#A07818);color:#0F0B08;font-weight:600;box-shadow:0 4px 18px rgba(201,162,39,.28)}
 .btn-gold:hover{background:linear-gradient(135deg,#E8C84A,#F5D962,#D4AF37);box-shadow:0 12px 36px rgba(201,162,39,.5)}
-.btn-og{border:1px solid rgba(201,162,39,.5);color:#C9A227;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08)}
-.btn-ow{border:1px solid rgba(255,255,255,.55);color:white;background:rgba(255,255,255,.05)}.btn-ow:hover{border-color:#C9A227;color:#C9A227}
+.btn-og{border:1px solid rgba(201,162,39,.5);color:#9A7A14;background:transparent}.btn-og:hover{background:rgba(201,162,39,.08)}
+.btn-ow{border:1px solid rgba(58,40,16,.4);color:#3A2C18;background:rgba(255,255,255,.45)}.btn-ow:hover{border-color:#9A7A14;color:#9A7A14}
 .btn .ripple{position:absolute;border-radius:50%;transform:scale(0);animation:ripplePop .6s cubic-bezier(0,.5,.5,1) forwards;pointer-events:none;z-index:3}
 @keyframes ripplePop{to{transform:scale(5);opacity:0}}
 @keyframes borderPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,0)}50%{box-shadow:0 0 0 3px rgba(201,162,39,.15)}}
-.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#C9A227;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
+.btn-reserve-nav{border:1px solid rgba(201,162,39,.6);color:#9A7A14;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;font-family:'Inter',sans-serif;padding:8px 22px;position:relative;overflow:hidden;display:inline-block;transition:all .3s;text-decoration:none;animation:borderPulse 3s ease-in-out infinite}
 .btn-reserve-nav::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.18),transparent);transform:skewX(-18deg);transition:left .5s}
 .btn-reserve-nav:hover::before{left:140%}.btn-reserve-nav:hover{background:#C9A227;color:#0F0B08;animation:none;transform:translateY(-1px)}
 #nav{transition:transform .38s cubic-bezier(.4,0,.2,1),background .3s,box-shadow .3s}
 #nav.nav-hidden{transform:translateY(-100%)}
-#nav.nav-light{background:rgba(15,11,8,.96)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(0,0,0,.3)}
-.nav-link{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:white}.nav-active{color:#C9A227!important}
+#nav.nav-light{background:rgba(248,240,225,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(58,40,16,.12)}
+.nav-link{color:rgba(58,44,24,.65);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:#3A2C18}.nav-active{color:#9A7A14!important}
 #mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
-#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#1A1108;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.5);overflow:hidden;animation:cardIn .22s ease forwards}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FBF4E8;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
-.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:white}
+.mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.75);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
 .mob-card-cta{padding:.85rem 1.25rem 1.1rem;border-top:1px solid rgba(201,162,39,.2)}
 .mob-card-cta a{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.75rem;border-radius:3px;text-decoration:none}
 .gold-bar{width:48px;height:2px;background:#C9A227}
@@ -58,36 +60,36 @@
 .timeline-item{display:grid;grid-template-columns:80px 1fr;gap:24px;padding-bottom:40px;position:relative}
 .timeline-item::before{content:'';position:absolute;left:38px;top:28px;bottom:0;width:1px;background:rgba(201,162,39,.15)}
 .timeline-item:last-child::before{display:none}
-.timeline-year{font-family:'Playfair Display',serif;font-size:1.5rem;color:#C9A227;font-weight:600;padding-top:2px}
-.timeline-dot{position:absolute;left:32px;top:8px;width:13px;height:13px;border-radius:50%;border:2px solid #C9A227;background:#0F0B08}
+.timeline-year{font-family:'Playfair Display',serif;font-size:1.5rem;color:#9A7A14;font-weight:600;padding-top:2px}
+.timeline-dot{position:absolute;left:32px;top:8px;width:13px;height:13px;border-radius:50%;border:2px solid #C9A227;background:transparent}
 /* Philosophy cards */
-.phil-card{background:linear-gradient(145deg,#160F07,#1A1208);border:1px solid rgba(201,162,39,.1);padding:28px;transition:border-color .3s,transform .3s}
+.phil-card{background:linear-gradient(145deg,#FFFFFF,#FBF4E8);border:1px solid rgba(201,162,39,.1);padding:28px;transition:border-color .3s,transform .3s}
 .phil-card:hover{border-color:rgba(201,162,39,.28);transform:translateY(-3px)}
 .phil-icon{width:44px;height:44px;border:1px solid rgba(201,162,39,.25);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:rgba(201,162,39,.6)}
 /* Achievement */
-.ach-item{display:flex;align-items:flex-start;gap:16px;padding:20px;border:1px solid rgba(201,162,39,.1);background:linear-gradient(145deg,#160F07,#1A1208)}
+.ach-item{display:flex;align-items:flex-start;gap:16px;padding:20px;border:1px solid rgba(201,162,39,.1);background:linear-gradient(145deg,#FFFFFF,#FBF4E8)}
 /* WA FAB */
 @keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
-.footer-link{color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#C9A227}
+.footer-link{color:rgba(58,44,24,.38);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif;font-size:12px}.footer-link:hover{color:#9A7A14}
 #chat-btn{position:fixed;bottom:88px;right:22px;z-index:9000;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);box-shadow:0 4px 18px rgba(201,162,39,.4);cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1)}
 #chat-btn:hover{transform:scale(1.1)}
-#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 16px 60px rgba(15,11,8,.3);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
+#chat-panel{position:fixed;bottom:150px;right:22px;z-index:9000;width:340px;max-height:460px;background:#FBF4E8;border-radius:12px;box-shadow:0 18px 60px rgba(58,40,16,.20);display:flex;flex-direction:column;overflow:hidden;transform:scale(0.9) translateY(10px);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(0.34,1.56,0.64,1),opacity .22s ease;transform-origin:bottom right}
 #chat-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
-.chat-head{background:linear-gradient(135deg,#0F0B08,#1C1108);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head{background:linear-gradient(135deg,#FBF1DD,#F0E2C6);border-bottom:1px solid rgba(174,138,51,.25);padding:14px 16px;display:flex;align-items:center;gap:10px}
 .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#B8891E,#E8C84A);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#0F0B08;flex-shrink:0}
 .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}.chat-body::-webkit-scrollbar{width:3px}.chat-body::-webkit-scrollbar-thumb{background:rgba(201,162,39,.3)}
 .chat-msg{max-width:82%;padding:10px 13px;border-radius:12px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.55;white-space:pre-wrap}
-.chat-msg.bot{background:#0F0B08;color:rgba(255,255,255,.82);border-radius:2px 12px 12px 12px;align-self:flex-start}
+.chat-msg.bot{background:#EFE2C9;color:rgba(58,44,24,.86);border-radius:2px 12px 12px 12px;align-self:flex-start}
 .chat-msg.user{background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;font-weight:500;border-radius:12px 2px 12px 12px;align-self:flex-end}
 .chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
 .chip{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:6px 12px;border-radius:20px;border:1px solid rgba(201,162,39,.4);color:#9E7F1E;background:transparent;cursor:pointer;transition:all .2s}.chip:hover{background:rgba(201,162,39,.1)}
 .chat-input-row{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid rgba(15,11,8,.1)}
-.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#C9A227}
+.chat-input-row input{flex:1;border:1px solid rgba(15,11,8,.15);border-radius:6px;padding:8px 12px;font-family:'Inter',sans-serif;font-size:13px;background:white;color:#1C1C1E;outline:none;transition:border-color .2s}.chat-input-row input:focus{border-color:#9A7A14}
 .chat-input-row button{width:36px;height:36px;flex-shrink:0;background:linear-gradient(135deg,#B8891E,#C9A227);border:none;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}.typing-dots span{width:6px;height:6px;border-radius:50%;background:rgba(201,162,39,.6);animation:typingBounce 1.2s ease-in-out infinite}
 .typing-dots span:nth-child(2){animation-delay:.2s}.typing-dots span:nth-child(3){animation-delay:.4s}
 @keyframes typingBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
-@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.1)!important;border:1.5px solid rgba(255,255,255,.3)!important}#mob-toggle-btn svg{stroke:white!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}.timeline-item{grid-template-columns:60px 1fr}}
+@media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(58,40,16,.05)!important;border:1.5px solid rgba(58,40,16,.28)!important}#mob-toggle-btn svg{stroke:#3A2C18!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}.timeline-item{grid-template-columns:60px 1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 </head>
@@ -96,7 +98,7 @@
 <nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-5" id="nav">
   <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
     <a href="index.html" style="text-decoration:none">
-      <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:white">DELUXCIOUS</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:#3A2C18">DELUXCIOUS</div>
       <div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.8);margin-top:1px">Heritage · Spa · Restaurant</div>
     </a>
     <div class="hidden md:flex items-center justify-center gap-7">
@@ -117,7 +119,7 @@
   </div>
 </nav>
 <div id="mob-card">
-  <a href="about.html" class="mob-card-link" onclick="mobCardClose()" style="color:#C9A227">About</a>
+  <a href="about.html" class="mob-card-link" onclick="mobCardClose()" style="color:#9A7A14">About</a>
   <a href="menu.html" class="mob-card-link" onclick="mobCardClose()">Menu</a>
   <a href="spa.html" class="mob-card-link" onclick="mobCardClose()">Spa</a>
   <a href="hotel.html" class="mob-card-link" onclick="mobCardClose()">Hotel</a>
@@ -142,46 +144,46 @@
   <div class="hero-c py-20 pb-28 px-6 lg:px-12">
     <div class="max-w-7xl mx-auto">
       <p style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,162,39,.75);margin-bottom:16px;font-weight:500">Deluxcious · Our Story</p>
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:white;line-height:1.1;font-weight:600;margin-bottom:20px">A Mansion <em class="font-normal italic" style="color:#C9A227">Restored</em></h1>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#3A2C18;line-height:1.1;font-weight:600;margin-bottom:20px">A Mansion <em class="font-normal italic" style="color:#9A7A14">Restored</em></h1>
       <div class="gold-bar" style="margin-bottom:20px"></div>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);max-width:480px">From a forgotten colonial estate to one of George Town's most celebrated heritage destinations — the story of Deluxcious spans more than 140 years.</p>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(58,44,24,.5);max-width:480px">From a forgotten colonial estate to one of George Town's most celebrated heritage destinations — the story of Deluxcious spans more than 140 years.</p>
     </div>
   </div>
 </section>
 
 <!-- HERITAGE STORY -->
-<section style="background:#0F0B08;padding:96px 0">
+<section style="background:transparent;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       <div>
-        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">The Building</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:white;line-height:1.15;font-weight:600;margin-bottom:24px">Built 1880. <em class="font-normal italic">Restored 2014–2019.</em></h2>
+        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:20px">The Building</p>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">Built 1880. <em class="font-normal italic">Restored 2014–2019.</em></h2>
         <div class="gold-bar reveal d2" style="margin-bottom:32px"></div>
-        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:18px">The building at 15-17A Jalan Sultan Ahmad Shah was originally constructed in the late 1880s as a private residence for a prominent Straits Chinese merchant family. Its Straits Eclectic architecture — a fusion of European neoclassical design with Chinese decorative motifs — was characteristic of the wealthy merchant class of late-19th century Penang.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.38);margin-bottom:18px">The property changed hands several times through the 20th century, serving variously as a boarding house, private offices, and most recently, as a partially tenanted residential building. By the early 2000s, much of the structure had fallen into disrepair — though the essential bones of the building remained intact.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.38);margin-bottom:36px">In 2014, the property was acquired with the sole intention of a faithful restoration. Penang Heritage Trust consultants were engaged alongside master craftsmen from within the George Town conservation community. Every original element — the hand-laid Peranakan mosaic floors, the carved timber balustrades, the cast-iron ventilation grilles — was assessed, repaired where possible, and replaced only where structural integrity required it.</p>
+        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.55);margin-bottom:18px">The building at 15-17A Jalan Sultan Ahmad Shah was originally constructed in the late 1880s as a private residence for a prominent Straits Chinese merchant family. Its Straits Eclectic architecture — a fusion of European neoclassical design with Chinese decorative motifs — was characteristic of the wealthy merchant class of late-19th century Penang.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.38);margin-bottom:18px">The property changed hands several times through the 20th century, serving variously as a boarding house, private offices, and most recently, as a partially tenanted residential building. By the early 2000s, much of the structure had fallen into disrepair — though the essential bones of the building remained intact.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.38);margin-bottom:36px">In 2014, the property was acquired with the sole intention of a faithful restoration. Penang Heritage Trust consultants were engaged alongside master craftsmen from within the George Town conservation community. Every original element — the hand-laid Peranakan mosaic floors, the carved timber balustrades, the cast-iron ventilation grilles — was assessed, repaired where possible, and replaced only where structural integrity required it.</p>
 
         <!-- Timeline -->
         <div class="reveal">
           <div class="timeline-item">
             <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">1880</div></div>
-            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:5px">Original Construction</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.38);line-height:1.65">Built for a Straits Chinese merchant family. Straits Eclectic architecture, hand-laid mosaic floors, carved timber throughout.</p></div>
+            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Original Construction</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.38);line-height:1.65">Built for a Straits Chinese merchant family. Straits Eclectic architecture, hand-laid mosaic floors, carved timber throughout.</p></div>
           </div>
           <div class="timeline-item">
             <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">1940</div></div>
-            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:5px">Wartime & Post-War Transitions</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.38);line-height:1.65">The building served as temporary wartime accommodation during the Japanese occupation, then as a boarding house in the years that followed.</p></div>
+            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Wartime & Post-War Transitions</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.38);line-height:1.65">The building served as temporary wartime accommodation during the Japanese occupation, then as a boarding house in the years that followed.</p></div>
           </div>
           <div class="timeline-item">
             <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2008</div></div>
-            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:5px">UNESCO Heritage Designation</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.38);line-height:1.65">George Town inscribed on the UNESCO World Heritage List. The building falls within the heritage core zone, increasing both its protection and significance.</p></div>
+            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">UNESCO Heritage Designation</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.38);line-height:1.65">George Town inscribed on the UNESCO World Heritage List. The building falls within the heritage core zone, increasing both its protection and significance.</p></div>
           </div>
           <div class="timeline-item">
             <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2014</div></div>
-            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:5px">Restoration Begins</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.38);line-height:1.65">Five-year restoration project commissioned. Penang Heritage Trust consultants and master craftsmen engaged. Original structural survey identifies 94% of original fabric salvageable.</p></div>
+            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Restoration Begins</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.38);line-height:1.65">Five-year restoration project commissioned. Penang Heritage Trust consultants and master craftsmen engaged. Original structural survey identifies 94% of original fabric salvageable.</p></div>
           </div>
           <div class="timeline-item">
             <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2019</div></div>
-            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:5px">Deluxcious Opens</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.38);line-height:1.65">18 heritage suites, three spa sanctuaries, and the restaurant open their doors. The building has its new purpose — one it was perhaps always suited for.</p></div>
+            <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Deluxcious Opens</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.38);line-height:1.65">18 heritage suites, three spa sanctuaries, and the restaurant open their doors. The building has its new purpose — one it was perhaps always suited for.</p></div>
           </div>
         </div>
       </div>
@@ -205,7 +207,7 @@
 </section>
 
 <!-- CHEF -->
-<section style="background:#0A0705;padding:96px 0">
+<section style="background:#ECDDC2;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <!-- Portrait placeholder -->
@@ -218,17 +220,17 @@
       </div>
       <!-- Bio -->
       <div>
-        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">The Chef</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:white;line-height:1.15;font-weight:600;margin-bottom:8px">Chef Keith Khoo</h2>
+        <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:20px">The Chef</p>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:8px">Chef Keith Khoo</h2>
         <p class="reveal d1" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:rgba(201,162,39,.7);margin-bottom:24px">Executive Chef & Culinary Director</p>
         <div class="gold-bar reveal d2" style="margin-bottom:28px"></div>
-        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:16px">Born and raised in Penang, Keith Khoo spent his formative years cooking alongside his grandmother — a Nyonya cook whose recipes drew from three generations of Peranakan tradition. That foundation never left him.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.4);margin-bottom:16px">After formal training at Le Cordon Bleu in Sydney, Keith spent a decade in Michelin-starred kitchens across London and Singapore — most notably as sous chef at the Ritz-Carlton Singapore's fine dining programme. He returned to Penang in 2016 to begin work on Deluxcious, spending three years developing a menu that could honour the building's heritage while standing firmly in its own right.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(255,255,255,.4);margin-bottom:32px">His cooking resists simple categorisation. European precision, Southeast Asian instinct, and a deep sensitivity to local produce — each dish is a considered conversation between tradition and craft.</p>
+        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.55);margin-bottom:16px">Born and raised in Penang, Keith Khoo spent his formative years cooking alongside his grandmother — a Nyonya cook whose recipes drew from three generations of Peranakan tradition. That foundation never left him.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.4);margin-bottom:16px">After formal training at Le Cordon Bleu in Sydney, Keith spent a decade in Michelin-starred kitchens across London and Singapore — most notably as sous chef at the Ritz-Carlton Singapore's fine dining programme. He returned to Penang in 2016 to begin work on Deluxcious, spending three years developing a menu that could honour the building's heritage while standing firmly in its own right.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.85;color:rgba(58,44,24,.4);margin-bottom:32px">His cooking resists simple categorisation. European precision, Southeast Asian instinct, and a deep sensitivity to local produce — each dish is a considered conversation between tradition and craft.</p>
         <div class="flex flex-wrap gap-3 reveal d3">
-          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,.5)"><span style="color:#C9A227;display:block;font-weight:600;font-size:12px">Le Cordon Bleu</span>Sydney, Australia</div>
-          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,.5)"><span style="color:#C9A227;display:block;font-weight:600;font-size:12px">Ritz-Carlton Singapore</span>Sous Chef</div>
-          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(255,255,255,.5)"><span style="color:#C9A227;display:block;font-weight:600;font-size:12px">30+ Years</span>Industry Experience</div>
+          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(58,44,24,.5)"><span style="color:#9A7A14;display:block;font-weight:600;font-size:12px">Le Cordon Bleu</span>Sydney, Australia</div>
+          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(58,44,24,.5)"><span style="color:#9A7A14;display:block;font-weight:600;font-size:12px">Ritz-Carlton Singapore</span>Sous Chef</div>
+          <div style="border:1px solid rgba(201,162,39,.15);padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;color:rgba(58,44,24,.5)"><span style="color:#9A7A14;display:block;font-weight:600;font-size:12px">30+ Years</span>Industry Experience</div>
         </div>
       </div>
     </div>
@@ -236,86 +238,86 @@
 </section>
 
 <!-- PHILOSOPHY -->
-<section style="background:#0F0B08;padding:96px 0">
+<section style="background:transparent;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center" style="margin-bottom:56px">
-      <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:16px">What We Believe</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:white;line-height:1.15;font-weight:600;margin-bottom:16px">Our <em class="font-normal italic">Philosophy</em></h2>
+      <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:16px">What We Believe</p>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">Our <em class="font-normal italic">Philosophy</em></h2>
       <div class="gold-bar reveal d2" style="margin:0 auto 16px"></div>
-      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(255,255,255,.38);max-width:480px;margin:0 auto">Four principles guide everything we do — from how we restore a room to how we plate a dish.</p>
+      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(58,44,24,.38);max-width:480px;margin:0 auto">Four principles guide everything we do — from how we restore a room to how we plate a dish.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="phil-card reveal">
         <div class="phil-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:10px;font-weight:500">Heritage First</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.65">Every decision begins with the building. We do not renovate — we restore. The past is the foundation, not the obstacle.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;margin-bottom:10px;font-weight:500">Heritage First</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.4);line-height:1.65">Every decision begins with the building. We do not renovate — we restore. The past is the foundation, not the obstacle.</p>
       </div>
       <div class="phil-card reveal d1">
         <div class="phil-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:10px;font-weight:500">Craft Over Speed</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.65">Five years to restore. Hours to prepare a bisque. No shortcuts in the kitchen, and none in the building work either.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;margin-bottom:10px;font-weight:500">Craft Over Speed</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.4);line-height:1.65">Five years to restore. Hours to prepare a bisque. No shortcuts in the kitchen, and none in the building work either.</p>
       </div>
       <div class="phil-card reveal d2">
         <div class="phil-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:10px;font-weight:500">Local Roots</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.65">We source from Penang market suppliers, Camerons Highland farms, and local producers wherever possible. The region feeds us.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;margin-bottom:10px;font-weight:500">Local Roots</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.4);line-height:1.65">We source from Penang market suppliers, Camerons Highland farms, and local producers wherever possible. The region feeds us.</p>
       </div>
       <div class="phil-card reveal d3">
         <div class="phil-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:10px;font-weight:500">Guest Before Guest</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.4);line-height:1.65">We consider the experience before the service interaction. What does a guest feel when they walk through the door? That question shapes every detail.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;margin-bottom:10px;font-weight:500">Guest Before Guest</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.4);line-height:1.65">We consider the experience before the service interaction. What does a guest feel when they walk through the door? That question shapes every detail.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- AWARDS & RECOGNITION -->
-<section style="background:#0A0705;padding:96px 0">
+<section style="background:#ECDDC2;padding:96px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center" style="margin-bottom:56px">
-      <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:16px">Recognition</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:white;line-height:1.15;font-weight:600;margin-bottom:16px">Awards & <em class="font-normal italic">Distinctions</em></h2>
+      <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:16px">Recognition</p>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">Awards & <em class="font-normal italic">Distinctions</em></h2>
       <div class="gold-bar reveal d2" style="margin:0 auto"></div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal">
       <div class="ach-item">
         <div style="width:48px;height:48px;border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="#C9A227" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;font-weight:500;margin-bottom:4px">Best Heritage Dining Experience</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Penang Tourism Awards · 2022 & 2023</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.6">Recognised for outstanding contribution to heritage tourism through culinary excellence in a restored colonial setting.</p></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;font-weight:500;margin-bottom:4px">Best Heritage Dining Experience</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Penang Tourism Awards · 2022 & 2023</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38);line-height:1.6">Recognised for outstanding contribution to heritage tourism through culinary excellence in a restored colonial setting.</p></div>
       </div>
       <div class="ach-item">
         <div style="width:48px;height:48px;border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="#C9A227" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;font-weight:500;margin-bottom:4px">Conservation Award</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Penang Heritage Trust · 2020</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.6">Awarded for the exceptional standard of heritage restoration, particularly the preservation of original Peranakan mosaic tilework and carved timber elements.</p></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;font-weight:500;margin-bottom:4px">Conservation Award</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Penang Heritage Trust · 2020</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38);line-height:1.6">Awarded for the exceptional standard of heritage restoration, particularly the preservation of original Peranakan mosaic tilework and carved timber elements.</p></div>
       </div>
       <div class="ach-item">
         <div style="width:48px;height:48px;border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="#C9A227" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;font-weight:500;margin-bottom:4px">Top 50 Restaurants in Malaysia</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Tatler Dining Malaysia · 2022 & 2024</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.6">Consecutively listed among Malaysia's most distinguished dining destinations, with particular praise for the seasonal tasting menu.</p></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;font-weight:500;margin-bottom:4px">Top 50 Restaurants in Malaysia</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Tatler Dining Malaysia · 2022 & 2024</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38);line-height:1.6">Consecutively listed among Malaysia's most distinguished dining destinations, with particular praise for the seasonal tasting menu.</p></div>
       </div>
       <div class="ach-item">
         <div style="width:48px;height:48px;border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" fill="none" stroke="#C9A227" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:white;font-weight:500;margin-bottom:4px">Best Boutique Hotel — Northern Malaysia</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Travel + Leisure SE Asia · 2023</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38);line-height:1.6">Recognised for creating an intimate heritage hotel experience that authentically captures the spirit of 19th-century colonial Penang.</p></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;font-weight:500;margin-bottom:4px">Best Boutique Hotel — Northern Malaysia</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(201,162,39,.6);margin-bottom:4px">Travel + Leisure SE Asia · 2023</div><p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38);line-height:1.6">Recognised for creating an intimate heritage hotel experience that authentically captures the spirit of 19th-century colonial Penang.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<section style="background:#0F0B08;padding:72px 0;border-top:1px solid rgba(201,162,39,.1)">
+<section style="background:transparent;padding:72px 0;border-top:1px solid rgba(201,162,39,.1)">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div class="reveal"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#C9A227;line-height:1;margin-bottom:8px">140+</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.38)">Years of History</div></div>
-      <div class="reveal d1"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#C9A227;line-height:1;margin-bottom:8px">18</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.38)">Heritage Suites</div></div>
-      <div class="reveal d2"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#C9A227;line-height:1;margin-bottom:8px">3</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.38)">Spa Traditions</div></div>
-      <div class="reveal d3"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#C9A227;line-height:1;margin-bottom:8px">5</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.38)">Year Restoration</div></div>
+      <div class="reveal"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#9A7A14;line-height:1;margin-bottom:8px">140+</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.38)">Years of History</div></div>
+      <div class="reveal d1"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#9A7A14;line-height:1;margin-bottom:8px">18</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.38)">Heritage Suites</div></div>
+      <div class="reveal d2"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#9A7A14;line-height:1;margin-bottom:8px">3</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.38)">Spa Traditions</div></div>
+      <div class="reveal d3"><div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:600;color:#9A7A14;line-height:1;margin-bottom:8px">5</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.38)">Year Restoration</div></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section style="background:#0A0705;padding:80px 0">
+<section style="background:#ECDDC2;padding:80px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-    <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#C9A227;font-weight:500;margin-bottom:20px">Experience It</p>
-    <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:white;line-height:1.15;font-weight:600;margin-bottom:24px">The Story is Best Read <em class="font-normal italic">In Person</em></h2>
-    <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(255,255,255,.4);max-width:440px;margin:0 auto 36px">A photograph cannot render the light on the mosaic floor at 8pm, or the smell of a 140-year-old timber staircase in the morning. Come see it yourself.</p>
+    <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#9A7A14;font-weight:500;margin-bottom:20px">Experience It</p>
+    <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">The Story is Best Read <em class="font-normal italic">In Person</em></h2>
+    <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(58,44,24,.4);max-width:440px;margin:0 auto 36px">A photograph cannot render the light on the mosaic floor at 8pm, or the smell of a 140-year-old timber staircase in the morning. Come see it yourself.</p>
     <div class="flex flex-wrap gap-4 justify-center reveal d3">
       <a href="reservations.html" class="btn btn-gold" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:14px 32px;font-weight:600;text-decoration:none">Reserve a Table</a>
       <a href="hotel.html" class="btn btn-ow" style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:14px 32px;text-decoration:none">View Suites</a>
@@ -324,15 +326,15 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#0A0705;border-top:1px solid rgba(201,162,39,.12)">
+<footer style="background:#ECDDC2;border-top:1px solid rgba(201,162,39,.12)">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10" style="margin-bottom:40px">
-      <div><div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:white;margin-bottom:4px">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div><div class="gold-bar" style="margin-bottom:16px"></div><p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Explore</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="about.html" class="footer-link">About Us</a><a href="menu.html" class="footer-link">Menu</a><a href="spa.html" class="footer-link">Spa Experiences</a><a href="hotel.html" class="footer-link">Heritage Suites</a><a href="gallery.html" class="footer-link">Gallery</a><a href="reservations.html" class="footer-link">Reservations</a></div></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Hours</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)"><div><span style="color:rgba(255,255,255,.58)">Tue – Sun</span><br>12:00pm – 3:00am</div><div><span style="color:rgba(255,255,255,.58)">Monday</span><br>Closed</div></div></div>
-      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.38)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
+      <div><div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:#3A2C18;margin-bottom:4px">DELUXCIOUS</div><div style="font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Heritage · Spa · Restaurant</div><div class="gold-bar" style="margin-bottom:16px"></div><p style="font-family:'Inter',sans-serif;font-size:12px;line-height:1.7;color:rgba(58,44,24,.35)">A 19th-century colonial mansion reimagined as Penang's most distinctive dining, spa and hospitality destination.</p></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Explore</h4><div style="display:flex;flex-direction:column;gap:10px"><a href="about.html" class="footer-link">About Us</a><a href="menu.html" class="footer-link">Menu</a><a href="spa.html" class="footer-link">Spa Experiences</a><a href="hotel.html" class="footer-link">Heritage Suites</a><a href="gallery.html" class="footer-link">Gallery</a><a href="reservations.html" class="footer-link">Reservations</a></div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Hours</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38)"><div><span style="color:rgba(58,44,24,.58)">Tue – Sun</span><br>12:00pm – 3:00am</div><div><span style="color:rgba(58,44,24,.58)">Monday</span><br>Closed</div></div></div>
+      <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#9A7A14;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.38)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
+    <div style="border-top:1px solid rgba(58,40,16,.10);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.2)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
   </div>
 </footer>
 
@@ -340,7 +342,7 @@
   <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
 </a>
 <button id="chat-btn" onclick="chatToggle()" aria-label="Chat"><svg id="chat-icon-open" width="22" height="22" fill="none" stroke="#0F0B08" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg><svg id="chat-icon-close" width="18" height="18" fill="none" stroke="#0F0B08" stroke-width="2.2" viewBox="0 0 24 24" style="display:none"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
-<div id="chat-panel"><div class="chat-head"><div class="chat-avatar">D</div><div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:white">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Guest Concierge</div></div><button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.4)"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. Happy to answer anything about our heritage, our chef, or making a reservation.</div></div><div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'Reserve a table')">Reserve</button><button class="chip" onclick="sendChip(this,'Menu and food')">Menu</button><button class="chip" onclick="sendChip(this,'Hotel rooms')">Hotel</button></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div></div>
+<div id="chat-panel"><div class="chat-head"><div class="chat-avatar">D</div><div><div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#3A2C18">Delux</div><div style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(201,162,39,.7)">Guest Concierge</div></div><button onclick="chatToggle()" style="margin-left:auto;background:none;border:none;cursor:pointer;color:rgba(58,44,24,.4)"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg></button></div><div class="chat-body" id="chat-body"><div class="chat-msg bot">Hi. Happy to answer anything about our heritage, our chef, or making a reservation.</div></div><div class="chat-chips" id="chat-chips"><button class="chip" onclick="sendChip(this,'Reserve a table')">Reserve</button><button class="chip" onclick="sendChip(this,'Menu and food')">Menu</button><button class="chip" onclick="sendChip(this,'Hotel rooms')">Hotel</button></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMsg()"/><button onclick="sendMsg()"><svg width="16" height="16" fill="none" stroke="#0F0B08" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg></button></div></div>
 
 <script>
 (function(){const nav=document.getElementById('nav');let lastY=0,ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const y=window.scrollY;if(y>lastY&&y>100)nav.classList.add('nav-hidden');else nav.classList.remove('nav-hidden');if(y>60)nav.classList.add('nav-light');else nav.classList.remove('nav-light');lastY=y;ticking=false;});ticking=true;}});})();

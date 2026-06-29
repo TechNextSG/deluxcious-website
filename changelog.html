@@ -6,27 +6,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0F0B08;color:#FBF4E8;min-height:100vh;padding:0;margin:0;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#0F0B08}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-color:#F4E9D4;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'168'%20height%3D'230'%20viewBox%3D'0%200%20168%20230'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.40'%3E%3Cpath%20d%3D'M84%2018%20C128%2044%20147%2076%20137%20116%20C130%20150%20102%20176%2084%20214%20C66%20176%2038%20150%2031%20116%20C21%2076%2040%2044%2084%2018%20Z'%2F%3E%3Cpath%20d%3D'M84%2082%20C98%2099%2098%20128%2084%20147%20C70%20128%2070%2099%2084%2082%20Z'%2F%3E%3Cpath%20d%3D'M84%20147%20C106%20160%20120%20180%20110%20200%20C104%20184%2094%20174%2084%20172%20C74%20174%2064%20184%2058%20200%20C48%20180%2062%20160%2084%20147%20Z'%2F%3E%3Cpath%20d%3D'M84%2042%20C90%2055%2090%2066%2084%2076%20C78%2066%2078%2055%2084%2042%20Z'%2F%3E%3Cpath%20d%3D'M60%20110%20C70%20105%2098%20105%20108%20110'%2F%3E%3Cpath%20d%3D'M60%20124%20C70%20129%2098%20129%20108%20124'%2F%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'5.5'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'%23AE8A33'%20fill-opacity%3D'0.13'%3E%3Ccircle%20cx%3D'84'%20cy%3D'116'%20r%3D'2.4'%2F%3E%3C%2Fg%3E%3Cg%20fill%3D'none'%20stroke%3D'%23AE8A33'%20stroke-width%3D'1.1'%20stroke-opacity%3D'0.32'%3E%3Cpath%20d%3D'M0%20-13%20C6%20-5%206%205%200%2013%20C-6%205%20-6%20-5%200%20-13%20Z'%2F%3E%3Cpath%20d%3D'M-13%200%20C-5%20-6%205%20-6%2013%200%20C5%206%20-5%206%20-13%200%20Z'%2F%3E%3Cpath%20d%3D'M168%20-13%20C174%20-5%20174%205%20168%2013%20C162%205%20162%20-5%20168%20-13%20Z'%2F%3E%3Cpath%20d%3D'M155%200%20C163%20-6%20173%20-6%20181%200%20C173%206%20163%206%20155%200%20Z'%2F%3E%3Cpath%20d%3D'M0%20217%20C6%20225%206%20235%200%20243%20C-6%20235%20-6%20225%200%20217%20Z'%2F%3E%3Cpath%20d%3D'M-13%20230%20C-5%20224%205%20224%2013%20230%20C5%20236%20-5%20236%20-13%20230%20Z'%2F%3E%3Cpath%20d%3D'M168%20217%20C174%20225%20174%20235%20168%20243%20C162%20235%20162%20225%20168%20217%20Z'%2F%3E%3Cpath%20d%3D'M155%20230%20C163%20224%20173%20224%20181%20230%20C173%20236%20163%20236%20155%20230%20Z'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-size:168px 230px;background-position:center top;opacity:1}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#F4E9D4;color:#3A2C18;min-height:100vh;padding:0;margin:0;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#EFE3CC}::-webkit-scrollbar-thumb{background:#C9A227;border-radius:2px}
 .container{max-width:760px;margin:0 auto;padding:80px 24px 80px}
 .back-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.6);text-decoration:none;margin-bottom:48px;transition:color .2s}
-.back-link:hover{color:#C9A227}
-.site-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:white;margin-bottom:4px}
+.back-link:hover{color:#9A7A14}
+.site-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:#3A2C18;margin-bottom:4px}
 .site-sub{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:40px}
 .gold-bar{width:48px;height:2px;background:#C9A227;margin-bottom:48px}
-.version-block{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.version-block{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(58,40,16,.11)}
 .version-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .version-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap}
 .version-badge{font-size:12px;font-weight:600;letter-spacing:.06em;padding:4px 10px;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;border-radius:2px;flex-shrink:0;font-family:'Inter',sans-serif}
-.version-badge.minor{background:rgba(201,162,39,.15);color:#C9A227}
-.version-date{font-size:12px;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;margin-top:4px}
-.version-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:white;margin-bottom:4px}
+.version-badge.minor{background:rgba(201,162,39,.15);color:#9A7A14}
+.version-date{font-size:12px;color:rgba(58,44,24,.35);font-family:'Inter',sans-serif;margin-top:4px}
+.version-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:#3A2C18;margin-bottom:4px}
 .change-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.change-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.55;font-family:'Inter',sans-serif}
+.change-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(58,44,24,.6);line-height:1.55;font-family:'Inter',sans-serif}
 .change-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;flex-shrink:0;margin-top:5px;opacity:.7}
-.change-list li strong{color:rgba(255,255,255,.85);font-weight:500}
+.change-list li strong{color:rgba(58,44,24,.85);font-weight:500}
 .tag{display:inline-block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:500;margin-right:4px;font-family:'Inter',sans-serif}
-.tag.new{background:rgba(201,162,39,.15);color:#C9A227}
+.tag.new{background:rgba(201,162,39,.15);color:#9A7A14}
 .tag.fix{background:rgba(74,222,128,.1);color:#4ade80}
 .tag.update{background:rgba(96,165,250,.1);color:#60a5fa}
 </style>
@@ -40,6 +42,24 @@
   <div class="site-title">Deluxcious</div>
   <div class="site-sub">Website Changelog</div>
   <div class="gold-bar"></div>
+
+  <!-- v1.2 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v1.2</span>
+      <div>
+        <div class="version-title">Light Theme — Site-Wide Palette Conversion</div>
+        <div class="version-date">29 June 2026</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag update">Update</span>Converted the entire site from the dark "espresso" palette to a warm light theme across all 9 pages. Backgrounds now use cream tones (<strong>#F4E9D4 / #EFE3CC / #F7EEDC</strong>) and body copy uses dark brown (<strong>#3A2C18</strong>) for high legibility</li>
+      <li><span class="tag update">Update</span>Gold accents retained for brand continuity; small gold labels darkened to <strong>#9A7A14</strong> so they stay readable on light backgrounds</li>
+      <li><span class="tag update">Update</span>Re-themed all structural elements for light mode — video-hero overlay, navigation (transparent on hero, light cream on scroll), image-placeholder cards, ticker, and the chatbot panel with a distinct light bot bubble</li>
+      <li><span class="tag new">New</span>Subtle gold batik watermark pattern added to the page background for warmth and texture</li>
+      <li><span class="tag update">Update</span>Verified no dark backgrounds or low-contrast text remain; dark-on-gold button text preserved</li>
+    </ul>
+  </div>
 
   <!-- v1.1 -->
   <div class="version-block">
