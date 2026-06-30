@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -30,7 +30,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .hero-m .ph{position:absolute;inset:0;height:100%;background:linear-gradient(145deg,#F7F7F4,#EFEFEA 45%,#F3F3EF);border:none}
 .hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.55) 0%,rgba(15,11,8,.60) 78%,rgba(15,11,8,.72) 100%)}
 .hero-c{position:relative;z-index:3;width:100%}
-.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.1);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
+.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1.5px solid rgba(201,162,39,.36);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
 /* Buttons */
 .btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease,border-color .2s ease}
 .btn::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .5s ease;pointer-events:none;z-index:2}
@@ -51,7 +51,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 #nav.nav-light{background:rgba(248,240,225,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(58,40,16,.12)}#nav:not(.nav-light){background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.14) 65%,transparent 100%)}
 .nav-link{color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s;font-family:'Inter',sans-serif}.nav-link:hover{color:#FFFFFF}.nav-logo{color:#FBF6EC}#nav.nav-light .nav-link{color:rgba(58,44,24,.82)}#nav.nav-light .nav-link:hover{color:#3A2C18}#nav.nav-light .nav-logo,#nav.nav-light .nav-logo-main{color:#3A2C18!important}
 #mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
-#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FAFAF7;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FAFAF7;border:1.5px solid rgba(201,162,39,.48);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
 .mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.85);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
@@ -69,9 +69,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 /* Section divider */
 .gold-bar{width:48px;height:2px;background:linear-gradient(90deg,#8A6A10 0%,#E8C84A 30%,#FBF0B0 50%,#E8C84A 70%,#8A6A10 100%);box-shadow:0 0 6px rgba(201,162,39,.35)}
 /* Cards */
-.menu-card{background:linear-gradient(145deg,#FFFFFF,#FAFAF7);border:1px solid rgba(201,162,39,.22);box-shadow:0 6px 24px rgba(58,40,16,.08);transition:border-color .3s,transform .3s,box-shadow .3s;overflow:hidden}
+.menu-card{background:linear-gradient(145deg,#FFFFFF,#FAFAF7);border:1.5px solid rgba(201,162,39,.5);box-shadow:0 6px 24px rgba(58,40,16,.08);transition:border-color .3s,transform .3s,box-shadow .3s;overflow:hidden}
 .menu-card:hover{border-color:rgba(201,162,39,.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(58,40,16,.14)}
-.testimonial-card{background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1px solid rgba(201,162,39,.08)}
+.testimonial-card{background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1.5px solid rgba(201,162,39,.35)}
 /* Stats */
 .stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:600;color:#846612;line-height:1;margin-bottom:6px}
 .stat-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.67)}
@@ -128,6 +128,22 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   .hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}
   #chat-panel{width:calc(100vw - 44px);right:22px}
 }
+/* THREE PILLARS + GLOBAL ENHANCEMENTS */
+.pillar-card{transition:background .45s ease}
+.pillar-card:hover{background:rgba(201,162,39,.08)!important}
+.pillar-card:hover .pc-bar{transform:scaleX(1)!important}
+.pillar-card:hover .pc-svg{transform:scale(1.15) translateY(-5px)!important}
+/* Dramatic h2 reveal */
+h2.reveal{opacity:0;transform:translateY(44px) skewY(.3deg);transition:opacity 1s ease,transform 1s cubic-bezier(.16,1,.3,1)!important}
+h2.reveal.in-view{opacity:1;transform:none}
+/* Gold bar glow-up */
+.gold-bar{height:3px!important;box-shadow:0 0 22px rgba(201,162,39,.55),0 0 8px rgba(201,162,39,.28)!important}
+/* Stronger card metallic borders */
+.menu-card{border-color:rgba(201,162,39,.38)!important;box-shadow:0 4px 20px rgba(58,40,16,.1),0 0 0 0.5px rgba(201,162,39,.12)!important}
+.menu-card:hover{border-color:rgba(201,162,39,.6)!important;box-shadow:0 18px 48px rgba(58,40,16,.16),0 0 0 1px rgba(201,162,39,.22)!important}
+/* Eyebrow label breath */
+@keyframes eyebrowBreathe{0%,100%{letter-spacing:.26em;opacity:.85}50%{letter-spacing:.3em;opacity:1}}
+@media(max-width:900px){.pillar-card{border-right:none!important;border-bottom:1px solid rgba(201,162,39,.24)!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}.word span{transform:none!important;opacity:1!important;animation:none!important}}
 </style>
 </head>
@@ -183,7 +199,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       <p class="hero-sub" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.1rem,2.5vw,1.45rem);color:rgba(255,255,255,.76);max-width:480px;line-height:1.55;opacity:0;animation:wordRise .6s ease .9s forwards;margin-bottom:40px">A 19th-century colonial mansion, painstakingly restored — now Penang's most distinctive dining, spa and hotel destination.</p>
       <div class="flex flex-wrap gap-4" style="opacity:0;animation:wordRise .5s ease 1.15s forwards">
         <a href="reservations.html" class="btn btn-gold text-[11px] tracking-[.18em] uppercase px-8 py-4 font-semibold">Reserve a Table</a>
-        <a href="menu.html" class="btn btn-ow text-[11px] tracking-[.15em] uppercase px-8 py-4">Explore the Menu</a>
+        <a href="menu.html" class="btn btn-gold text-[11px] tracking-[.15em] uppercase px-8 py-4">Explore the Menu</a>
       </div>
     </div>
   </div>
@@ -210,37 +226,99 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </div>
 
 <!-- ABOUT TEASER -->
-<section style="background:transparent;padding:36px 0">
+<section style="background:transparent;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div>
         <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">Our Story</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">A Colonial Mansion, <em class="font-normal italic">Reimagined</em></h2>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4.5vw,3.6rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">A Colonial Mansion, <em class="font-normal italic">Reimagined</em></h2>
         <div class="gold-bar reveal d2" style="margin-bottom:32px"></div>
-        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.8;color:rgba(58,44,24,.76);margin-bottom:20px">Built in the 1880s along Jalan Sultan Ahmad Shah, this Straits Eclectic mansion stood witness to over a century of Penang history. In 2014, we began a five-year restoration that preserved every original timber beam, hand-laid mosaic tile, and colonial archway.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.8;color:rgba(58,44,24,.67);margin-bottom:36px">Today, the building holds 18 private suites, three spa sanctuaries, and a restaurant where Chef Keith Khoo's craft meets the heritage of the space around it. Situated in the George Town UNESCO World Heritage Site.</p>
+        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.86;color:rgba(58,44,24,.76);margin-bottom:20px">Built in the 1880s along Jalan Sultan Ahmad Shah, this Straits Eclectic mansion stood witness to over a century of Penang history. In 2014, we began a five-year restoration that preserved every original timber beam, hand-laid mosaic tile, and colonial archway.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.86;color:rgba(58,44,24,.67);margin-bottom:36px">Today, the building holds 18 private suites, three spa sanctuaries, and a restaurant where Chef Keith Khoo's craft meets the heritage of the space around it. Situated in the George Town UNESCO World Heritage Site.</p>
         <div class="flex flex-wrap gap-10 reveal d3" style="margin-bottom:36px">
           <div><div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:600;color:#846612;line-height:1;margin-bottom:6px">1880</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.67)">Original Build</div></div>
           <div><div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:600;color:#846612;line-height:1;margin-bottom:6px">5</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.67)">Year Restoration</div></div>
           <div><div style="font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:600;color:#846612;line-height:1;margin-bottom:6px">18</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(58,44,24,.67)">Heritage Suites</div></div>
         </div>
-        <a href="about.html" class="btn btn-og reveal d4" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;text-decoration:none">Our Heritage Story</a>
+        <a href="about.html" class="btn btn-gold reveal d4" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;text-decoration:none">Our Heritage Story</a>
       </div>
       <div class="reveal d1">
-        <img src="img/story-building.jpg" alt="Deluxcious Heritage Building — Jalan Sultan Ahmad Shah, George Town" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid rgba(201,162,39,.1)">
+        <img src="img/story-building.jpg" alt="Deluxcious Heritage Building — Jalan Sultan Ahmad Shah, George Town" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1.5px solid rgba(201,162,39,.36)">
       </div>
     </div>
   </div>
 </section>
 
+<!-- THREE PILLARS -->
+<section style="background:#0F0B08;padding:96px 0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(201,162,39,.022) 0,rgba(201,162,39,.022) 1px,transparent 0,transparent 50%);background-size:30px 30px;pointer-events:none"></div>
+  <div style="position:absolute;top:24px;left:24px;width:48px;height:48px;border-top:1px solid rgba(201,162,39,.32);border-left:1px solid rgba(201,162,39,.32)"></div>
+  <div style="position:absolute;top:24px;right:24px;width:48px;height:48px;border-top:1px solid rgba(201,162,39,.32);border-right:1px solid rgba(201,162,39,.32)"></div>
+  <div style="position:absolute;bottom:24px;left:24px;width:48px;height:48px;border-bottom:1px solid rgba(201,162,39,.32);border-left:1px solid rgba(201,162,39,.32)"></div>
+  <div style="position:absolute;bottom:24px;right:24px;width:48px;height:48px;border-bottom:1px solid rgba(201,162,39,.32);border-right:1px solid rgba(201,162,39,.32)"></div>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-12" style="position:relative;z-index:1">
+    <div class="reveal" style="text-align:center;margin-bottom:64px">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,162,39,.6);font-weight:500;margin-bottom:16px">Everything Under One Roof</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.6rem);color:#FBF6EC;line-height:1.08;font-weight:600">Three Worlds, <em style="color:#E8C84A;font-weight:400;font-style:italic">One Address</em></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));border:1.5px solid rgba(201,162,39,.58)">
+
+      <!-- Heritage Hotel -->
+      <div class="pillar-card reveal" style="padding:56px 40px 52px;border-right:1px solid rgba(201,162,39,.22);text-align:center;position:relative;overflow:hidden">
+        <div class="pc-bar" style="position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,transparent,rgba(201,162,39,.75) 50%,transparent);transform:scaleX(0);transition:transform .55s ease;transform-origin:left"></div>
+        <div style="display:flex;justify-content:center;margin-bottom:30px">
+          <svg class="pc-svg" width="52" height="52" fill="none" stroke="rgba(201,162,39,.8)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="transition:transform .5s cubic-bezier(.34,1.56,.64,1)">
+            <rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,162,39,.52);margin-bottom:14px">Heritage Hotel</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.85rem;color:#FBF6EC;font-weight:600;margin-bottom:18px;line-height:1.15">18 Private <em style="font-weight:400;font-style:italic;color:#E8D590">Suites</em></h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13.5px;line-height:1.82;color:rgba(244,237,223,.52);margin-bottom:38px">18 elegantly appointed suites with hardwood floors, period furnishings, and modern amenities. Each room is a sanctuary of calm amid Georgetown's vibrant streets.</p>
+        <a href="hotel.html" class="btn btn-gold" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:12px 28px;text-decoration:none">Explore Rooms</a>
+      </div>
+
+      <!-- Luxury Spa -->
+      <div class="pillar-card reveal d1" style="padding:56px 40px 52px;border-right:1px solid rgba(201,162,39,.22);text-align:center;position:relative;overflow:hidden">
+        <div class="pc-bar" style="position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,transparent,rgba(201,162,39,.75) 50%,transparent);transform:scaleX(0);transition:transform .55s ease .09s;transform-origin:left"></div>
+        <div style="display:flex;justify-content:center;margin-bottom:30px">
+          <svg class="pc-svg" width="52" height="52" fill="none" stroke="rgba(201,162,39,.8)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="transition:transform .5s cubic-bezier(.34,1.56,.64,1)">
+            <path d="M12 22s8-4 8-10a8 8 0 10-16 0c0 6 8 10 8 10z"/><path d="M12 22V12"/><path d="M12 12c0 0-4-3-4-7 0 0 2 2 4 7z"/><path d="M12 12c0 0 4-3 4-7 0 0-2 2-4 7z"/>
+          </svg>
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,162,39,.52);margin-bottom:14px">Luxury Spa</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.85rem;color:#FBF6EC;font-weight:600;margin-bottom:18px;line-height:1.15">Three <em style="font-weight:400;font-style:italic;color:#E8D590">Healing</em> Traditions</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13.5px;line-height:1.82;color:rgba(244,237,223,.52);margin-bottom:38px">Choose from three distinct spa experiences — Deluxcious, Samporna, and Qin — each offering curated body massages, facials, and holistic treatments.</p>
+        <a href="spa.html" class="btn btn-gold" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:12px 28px;text-decoration:none">Discover Spa</a>
+      </div>
+
+      <!-- Fine Dining -->
+      <div class="pillar-card reveal d2" style="padding:56px 40px 52px;text-align:center;position:relative;overflow:hidden">
+        <div class="pc-bar" style="position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,transparent,rgba(201,162,39,.75) 50%,transparent);transform:scaleX(0);transition:transform .55s ease .18s;transform-origin:left"></div>
+        <div style="display:flex;justify-content:center;margin-bottom:30px">
+          <svg class="pc-svg" width="52" height="52" fill="none" stroke="rgba(201,162,39,.8)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="transition:transform .5s cubic-bezier(.34,1.56,.64,1)">
+            <path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,162,39,.52);margin-bottom:14px">Fine Dining</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.85rem;color:#FBF6EC;font-weight:600;margin-bottom:18px;line-height:1.15">Heritage <em style="font-weight:400;font-style:italic;color:#E8D590">Cuisine</em> Reimagined</h3>
+        <p style="font-family:'Inter',sans-serif;font-size:13.5px;line-height:1.82;color:rgba(244,237,223,.52);margin-bottom:38px">An inspired fusion of Asian and Western cuisine. Daily buffet sessions, elegant high tea, and à la carte cuisine complemented by a curated wine collection.</p>
+        <a href="menu.html" class="btn btn-gold" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:12px 28px;text-decoration:none">View Dining</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- MENU HIGHLIGHTS -->
-<section style="background:#EBEBE5;padding:36px 0">
+<section style="background:#EBEBE5;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center" style="margin-bottom:56px">
       <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">Restaurant</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">Signature <em class="font-normal italic">Dishes</em></h2>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">Signature <em class="font-normal italic">Dishes</em></h2>
       <div class="gold-bar reveal d2" style="margin:0 auto 20px"></div>
-      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(58,44,24,.7);max-width:440px;margin:0 auto">Chef Keith Khoo balances European technique with Penang's culinary heritage. À la carte daily, alongside three buffet sessions.</p>
+      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.82;color:rgba(58,44,24,.7);max-width:440px;margin:0 auto">Chef Keith Khoo balances European technique with Penang's culinary heritage. À la carte daily, alongside three buffet sessions.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style="margin-bottom:40px">
@@ -270,7 +348,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       </div>
     </div>
 
-    <div style="background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.04));border:1px solid rgba(201,162,39,.2);padding:24px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px" class="reveal">
+    <div style="background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.04));border:1.5px solid rgba(201,162,39,.48);padding:24px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px" class="reveal">
       <div>
         <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#846612;margin-bottom:10px">Buffet Sessions — Daily</p>
         <div class="flex flex-wrap gap-8">
@@ -285,58 +363,58 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- SPA SECTION -->
-<section style="background:transparent;padding:36px 0">
+<section style="background:transparent;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="order-2 lg:order-1 reveal">
-        <img src="img/hero/hero-spa.jpg" alt="Deluxcious Spa — Treatment Suite" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid rgba(201,162,39,.1)">
+        <img src="img/hero/hero-spa.jpg" alt="Deluxcious Spa — Treatment Suite" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1.5px solid rgba(201,162,39,.36)">
       </div>
       <div class="order-1 lg:order-2">
         <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">The Spa</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">Three <em class="font-normal italic">Traditions</em> of Healing</h2>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4.5vw,3.6rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">Three <em class="font-normal italic">Traditions</em> of Healing</h2>
         <div class="gold-bar reveal d2" style="margin-bottom:32px"></div>
-        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.8;color:rgba(58,44,24,.76);margin-bottom:18px">Our spa brings together three distinct healing philosophies under one roof — the Deluxcious Signature experience, the Malay heritage tradition of Samporna, and the ancient Chinese meridian practice of Qin.</p>
-        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.8;color:rgba(58,44,24,.67);margin-bottom:36px">Each is practiced in a dedicated treatment suite by therapists trained in their respective disciplines. Sessions from RM 160 for 60 minutes.</p>
+        <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.86;color:rgba(58,44,24,.76);margin-bottom:18px">Our spa brings together three distinct healing philosophies under one roof — the Deluxcious Signature experience, the Malay heritage tradition of Samporna, and the ancient Chinese meridian practice of Qin.</p>
+        <p class="reveal d3" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.86;color:rgba(58,44,24,.67);margin-bottom:36px">Each is practiced in a dedicated treatment suite by therapists trained in their respective disciplines. Sessions from RM 160 for 60 minutes.</p>
         <div class="flex gap-4 flex-wrap reveal d3" style="margin-bottom:32px">
-          <div style="text-align:center;padding:14px 20px;border:1px solid rgba(201,162,39,.15)">
+          <div style="text-align:center;padding:14px 20px;border:1.5px solid rgba(201,162,39,.42)">
             <div style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#846612;margin-bottom:3px">Deluxcious</div>
             <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(58,44,24,.6)">Signature</div>
           </div>
-          <div style="text-align:center;padding:14px 20px;border:1px solid rgba(201,162,39,.15)">
+          <div style="text-align:center;padding:14px 20px;border:1.5px solid rgba(201,162,39,.42)">
             <div style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#846612;margin-bottom:3px">Samporna</div>
             <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(58,44,24,.6)">Malay Heritage</div>
           </div>
-          <div style="text-align:center;padding:14px 20px;border:1px solid rgba(201,162,39,.15)">
+          <div style="text-align:center;padding:14px 20px;border:1.5px solid rgba(201,162,39,.42)">
             <div style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#846612;margin-bottom:3px">Qin</div>
             <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(58,44,24,.6)">Ancient Chinese</div>
           </div>
         </div>
-        <a href="spa.html" class="btn btn-og reveal d4" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;text-decoration:none">Explore the Spa</a>
+        <a href="spa.html" class="btn btn-gold reveal d4" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:14px 28px;text-decoration:none">Explore the Spa</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOTEL TEASER -->
-<section style="background:#EBEBE5;padding:36px 0">
+<section style="background:#EBEBE5;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center" style="margin-bottom:56px">
       <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">Heritage Hotel</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">18 <em class="font-normal italic">Private</em> Suites</h2>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:16px">18 <em class="font-normal italic">Private</em> Suites</h2>
       <div class="gold-bar reveal d2" style="margin:0 auto 20px"></div>
-      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.75;color:rgba(58,44,24,.7);max-width:440px;margin:0 auto">Every room is a restored piece of the 1880s original — period furniture, mosaic floors, and en-suite bathrooms with rain shower and soaking tub.</p>
+      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.82;color:rgba(58,44,24,.7);max-width:440px;margin:0 auto">Every room is a restored piece of the 1880s original — period furniture, mosaic floors, and en-suite bathrooms with rain shower and soaking tub.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" style="margin-bottom:40px">
-      <div class="reveal" style="border:1px solid rgba(201,162,39,.12);overflow:hidden">
+      <div class="reveal" style="border:1.5px solid rgba(201,162,39,.38);overflow:hidden">
         <div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Standard Suite</div></div></div>
         <div style="padding:20px"><div style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;font-weight:500;margin-bottom:6px">Heritage Standard</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.67);line-height:1.6;margin-bottom:10px">King bed, courtyard view, mosaic floor, rain shower.</div><div style="font-family:'Playfair Display',serif;font-size:20px;color:#846612">From RM 320<span style="font-size:12px;color:rgba(58,44,24,.6)"> /night</span></div></div>
       </div>
-      <div class="reveal d1" style="border:1px solid rgba(201,162,39,.3);overflow:hidden;position:relative">
+      <div class="reveal d1" style="border:1.5px solid rgba(201,162,39,.58);overflow:hidden;position:relative">
         <div style="position:absolute;top:12px;left:12px;z-index:10;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(135deg,#B8891E,#C9A227);color:#0F0B08;padding:4px 10px;font-weight:700">Best Value</div>
         <div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Deluxe Suite</div></div></div>
         <div style="padding:20px"><div style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;font-weight:500;margin-bottom:6px">Heritage Deluxe</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.67);line-height:1.6;margin-bottom:10px">King bed, original timber beams, soaking tub, sitting area.</div><div style="font-family:'Playfair Display',serif;font-size:20px;color:#846612">From RM 480<span style="font-size:12px;color:rgba(58,44,24,.6)"> /night</span></div></div>
       </div>
-      <div class="reveal d2" style="border:1px solid rgba(201,162,39,.12);overflow:hidden">
+      <div class="reveal d2" style="border:1.5px solid rgba(201,162,39,.38);overflow:hidden">
         <div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Superior Suite</div></div></div>
         <div style="padding:20px"><div style="font-family:'Playfair Display',serif;font-size:18px;color:#3A2C18;font-weight:500;margin-bottom:6px">Superior Suite</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.67);line-height:1.6;margin-bottom:10px">Copper soaking tub, private verandah, Straits view, antique furnishings.</div><div style="font-family:'Playfair Display',serif;font-size:20px;color:#846612">From RM 750<span style="font-size:12px;color:rgba(58,44,24,.6)"> /night</span></div></div>
       </div>
@@ -346,14 +424,14 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- GALLERY TEASER -->
-<section style="background:transparent;padding:36px 0">
+<section style="background:transparent;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="flex flex-col md:flex-row justify-between items-end" style="margin-bottom:36px">
       <div>
         <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">Gallery</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600">A Visual <em class="font-normal italic">Journey</em></h2>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600">A Visual <em class="font-normal italic">Journey</em></h2>
       </div>
-      <a href="gallery.html" class="btn btn-og reveal" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:12px 24px;text-decoration:none;margin-top:16px">View Full Gallery</a>
+      <a href="gallery.html" class="btn btn-gold reveal" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:12px 24px;text-decoration:none;margin-top:16px">View Full Gallery</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px" class="reveal d1">
       <div class="gp-item" style="grid-column:span 2;grid-row:span 2">
@@ -368,26 +446,26 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- TESTIMONIALS -->
-<section style="background:#EBEBE5;padding:36px 0">
+<section style="background:#EBEBE5;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center" style="margin-bottom:56px">
       <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">Guest Stories</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600">What Guests Say</h2>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600">What Guests Say</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="reveal" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1px solid rgba(201,162,39,.08);padding:28px">
+      <div class="reveal" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1.5px solid rgba(201,162,39,.35);padding:28px">
         <div style="font-family:'Playfair Display',serif;font-size:72px;line-height:.7;color:rgba(201,162,39,.12);font-weight:700;user-select:none">"</div>
         <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.7;color:rgba(58,44,24,.82);margin:12px 0 20px">"The crème brûlée was torched at the table. The staircase alone is worth the visit. One of Penang's finest."</p>
         <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#846612">— Priya S.</div>
         <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.56);margin-top:3px">Kuala Lumpur</div>
       </div>
-      <div class="reveal d1" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1px solid rgba(201,162,39,.08);padding:28px">
+      <div class="reveal d1" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1.5px solid rgba(201,162,39,.35);padding:28px">
         <div style="font-family:'Playfair Display',serif;font-size:72px;line-height:.7;color:rgba(201,162,39,.12);font-weight:700;user-select:none">"</div>
         <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.7;color:rgba(58,44,24,.82);margin:12px 0 20px">"We stayed in the Superior Suite. The copper soaking tub, the view, the silence. We extended by two nights."</p>
         <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#846612">— Marcus T.</div>
         <div style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(58,44,24,.56);margin-top:3px">Singapore</div>
       </div>
-      <div class="reveal d2" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1px solid rgba(201,162,39,.08);padding:28px">
+      <div class="reveal d2" style="background:linear-gradient(145deg,#FFFFFF,#F6F6F2);border:1.5px solid rgba(201,162,39,.35);padding:28px">
         <div style="font-family:'Playfair Display',serif;font-size:72px;line-height:.7;color:rgba(201,162,39,.12);font-weight:700;user-select:none">"</div>
         <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.7;color:rgba(58,44,24,.82);margin:12px 0 20px">"The Samporna massage was unlike anything I've experienced. The therapist explained each technique as she worked."</p>
         <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#846612">— Linh N.</div>
@@ -406,9 +484,9 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div style="position:relative;z-index:2;width:100%;padding:0 24px" class="lg:px-12">
     <div class="max-w-7xl mx-auto">
       <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">Make a Reservation</p>
-      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:#3A2C18;line-height:1.1;max-width:540px;font-weight:600;margin-bottom:20px">Reserve Your <em class="font-normal italic">Place at the Table</em></h2>
+      <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.2rem);color:#3A2C18;line-height:1.1;max-width:540px;font-weight:600;margin-bottom:20px">Reserve Your <em class="font-normal italic">Place at the Table</em></h2>
       <div class="gold-bar reveal d2" style="margin-bottom:24px"></div>
-      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.8;color:rgba(58,44,24,.72);max-width:420px;margin-bottom:36px">Restaurant, spa and hotel bookings — all in one place. Or call directly at +604-261 0288.</p>
+      <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.86;color:rgba(58,44,24,.72);max-width:420px;margin-bottom:36px">Restaurant, spa and hotel bookings — all in one place. Or call directly at +604-261 0288.</p>
       <div class="flex flex-wrap gap-4 reveal d3">
         <a href="reservations.html" class="btn btn-gold" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:16px 36px;font-weight:600;text-decoration:none">Reserve Now</a>
         <a href="https://wa.me/60125151288" target="_blank" class="btn btn-gold" style="font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:16px 36px;text-decoration:none">WhatsApp Us</a>

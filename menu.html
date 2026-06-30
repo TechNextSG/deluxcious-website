@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,7 +26,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .hero-m .ph{position:absolute;inset:0;height:100%;background:linear-gradient(145deg,#F7F7F4,#EFEFEA 45%,#F3F3EF);border:none}
 .hero-o{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(15,11,8,.55) 0%,rgba(15,11,8,.60) 78%,rgba(15,11,8,.72) 100%)}
 .hero-c{position:relative;z-index:3;width:100%}
-.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1px solid rgba(201,162,39,.1);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
+.vid-note{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,162,39,.22);border:1.5px solid rgba(201,162,39,.36);padding:5px 16px;white-space:nowrap;z-index:4;pointer-events:none}
 .btn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s ease,background .25s ease,color .2s ease}
 .btn::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .5s;pointer-events:none;z-index:2}
 .btn:hover::before{left:140%}.btn:hover{transform:translateY(-2px) scale(1.01)}.btn:active{transform:translateY(1px) scale(0.98)!important}
@@ -45,7 +45,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 #nav.nav-light{background:rgba(248,240,225,.94)!important;backdrop-filter:blur(12px);box-shadow:0 1px 24px rgba(58,40,16,.12)}#nav:not(.nav-light){background:linear-gradient(to bottom,rgba(15,11,8,.45) 0%,rgba(15,11,8,.14) 65%,transparent 100%)}
 .nav-link{color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}.nav-link:hover{color:#FFFFFF}.nav-logo{color:#FBF6EC}#nav.nav-light .nav-link{color:rgba(58,44,24,.82)}#nav.nav-light .nav-link:hover{color:#3A2C18}#nav.nav-light .nav-logo,#nav.nav-light .nav-logo-main{color:#3A2C18!important}.nav-active{color:#846612!important}
 #mob-toggle-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;border:none;background:transparent;flex-shrink:0}
-#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FAFAF7;border:1px solid rgba(201,162,39,.2);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
+#mob-card{display:none;position:fixed;top:56px;left:1rem;right:1rem;z-index:9999;background:#FAFAF7;border:1.5px solid rgba(201,162,39,.48);border-radius:4px;box-shadow:0 14px 40px rgba(58,40,16,.18);overflow:hidden;animation:cardIn .22s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 #mob-card.open{display:block}
 .mob-card-link{display:block;text-align:center;font-family:'Inter',sans-serif;font-size:1rem;color:rgba(58,44,24,.85);text-decoration:none;padding:.9rem 1rem;border-bottom:1px solid rgba(58,40,16,.11);transition:color .15s,background .15s}.mob-card-link:hover{background:rgba(201,162,39,.08);color:#3A2C18}
@@ -72,12 +72,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .hero-eyebrow{display:inline-block;animation:eyebrowPulse 4s ease-in-out .5s infinite}
 .nav-active{color:#E8C84A!important;text-shadow:0 0 12px rgba(232,200,74,.4),0 0 24px rgba(232,200,74,.15)}
 #nav.nav-light .nav-active{color:#C9A227!important;text-shadow:none;background:rgba(201,162,39,.1);padding:3px 8px;border-radius:2px}
-.dish-card{background:linear-gradient(160deg,#FFFFFF,#F6F6F2);border:1px solid rgba(201,162,39,.1);overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.dish-card{background:linear-gradient(160deg,#FFFFFF,#F6F6F2);border:1.5px solid rgba(201,162,39,.36);overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
 .dish-card:hover{border-color:rgba(201,162,39,.3);transform:translateY(-3px);box-shadow:0 16px 40px rgba(58,40,16,.16)}
 .menu-section-tab{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;padding:10px 22px;border:1px solid rgba(58,40,16,.14);color:rgba(58,44,24,.72);background:transparent;cursor:pointer;transition:all .25s}
 .menu-section-tab:hover{border-color:rgba(201,162,39,.3);color:rgba(201,162,39,.7)}
 .menu-section-tab.active{border-color:#846612;color:#846612;background:rgba(201,162,39,.06)}
-.diet-badge{display:inline-block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border:1px solid rgba(201,162,39,.25);color:rgba(201,162,39,.6);margin-right:6px}
+.diet-badge{display:inline-block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border:1.5px solid rgba(201,162,39,.52);color:rgba(201,162,39,.6);margin-right:6px}
 .tasting-step{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid rgba(58,40,16,.10)}
 .tasting-step:last-child{border-bottom:none}
 .tasting-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:rgba(201,162,39,.18);line-height:1;min-width:40px}
@@ -103,6 +103,10 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 @keyframes typingBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
 @media(max-width:767px){#mob-toggle-btn{display:flex!important;width:40px;height:40px;border-radius:6px;background:rgba(255,255,255,.12)!important;border:1.5px solid rgba(255,255,255,.45)!important}#mob-toggle-btn svg{stroke:#FBF6EC!important}#nav.nav-light #mob-toggle-btn{background:rgba(58,40,16,.05)!important;border-color:rgba(58,40,16,.28)!important}#nav.nav-light #mob-toggle-btn svg{stroke:#3A2C18!important}.hidden.md\:flex{display:none!important}.hidden.md\:inline-block{display:none!important}#chat-panel{width:calc(100vw - 44px);right:22px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
+/* GLOBAL UI ENHANCEMENTS v2.5 */
+h2.reveal{opacity:0;transform:translateY(44px) skewY(.28deg);transition:opacity 1s ease,transform 1s cubic-bezier(.16,1,.3,1)!important}
+h2.reveal.in-view{opacity:1;transform:none}
+.gold-bar{height:3px!important;box-shadow:0 0 22px rgba(201,162,39,.55),0 0 8px rgba(201,162,39,.28)!important}
 </style>
 </head>
 <body>
@@ -143,7 +147,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       <p class="hero-eyebrow" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,162,39,.75);margin-bottom:16px;font-weight:500">Deluxcious · Restaurant</p>
       <h1 class="hero-h1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4.2rem);color:#FBF6EC;line-height:1.1;font-weight:600;margin-bottom:20px"><span class="word"><span style="animation-delay:.35s">Modern</span></span> <span class="word"><span style="animation-delay:.45s"><em class="font-normal italic hero-em" style="color:#E8C84A">Nyonya</em></span></span> <span class="word"><span style="animation-delay:.55s">Cuisine</span></span></h1>
       <div class="gold-bar" style="margin-bottom:20px"></div>
-      <p class="hero-sub" style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:rgba(255,255,255,.74);max-width:500px">Chef Keith Khoo draws on Peranakan tradition and Le Cordon Bleu technique. Seasonal produce from Penang's heritage farms. Dishes change to reflect what is best on any given week.</p>
+      <p class="hero-sub" style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.8;color:rgba(255,255,255,.74);max-width:500px">Chef Keith Khoo draws on Peranakan tradition and Le Cordon Bleu technique. Seasonal produce from Penang's heritage farms. Dishes change to reflect what is best on any given week.</p>
     </div>
   </div>
 </section>
@@ -167,7 +171,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 <!-- SEASONAL NOTE -->
 <section style="background:#EBEBE5;padding:48px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div style="border:1px solid rgba(201,162,39,.2);background:linear-gradient(135deg,rgba(201,162,39,.04),rgba(201,162,39,.02));padding:32px 40px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between" class="reveal">
+    <div style="border:1.5px solid rgba(201,162,39,.48);background:linear-gradient(135deg,rgba(201,162,39,.04),rgba(201,162,39,.02));padding:32px 40px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between" class="reveal">
       <div>
         <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:8px">Seasonal Menu Note</div>
         <p style="font-family:'Playfair Display',serif;font-size:1.05rem;color:#3A2C18;line-height:1.6;font-style:italic;max-width:540px">"Our produce arrives daily from Balik Pulau's heritage orchards and the Pasar Chowrasta vendors we have trusted for years. The menu reflects the season, not a fixed schedule."</p>
@@ -179,17 +183,17 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- TASTING MENU -->
-<section style="background:transparent;padding:36px 0">
+<section style="background:transparent;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       <div>
         <p class="reveal" style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">Tasting Experience</p>
-        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:12px">The Heritage <em class="font-normal italic">Tasting Menu</em></h2>
+        <h2 class="reveal d1" style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:12px">The Heritage <em class="font-normal italic">Tasting Menu</em></h2>
         <div class="gold-bar reveal d2" style="margin-bottom:24px"></div>
         <p class="reveal d2" style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(58,44,24,.72);line-height:1.8;margin-bottom:32px">A seven-course progression that moves from the cool and aromatic to the warm and complex — the full arc of Nyonya flavour in one sitting. Available Tuesday to Sunday, dinner only. Reservation required.</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px" class="reveal d3">
-          <div style="padding:10px 20px;border:1px solid rgba(201,162,39,.2);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#846612">RM 380</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(58,44,24,.64);margin-top:4px">Per Person</div></div>
-          <div style="padding:10px 20px;border:1px solid rgba(201,162,39,.2);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#846612">RM 580</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(58,44,24,.64);margin-top:4px">With Wine Pairing</div></div>
+          <div style="padding:10px 20px;border:1.5px solid rgba(201,162,39,.48);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#846612">RM 380</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(58,44,24,.64);margin-top:4px">Per Person</div></div>
+          <div style="padding:10px 20px;border:1.5px solid rgba(201,162,39,.48);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#846612">RM 580</div><div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(58,44,24,.64);margin-top:4px">With Wine Pairing</div></div>
         </div>
         <a href="reservations.html" class="btn btn-gold reveal d3" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:14px 32px;font-weight:600;text-decoration:none">Book Tasting Menu</a>
       </div>
@@ -207,11 +211,11 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- A LA CARTE -->
-<section style="background:#EBEBE5;padding:36px 0">
+<section style="background:#EBEBE5;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center reveal" style="margin-bottom:48px">
       <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">A La Carte</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:10px">The Full <em class="font-normal italic">Menu</em></h2>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:10px">The Full <em class="font-normal italic">Menu</em></h2>
       <div class="gold-bar" style="margin:0 auto 20px"></div>
       <p style="font-family:'Inter',sans-serif;font-size:14px;color:rgba(58,44,24,.67);max-width:440px;margin:0 auto;line-height:1.75">Available for lunch and dinner, seven days a week. All prices are exclusive of 8% service charge and 6% SST.</p>
     </div>
@@ -241,19 +245,19 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 </section>
 
 <!-- DIETARY KEY + PRIVATE DINING -->
-<section style="background:transparent;padding:36px 0">
+<section style="background:transparent;padding:88px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
       <div class="reveal">
         <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">Dietary Guide</p>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#3A2C18;font-weight:600;margin-bottom:24px">Dietary <em class="font-normal italic">Symbols</em></h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">GF</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Gluten-free preparation available on request</div></div>
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">VG</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Suitable for vegetarians</div></div>
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Local</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Sourced from Penang or northern Peninsular Malaysia</div></div>
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Seasonal</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Availability varies — confirm with your server</div></div>
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Chef's Pick</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Chef Khoo's personal recommendation</div></div>
-          <div style="padding:14px;border:1px solid rgba(201,162,39,.1)"><div class="diet-badge" style="margin-bottom:6px">Signature</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">House specialty, available year-round</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">GF</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Gluten-free preparation available on request</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">VG</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Suitable for vegetarians</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">Local</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Sourced from Penang or northern Peninsular Malaysia</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">Seasonal</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Availability varies — confirm with your server</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">Chef's Pick</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">Chef Khoo's personal recommendation</div></div>
+          <div style="padding:14px;border:1.5px solid rgba(201,162,39,.36)"><div class="diet-badge" style="margin-bottom:6px">Signature</div><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.72)">House specialty, available year-round</div></div>
         </div>
         <p style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(58,44,24,.58);line-height:1.75;margin-top:20px">Please inform your server of all dietary requirements or allergies before ordering. We can accommodate most requests with advance notice. Note: This is not a halal-certified establishment.</p>
       </div>
