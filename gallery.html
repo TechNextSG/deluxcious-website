@@ -24,9 +24,10 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .ph-t{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#7E6212;line-height:1.75}
 .ph-s{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;color:rgba(58,44,24,.42)}
 /* Gallery grid */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:start}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .g2{grid-column:span 2}.g3{grid-column:1 / -1}
-.gallery-item{position:relative;overflow:hidden;cursor:default}
+.gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:1}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
 .gallery-item .ph{transition:transform .55s ease}
 .gallery-item:hover .ph{transform:scale(1.04)}
 .gi-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,11,8,.85) 0%,rgba(15,11,8,.25) 55%,transparent 100%);opacity:0;transition:opacity .35s ease;display:flex;align-items:flex-end;padding:20px 22px;z-index:5}
@@ -128,8 +129,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   #chat-panel{width:calc(100vw - 44px);right:22px}
 }
 @media(max-width:480px){
-  .gallery-grid{grid-template-columns:1fr;gap:8px}
-  .g2,.g3{grid-column:span 1}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:4px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal.in-view{opacity:1!important;transform:none!important;transition:none!important}}
 /* GLOBAL UI ENHANCEMENTS v2.5 */
@@ -235,6 +235,24 @@ body{animation:pageFadeIn .42s ease both}
 @keyframes goldEmGlow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
 @keyframes heroWordGlow{0%,100%{filter:drop-shadow(0 0 20px rgba(201,162,39,.45)) drop-shadow(0 0 42px rgba(201,162,39,.14))}50%{filter:drop-shadow(0 0 55px rgba(201,162,39,.9)) drop-shadow(0 0 95px rgba(201,162,39,.36));}}
 .word:has(.hero-em){animation:heroWordGlow 3.5s ease-in-out 1.1s infinite}
+
+/* === Lightbox v2.9 === */
+#lightbox{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+#lightbox.lb-open{opacity:1;pointer-events:all}
+#lb-overlay{position:absolute;inset:0;background:rgba(10,7,4,.91);cursor:pointer}
+#lb-panel{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:min(90vw,900px)}
+#lb-img{display:block;max-width:100%;max-height:78vh;object-fit:contain;box-shadow:0 32px 80px rgba(0,0,0,.7);border:1px solid rgba(201,162,39,.22);transition:opacity .22s ease}
+#lb-caption{padding:13px 0 0;text-align:center}
+#lb-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;color:#F5F0E8;margin-bottom:4px}
+#lb-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,200,74,.75)}
+#lb-counter{font-family:'Inter',sans-serif;font-size:10px;color:rgba(255,255,255,.32);margin-top:8px;letter-spacing:.1em}
+#lb-close{position:fixed;top:16px;right:18px;z-index:100001;background:rgba(15,11,8,.55);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.82);width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+#lb-close:hover{background:rgba(201,162,39,.28);border-color:rgba(201,162,39,.65);color:#E8C84A}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);z-index:100001;background:rgba(15,11,8,.45);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.82);width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s}
+.lb-nav:hover{background:rgba(201,162,39,.25);border-color:rgba(201,162,39,.6);color:#E8C84A}
+.lb-nav:disabled{opacity:.2;cursor:default;pointer-events:none}
+#lb-prev{left:14px}#lb-next{right:14px}
+@media(max-width:600px){.lb-nav{width:36px;height:36px}#lb-prev{left:6px}#lb-next{right:6px}}
 </style>
 </head>
 <body style="background:transparent">
@@ -319,206 +337,206 @@ body{animation:pageFadeIn .42s ease both}
     <div class="gallery-grid" id="gallery-grid">
 
       <!-- 1. Building aerial — full width -->
-      <div class="gallery-item g3 reveal" data-cat="venue">
-          <img src="img/gallery/gc-01.png" alt="Deluxcious from Above" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="venue" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-01.png" alt="Deluxcious from Above" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Deluxcious from Above</div><div class="gi-meta">Venue</div></div></div>
       </div>
 
       <!-- 2. Oysters — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="restaurant">
-          <img src="img/gallery/gc-06.jpg" alt="Freshly Shucked Oysters" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-06.jpg" alt="Freshly Shucked Oysters" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Freshly Shucked Oysters</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 3. Foie gras — portrait -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-          <img src="img/gallery/gc-25.jpg" alt="Pan Seared Foie Gras" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-25.jpg" alt="Pan Seared Foie Gras" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Pan Seared Foie Gras</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 4. Herb chicken — single -->
-      <div class="gallery-item reveal" data-cat="restaurant">
-          <img src="img/gallery/gc-04.jpg" alt="Herb Grilled Chicken" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-04.jpg" alt="Herb Grilled Chicken" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Herb Grilled Chicken</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 5. Glazed chicken — single -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-          <img src="img/gallery/gc-22.jpg" alt="Honey Glazed Chicken" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-22.jpg" alt="Honey Glazed Chicken" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Honey Glazed Chicken</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 6. Tiger prawns — portrait -->
-      <div class="gallery-item reveal d2" data-cat="restaurant">
-          <img src="img/gallery/gc-26.jpg" alt="Tiger Prawns in Chilli Oil" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d2" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-26.jpg" alt="Tiger Prawns in Chilli Oil" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Tiger Prawns in Chilli Oil</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 7. Salmon — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="restaurant">
-          <img src="img/gallery/gc-16.jpg" alt="Grilled Atlantic Salmon" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-16.jpg" alt="Grilled Atlantic Salmon" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Grilled Atlantic Salmon</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 8. Barramundi — single -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-          <img src="img/gallery/gc-15.jpg" alt="Baked Barramundi" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-15.jpg" alt="Baked Barramundi" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Baked Barramundi</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 9. Crispy chicken — single -->
-      <div class="gallery-item reveal" data-cat="restaurant">
-          <img src="img/gallery/gc-14.jpg" alt="Crispy Chicken & Onion Rings" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-14.jpg" alt="Crispy Chicken & Onion Rings" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Crispy Chicken & Onion Rings</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 10. Spiced prawn — single -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-          <img src="img/gallery/gc-24.jpg" alt="Spiced Grilled Prawn" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-24.jpg" alt="Spiced Grilled Prawn" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Spiced Grilled Prawn</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 11. Yee Sang — single -->
-      <div class="gallery-item reveal d2" data-cat="restaurant">
-          <img src="img/gallery/gc-10.jpg" alt="Yee Sang Lo Hei" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d2" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-10.jpg" alt="Yee Sang Lo Hei" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Yee Sang — Lo Hei</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 12. Noodle soup — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="restaurant">
-          <img src="img/gallery/gc-27.jpg" alt="Seafood Noodle Soup" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-27.jpg" alt="Seafood Noodle Soup" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Seafood Noodle Soup</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 13. Sautéed prawns — single -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-          <img src="img/gallery/gc-28.jpg" alt="Sautéed Prawns with Greens" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="restaurant" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-28.jpg" alt="Sautéed Prawns with Greens" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Sautéed Prawns with Greens</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
       <!-- 14. Private dining — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="venue">
-          <img src="img/gallery/gc-11.jpg" alt="Private Dining Room" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="venue" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-11.jpg" alt="Private Dining Room" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dining Room</div><div class="gi-meta">Venue</div></div></div>
       </div>
 
       <!-- 15. Whisky bar — single -->
-      <div class="gallery-item reveal d1" data-cat="venue">
-          <img src="img/gallery/gc-12.jpg" alt="The Whisky Bar" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="venue" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-12.jpg" alt="The Whisky Bar" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Whisky Bar</div><div class="gi-meta">Venue</div></div></div>
       </div>
 
       <!-- 16. Wine collection — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="venue">
-          <img src="img/gallery/gc-13.jpg" alt="Our Wine Collection" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="venue" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-13.jpg" alt="Our Wine Collection" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Our Wine Collection</div><div class="gi-meta">Venue</div></div></div>
       </div>
 
       <!-- 17. Corporate dinner — single -->
-      <div class="gallery-item reveal d1" data-cat="events">
-          <img src="img/gallery/gc-33.jpg" alt="Elegant Corporate Dinner" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-33.jpg" alt="Elegant Corporate Dinner" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Elegant Corporate Dinner</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 18. Wedding — full width -->
-      <div class="gallery-item g3 reveal" data-cat="events">
-          <img src="img/gallery/gc-05.jpg" alt="Wedding Reception" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-05.jpg" alt="Wedding Reception" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Reception</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 19. Intimate toast — portrait -->
-      <div class="gallery-item reveal" data-cat="events">
-          <img src="img/gallery/gc-02.jpg" alt="Intimate Dinner Toast" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-02.jpg" alt="Intimate Dinner Toast" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Intimate Dinner Toast</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 20. Wedding florals — portrait -->
-      <div class="gallery-item reveal d1" data-cat="events">
-          <img src="img/gallery/gc-19.jpg" alt="Wedding Floral Backdrop" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-19.jpg" alt="Wedding Floral Backdrop" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Floral Backdrop</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 21. International guests — portrait -->
-      <div class="gallery-item reveal d2" data-cat="events">
-          <img src="img/gallery/gc-18.jpg" alt="International Guest Evening" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d2" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-18.jpg" alt="International Guest Evening" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">International Guest Evening</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 22. Wedding toast — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="events">
-          <img src="img/gallery/gc-07.jpg" alt="Wedding Dinner Toast" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-07.jpg" alt="Wedding Dinner Toast" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Dinner Toast</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 23. Wedding group — single -->
-      <div class="gallery-item reveal d1" data-cat="events">
-          <img src="img/gallery/gc-08.jpg" alt="Wedding Group Photo" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-08.jpg" alt="Wedding Group Photo" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Group Photo</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 24. Aaron & Tracy wedding — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="events">
-          <img src="img/gallery/gc-09.jpg" alt="Aaron & Tracy Wedding" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-09.jpg" alt="Aaron & Tracy Wedding" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Aaron & Tracy Wedding</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 25. Wine evening — single -->
-      <div class="gallery-item reveal d1" data-cat="events">
-          <img src="img/gallery/gc-20.jpg" alt="Wine & Dine Evening" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-20.jpg" alt="Wine & Dine Evening" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine & Dine Evening</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 26. Champagne — portrait -->
-      <div class="gallery-item reveal" data-cat="events">
-          <img src="img/gallery/gc-03.jpg" alt="Champagne Celebration" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-03.jpg" alt="Champagne Celebration" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Champagne Celebration</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 27. Wine long table — span 2 -->
-      <div class="gallery-item g2 reveal d1" data-cat="events">
-          <img src="img/gallery/gc-21.jpg" alt="Wine Dinner Long Table" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-21.jpg" alt="Wine Dinner Long Table" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Dinner — Long Table</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 28. Wine pairing dinner — full width -->
-      <div class="gallery-item g3 reveal" data-cat="events">
-          <img src="img/gallery/gc-17.jpg" alt="Wine Pairing Dinner" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-17.jpg" alt="Wine Pairing Dinner" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Pairing Dinner</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 29. Birthday — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="events">
-          <img src="img/gallery/gc-23.jpg" alt="Birthday Celebration" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-23.jpg" alt="Birthday Celebration" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Birthday Celebration</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 30. Guests celebrating — single -->
-      <div class="gallery-item reveal d1" data-cat="events">
-          <img src="img/gallery/gc-30.jpg" alt="Guests Celebrating Together" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-30.jpg" alt="Guests Celebrating Together" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Guests Celebrating Together</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 31. Wine toast — single -->
-      <div class="gallery-item reveal" data-cat="events">
-          <img src="img/gallery/gc-32.jpg" alt="Wine Dinner Toast" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-32.jpg" alt="Wine Dinner Toast" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Dinner Toast</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 32. Friends at bar — span 2 -->
-      <div class="gallery-item g2 reveal d1" data-cat="events">
-          <img src="img/gallery/gc-29.jpg" alt="Friends at the Wine Wall" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-29.jpg" alt="Friends at the Wine Wall" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Friends at the Wine Wall</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 33. Private dinner evening — single -->
-      <div class="gallery-item reveal" data-cat="events">
-          <img src="img/gallery/gc-31.jpg" alt="Private Dinner Evening" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-31.jpg" alt="Private Dinner Evening" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dinner Evening</div><div class="gi-meta">Events</div></div></div>
       </div>
 
       <!-- 34. Group dinner party — span 2 -->
-      <div class="gallery-item g2 reveal d1" data-cat="events">
-          <img src="img/gallery/gc-34.jpg" alt="Lively Group Dinner Party" style="width:100%;height:auto;display:block;transition:transform .55s ease">
+      <div class="gallery-item reveal d1" data-cat="events" onclick="openLightbox(this)">
+          <img src="img/gallery/gc-34.jpg" alt="Lively Group Dinner Party" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease">
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Lively Group Dinner Party</div><div class="gi-meta">Events</div></div></div>
       </div>
 
@@ -624,6 +642,28 @@ body{animation:pageFadeIn .42s ease both}
   </div>
 </div>
 
+<!-- Lightbox -->
+<div id="lightbox">
+  <div id="lb-overlay" onclick="closeLightbox()"></div>
+  <div id="lb-panel">
+    <img id="lb-img" src="" alt=""/>
+    <div id="lb-caption">
+      <div id="lb-title"></div>
+      <div id="lb-meta"></div>
+    </div>
+    <div id="lb-counter"></div>
+  </div>
+  <button id="lb-close" onclick="closeLightbox()" aria-label="Close">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <button class="lb-nav" id="lb-prev" onclick="lbNav(-1)" aria-label="Previous">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 19l-7-7 7-7"/></svg>
+  </button>
+  <button class="lb-nav" id="lb-next" onclick="lbNav(1)" aria-label="Next">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
 <script>
 (function(){const nav=document.getElementById('nav');let lastY=0,ticking=false;window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const y=window.scrollY;if(y>lastY&&y>100)nav.classList.add('nav-hidden');else nav.classList.remove('nav-hidden');if(y>60)nav.classList.add('nav-light');else nav.classList.remove('nav-light');lastY=y;ticking=false;});ticking=true;}});})();
 (function(){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
@@ -657,6 +697,41 @@ function hideTyping(){const t=document.getElementById('typing-indicator');if(t)t
 function botReply(q){const ql=q.toLowerCase();let r=null;for(const[,v]of Object.entries(KB)){if(v.k.some(k=>ql.includes(k))){r=v.r;break;}}if(!r)r="For enquiries:\n+604-261 0288\n+6012-515 1288 (WhatsApp)\nreservations@deluxcioushotel.com.my";showTyping();setTimeout(()=>{hideTyping();addMsg(r,'bot');},800+Math.random()*300);}
 function sendMsg(){const i=document.getElementById('chat-input');const t=i.value.trim();if(!t)return;addMsg(t,'user');i.value='';document.getElementById('chat-chips').style.display='none';botReply(t);}
 function sendChip(btn,txt){addMsg(txt,'user');document.getElementById('chat-chips').style.display='none';botReply(txt);}
+// === Lightbox ===
+let lbItems=[],lbIdx=0;
+function getVisibleItems(){return Array.from(document.querySelectorAll('#gallery-grid .gallery-item')).filter(el=>el.style.display!=='none');}
+function openLightbox(el){
+  lbItems=getVisibleItems();
+  lbIdx=lbItems.indexOf(el);
+  if(lbIdx<0)return;
+  lbRender();
+  document.getElementById('lightbox').classList.add('lb-open');
+  document.body.style.overflow='hidden';
+}
+function lbRender(){
+  const el=lbItems[lbIdx];
+  const img=el.querySelector('img');
+  const lbImg=document.getElementById('lb-img');
+  lbImg.style.opacity='0';
+  lbImg.src=img.src;
+  lbImg.alt=img.alt||'';
+  lbImg.onload=()=>{lbImg.style.opacity='1';};
+  if(lbImg.complete)lbImg.style.opacity='1';
+  document.getElementById('lb-title').textContent=el.querySelector('.gi-title')?.textContent||'';
+  document.getElementById('lb-meta').textContent=el.querySelector('.gi-meta')?.textContent||'';
+  document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbItems.length;
+  document.getElementById('lb-prev').disabled=lbIdx===0;
+  document.getElementById('lb-next').disabled=lbIdx===lbItems.length-1;
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('lb-open');document.body.style.overflow='';}
+function lbNav(dir){const n=lbIdx+dir;if(n>=0&&n<lbItems.length){lbIdx=n;lbRender();}}
+document.addEventListener('keydown',e=>{
+  const lb=document.getElementById('lightbox');
+  if(!lb.classList.contains('lb-open'))return;
+  if(e.key==='Escape')closeLightbox();
+  if(e.key==='ArrowLeft'&&lbIdx>0)lbNav(-1);
+  if(e.key==='ArrowRight'&&lbIdx<lbItems.length-1)lbNav(1);
+});
 </script>
 </body>
 </html>
