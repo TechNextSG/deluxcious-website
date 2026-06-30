@@ -29,12 +29,13 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .gallery-item{position:relative;overflow:hidden;cursor:default}
 .gallery-item .ph{transition:transform .55s ease}
 .gallery-item:hover .ph{transform:scale(1.04)}
-.gi-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(245,245,241,.92) 0%,rgba(245,245,241,.14) 50%,transparent 100%);opacity:0;transition:opacity .35s ease;display:flex;align-items:flex-end;padding:20px 22px;z-index:5}
+.gi-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,11,8,.85) 0%,rgba(15,11,8,.25) 55%,transparent 100%);opacity:0;transition:opacity .35s ease;display:flex;align-items:flex-end;padding:20px 22px;z-index:5}
 .gallery-item:hover .gi-ov{opacity:1}
 .gi-ov-body{transform:translateY(6px);transition:transform .35s ease}
 .gallery-item:hover .gi-ov-body{transform:translateY(0)}
-.gi-title{font-family:'Playfair Display',serif;font-size:15px;color:#3A2C18;font-weight:500;margin-bottom:3px;line-height:1.3}
-.gi-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,162,39,.7)}
+.gallery-item:hover img{transform:scale(1.04)}
+.gi-title{font-family:'Playfair Display',serif;font-size:15px;color:#F5F0E8;font-weight:500;margin-bottom:3px;line-height:1.3}
+.gi-meta{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,200,74,.85)}
 /* Filter */
 .filter-tab{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:8px 20px;border:1px solid rgba(58,40,16,.18);background:transparent;color:rgba(58,44,24,.72);cursor:pointer;transition:all .2s;border-radius:2px}
 .filter-tab.active,.filter-tab:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.4);color:#846612}
@@ -207,32 +208,285 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
     <div class="flex flex-wrap gap-2 mb-12 reveal">
       <button class="filter-tab active" onclick="filterGallery('all',this)">All</button>
       <button class="filter-tab" onclick="filterGallery('restaurant',this)">Restaurant</button>
-      <button class="filter-tab" onclick="filterGallery('spa',this)">Spa</button>
-      <button class="filter-tab" onclick="filterGallery('hotel',this)">Hotel</button>
-      <button class="filter-tab" onclick="filterGallery('heritage',this)">Heritage</button>
       <button class="filter-tab" onclick="filterGallery('events',this)">Events</button>
+      <button class="filter-tab" onclick="filterGallery('venue',this)">Venue</button>
     </div>
 
     <!-- Grid -->
     <div class="gallery-grid" id="gallery-grid">
 
-      <!-- 1. Restaurant Main Hall — full width -->
-      <div class="gallery-item g3 reveal" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:21/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Main Dining Hall<br>Colonial Arches · Heritage Mosaic Floor · Candlelit</div><div class="ph-s">Restaurant</div></div>
+      <!-- 1. Building aerial — full width -->
+      <div class="gallery-item g3 reveal" data-cat="venue">
+        <div style="aspect-ratio:21/9;overflow:hidden">
+          <img src="img/gallery/gc-01.png" alt="Deluxcious from Above" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
         </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Main Dining Hall</div><div class="gi-meta">Restaurant</div></div></div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Deluxcious from Above</div><div class="gi-meta">Venue</div></div></div>
       </div>
 
-      <!-- 2. Chef at Work — span 2 -->
+      <!-- 2. Oysters — span 2 -->
       <div class="gallery-item g2 reveal" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:16/10">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Chef Keith Khoo<br>Award-Winning Culinary Craft · The Kitchen</div><div class="ph-s">Restaurant</div></div>
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-06.jpg" alt="Freshly Shucked Oysters" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
         </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Chef Keith Khoo at Work</div><div class="gi-meta">Restaurant</div></div></div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Freshly Shucked Oysters</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
+
+      <!-- 3. Foie gras — portrait -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-25.jpg" alt="Pan Seared Foie Gras" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Pan Seared Foie Gras</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 4. Herb chicken — single -->
+      <div class="gallery-item reveal" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-04.jpg" alt="Herb Grilled Chicken" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Herb Grilled Chicken</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 5. Glazed chicken — single -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-22.jpg" alt="Honey Glazed Chicken" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Honey Glazed Chicken</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 6. Tiger prawns — portrait -->
+      <div class="gallery-item reveal d2" data-cat="restaurant">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-26.jpg" alt="Tiger Prawns in Chilli Oil" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Tiger Prawns in Chilli Oil</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 7. Salmon — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="restaurant">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-16.jpg" alt="Grilled Atlantic Salmon" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Grilled Atlantic Salmon</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 8. Barramundi — single -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-15.jpg" alt="Baked Barramundi" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Baked Barramundi</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 9. Crispy chicken — single -->
+      <div class="gallery-item reveal" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-14.jpg" alt="Crispy Chicken & Onion Rings" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Crispy Chicken & Onion Rings</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 10. Spiced prawn — single -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-24.jpg" alt="Spiced Grilled Prawn" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Spiced Grilled Prawn</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 11. Yee Sang — single -->
+      <div class="gallery-item reveal d2" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-10.jpg" alt="Yee Sang Lo Hei" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Yee Sang — Lo Hei</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 12. Noodle soup — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-27.jpg" alt="Seafood Noodle Soup" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Seafood Noodle Soup</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 13. Sautéed prawns — single -->
+      <div class="gallery-item reveal d1" data-cat="restaurant">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-28.jpg" alt="Sautéed Prawns with Greens" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Sautéed Prawns with Greens</div><div class="gi-meta">Restaurant</div></div></div>
+      </div>
+
+      <!-- 14. Private dining — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="venue">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-11.jpg" alt="Private Dining Room" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dining Room</div><div class="gi-meta">Venue</div></div></div>
+      </div>
+
+      <!-- 15. Whisky bar — single -->
+      <div class="gallery-item reveal d1" data-cat="venue">
+        <div style="aspect-ratio:16/9;overflow:hidden">
+          <img src="img/gallery/gc-12.jpg" alt="The Whisky Bar" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Whisky Bar</div><div class="gi-meta">Venue</div></div></div>
+      </div>
+
+      <!-- 16. Wine collection — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="venue">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-13.jpg" alt="Our Wine Collection" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Our Wine Collection</div><div class="gi-meta">Venue</div></div></div>
+      </div>
+
+      <!-- 17. Corporate dinner — single -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div style="aspect-ratio:16/9;overflow:hidden">
+          <img src="img/gallery/gc-33.jpg" alt="Elegant Corporate Dinner" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Elegant Corporate Dinner</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 18. Wedding — full width -->
+      <div class="gallery-item g3 reveal" data-cat="events">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-05.jpg" alt="Wedding Reception" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Reception</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 19. Intimate toast — portrait -->
+      <div class="gallery-item reveal" data-cat="events">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-02.jpg" alt="Intimate Dinner Toast" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Intimate Dinner Toast</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 20. Wedding florals — portrait -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-19.jpg" alt="Wedding Floral Backdrop" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Floral Backdrop</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 21. International guests — portrait -->
+      <div class="gallery-item reveal d2" data-cat="events">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-18.jpg" alt="International Guest Evening" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">International Guest Evening</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 22. Wedding toast — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="events">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-07.jpg" alt="Wedding Dinner Toast" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Dinner Toast</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 23. Wedding group — single -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-08.jpg" alt="Wedding Group Photo" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wedding Group Photo</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 24. Aaron & Tracy wedding — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="events">
+        <div style="aspect-ratio:4/3;overflow:hidden">
+          <img src="img/gallery/gc-09.jpg" alt="Aaron & Tracy Wedding" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Aaron & Tracy Wedding</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 25. Wine evening — single -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-20.jpg" alt="Wine & Dine Evening" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine & Dine Evening</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 26. Champagne — portrait -->
+      <div class="gallery-item reveal" data-cat="events">
+        <div style="aspect-ratio:4/5;overflow:hidden">
+          <img src="img/gallery/gc-03.jpg" alt="Champagne Celebration" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Champagne Celebration</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 27. Wine long table — span 2 -->
+      <div class="gallery-item g2 reveal d1" data-cat="events">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-21.jpg" alt="Wine Dinner Long Table" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Dinner — Long Table</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 28. Wine pairing dinner — full width -->
+      <div class="gallery-item g3 reveal" data-cat="events">
+        <div style="aspect-ratio:16/9;overflow:hidden">
+          <img src="img/gallery/gc-17.jpg" alt="Wine Pairing Dinner" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Pairing Dinner</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 29. Birthday — span 2 -->
+      <div class="gallery-item g2 reveal" data-cat="events">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-23.jpg" alt="Birthday Celebration" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Birthday Celebration</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 30. Guests celebrating — single -->
+      <div class="gallery-item reveal d1" data-cat="events">
+        <div style="aspect-ratio:16/9;overflow:hidden">
+          <img src="img/gallery/gc-30.jpg" alt="Guests Celebrating Together" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Guests Celebrating Together</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 31. Wine toast — single -->
+      <div class="gallery-item reveal" data-cat="events">
+        <div style="aspect-ratio:1/1;overflow:hidden">
+          <img src="img/gallery/gc-32.jpg" alt="Wine Dinner Toast" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Wine Dinner Toast</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 32. Friends at bar — span 2 -->
+      <div class="gallery-item g2 reveal d1" data-cat="events">
+        <div style="aspect-ratio:3/2;overflow:hidden">
+          <img src="img/gallery/gc-29.jpg" alt="Friends at the Wine Wall" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Friends at the Wine Wall</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 33. Private dinner evening — single -->
+      <div class="gallery-item reveal" data-cat="events">
+        <div style="aspect-ratio:16/9;overflow:hidden">
+          <img src="img/gallery/gc-31.jpg" alt="Private Dinner Evening" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dinner Evening</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
+      <!-- 34. Group dinner party — span 2 -->
+      <div class="gallery-item g2 reveal d1" data-cat="events">
+        <div style="aspect-ratio:2/1;overflow:hidden">
+          <img src="img/gallery/gc-34.jpg" alt="Lively Group Dinner Party" style="width:100%;height:100%;object-fit:cover;transition:transform .55s ease">
+        </div>
+        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Lively Group Dinner Party</div><div class="gi-meta">Events</div></div></div>
+      </div>
+
 
       <!-- 3. Signature Crème Brûlée — span 1, portrait -->
       <div class="gallery-item reveal d1" data-cat="restaurant">
@@ -243,194 +497,6 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
         <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Signature Crème Brûlée</div><div class="gi-meta">Restaurant</div></div></div>
       </div>
 
-      <!-- 4. Rib-Eye plating — square -->
-      <div class="gallery-item reveal" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Black Angus Rib-Eye 280g<br>Grilled to Order</div><div class="ph-s">Restaurant</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Black Angus Rib-Eye</div><div class="gi-meta">Restaurant</div></div></div>
-      </div>
-
-      <!-- 5. Seafood Aglio Olio — square -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Seafood Aglio Olio<br>Tiger Prawns · Al Dente Linguine</div><div class="ph-s">Restaurant</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Seafood Aglio Olio</div><div class="gi-meta">Restaurant</div></div></div>
-      </div>
-
-      <!-- 6. Heritage pillars — portrait -->
-      <div class="gallery-item reveal d2" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Dining Pillars<br>Original Colonial Architecture · Restored</div><div class="ph-s">Restaurant</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Dining Pillars</div><div class="gi-meta">Restaurant</div></div></div>
-      </div>
-
-      <!-- 7. Evening terrace — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:16/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Terrace at Dusk<br>Al Fresco Dining · Jalan Sultan Ahmad Shah</div><div class="ph-s">Restaurant</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Terrace at Dusk</div><div class="gi-meta">Restaurant</div></div></div>
-      </div>
-
-      <!-- 8. Buffet display — square -->
-      <div class="gallery-item reveal d1" data-cat="restaurant">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Evening Buffet Spread<br>Three Daily Sessions</div><div class="ph-s">Restaurant</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Evening Buffet Display</div><div class="gi-meta">Restaurant</div></div></div>
-      </div>
-
-      <!-- 9. Deluxcious Spa Suite — full width -->
-      <div class="gallery-item g3 reveal" data-cat="spa">
-        <div class="ph" style="aspect-ratio:21/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Deluxcious Spa — Treatment Suite<br>Warm Light · Heritage Textures · Restorative Silence</div><div class="ph-s">Spa</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Deluxcious Spa Suite</div><div class="gi-meta">Spa</div></div></div>
-      </div>
-
-      <!-- 10. Samporna room — portrait -->
-      <div class="gallery-item reveal" data-cat="spa">
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Samporna Treatment Room<br>Traditional Malay Healing</div><div class="ph-s">Spa</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Samporna Treatment Room</div><div class="gi-meta">Spa</div></div></div>
-      </div>
-
-      <!-- 11. Qin therapy — span 2 -->
-      <div class="gallery-item g2 reveal d1" data-cat="spa">
-        <div class="ph" style="aspect-ratio:4/3">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Qin — Meridian Therapy<br>Ancient Chinese Tui Na Practice</div><div class="ph-s">Spa</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Qin Meridian Therapy</div><div class="gi-meta">Spa</div></div></div>
-      </div>
-
-      <!-- 12. Botanical aromatics — square -->
-      <div class="gallery-item reveal" data-cat="spa">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">House Botanical Oils<br>Turmeric · Pandan · Lemongrass Blend</div><div class="ph-s">Spa</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Botanical Aromatics</div><div class="gi-meta">Spa</div></div></div>
-      </div>
-
-      <!-- 13. Spa corridor — square -->
-      <div class="gallery-item reveal d1" data-cat="spa">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Spa Corridor<br>Arched Colonial Walkway</div><div class="ph-s">Spa</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Spa Corridor</div><div class="gi-meta">Spa</div></div></div>
-      </div>
-
-      <!-- 14. Superior Suite — full width -->
-      <div class="gallery-item g3 reveal" data-cat="hotel">
-        <div class="ph" style="aspect-ratio:21/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Superior Suite<br>Copper Soaking Tub · Private Verandah · Straits Antiques</div><div class="ph-s">Hotel</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Superior Suite</div><div class="gi-meta">Hotel</div></div></div>
-      </div>
-
-      <!-- 15. Heritage Deluxe room — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="hotel">
-        <div class="ph" style="aspect-ratio:16/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Deluxe Room<br>King Bed · Original Timber Beams · Courtyard View</div><div class="ph-s">Hotel</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Deluxe Room</div><div class="gi-meta">Hotel</div></div></div>
-      </div>
-
-      <!-- 16. En-suite shower — portrait -->
-      <div class="gallery-item reveal d1" data-cat="hotel">
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">En-Suite Rainfall Shower<br>Period Fixtures · Premium Bath Amenities</div><div class="ph-s">Hotel</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">En-Suite Rainfall Shower</div><div class="gi-meta">Hotel</div></div></div>
-      </div>
-
-      <!-- 17. Heritage courtyard — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="hotel">
-        <div class="ph" style="aspect-ratio:16/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">The Heritage Courtyard<br>Original 19th-Century Colonial Courtyard · Private & Serene</div><div class="ph-s">Hotel</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Heritage Courtyard</div><div class="gi-meta">Hotel</div></div></div>
-      </div>
-
-      <!-- 18. Suite details — square -->
-      <div class="gallery-item reveal d1" data-cat="hotel">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Colonial Suite Details<br>Handcrafted Penang Artisan Furniture</div><div class="ph-s">Hotel</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Colonial Suite Details</div><div class="gi-meta">Hotel</div></div></div>
-      </div>
-
-      <!-- 19. Building facade — full width -->
-      <div class="gallery-item g3 reveal" data-cat="heritage">
-        <div class="ph" style="aspect-ratio:21/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Building Facade — Jalan Sultan Ahmad Shah<br>Straits Eclectic Architecture · c. 1880s · UNESCO Heritage Zone</div><div class="ph-s">Heritage</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">The Building Facade</div><div class="gi-meta">Heritage</div></div></div>
-      </div>
-
-      <!-- 20. Staircase — portrait -->
-      <div class="gallery-item reveal" data-cat="heritage">
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">19th Century Staircase<br>Original Carved Timber Balustrades · Fully Restored</div><div class="ph-s">Heritage</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">19th Century Staircase</div><div class="gi-meta">Heritage</div></div></div>
-      </div>
-
-      <!-- 21. Mosaic tiles — square -->
-      <div class="gallery-item reveal d1" data-cat="heritage">
-        <div class="ph" style="aspect-ratio:1/1">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Original Mosaic Floor Tiles<br>Hand-Laid Peranakan Tilework · Uncovered During Restoration</div><div class="ph-s">Heritage</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Original Mosaic Tiles</div><div class="gi-meta">Heritage</div></div></div>
-      </div>
-
-      <!-- 22. Heritage verandah — span 2 -->
-      <div class="gallery-item g2 reveal d2" data-cat="heritage">
-        <div class="ph" style="aspect-ratio:16/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Heritage Verandah<br>Upper-Floor Colonial Archways · Afternoon Light</div><div class="ph-s">Heritage</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Heritage Verandah</div><div class="gi-meta">Heritage</div></div></div>
-      </div>
-
-      <!-- 23. Private dining setup — span 2 -->
-      <div class="gallery-item g2 reveal" data-cat="events">
-        <div class="ph" style="aspect-ratio:16/9">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Private Dining Setup<br>Bespoke Table Arrangements for Corporate & Intimate Occasions</div><div class="ph-s">Events</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Private Dining Setup</div><div class="gi-meta">Events</div></div></div>
-      </div>
-
-      <!-- 24. Event florals — portrait -->
-      <div class="gallery-item reveal d1" data-cat="events">
-        <div class="ph" style="aspect-ratio:4/5">
-          <div class="ph-g"></div><div class="ph-f"></div>
-          <div class="ph-b"><svg class="ph-ic" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Event Florals & Table Styling<br>Curated Settings for Weddings & Celebrations</div><div class="ph-s">Events</div></div>
-        </div>
-        <div class="gi-ov"><div class="gi-ov-body"><div class="gi-title">Event Florals & Styling</div><div class="gi-meta">Events</div></div></div>
-      </div>
 
     </div><!-- /gallery-grid -->
 
