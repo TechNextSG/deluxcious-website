@@ -43,6 +43,21 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="site-sub">Website Changelog</div>
   <div class="gold-bar"></div>
 
+  <!-- v2.9 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v2.9</span>
+      <div>
+        <div class="version-title">Hero Glow Fix — Sitewide</div>
+        <div class="version-date">30 June 2026</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag fix">Fix</span><strong>Hero glow no longer clipped:</strong> The italic gold "Restored" word in the hero title had its pulsing glow cut off by the parent <code>.word{overflow:hidden}</code> container. Fixed by moving the glow to <code>filter:drop-shadow()</code> applied at the <code>.word</code> level — CSS filters apply after overflow clipping, so the glow now freely radiates outside the text boundary on all 8 pages.</li>
+      <li><span class="tag update">Update</span><strong>Animation preserved:</strong> Word-reveal slide-up animation unchanged; only the glow rendering layer was adjusted.</li>
+    </ul>
+  </div>
+
   <!-- v2.8 -->
   <div class="version-block">
     <div class="version-header">
