@@ -75,6 +75,23 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .dir-card:hover{border-color:rgba(201,162,39,.3)}
 .hours-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(58,40,16,.10)}
 .hours-row:last-child{border-bottom:none}
+/* Opening Hours Cards */
+.hours-card{position:relative;background:linear-gradient(160deg,#FFFFFF,#F8F7F3);border:1px solid rgba(201,162,39,.18);box-shadow:0 6px 24px rgba(58,40,16,.07);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s ease,border-color .3s;animation:hcFadeUp .65s cubic-bezier(.33,1,.68,1) both}
+.hours-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8A6A10 0%,#E8C84A 30%,#FBF0B0 50%,#E8C84A 70%,#8A6A10 100%)}
+.hours-card:hover{transform:translateY(-10px);box-shadow:0 32px 70px rgba(58,40,16,.18);border-color:rgba(201,162,39,.45)}
+@keyframes hcFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hc-top{background:linear-gradient(135deg,#ECE8DC,#F5F1E8);padding:30px 24px 22px;text-align:center;border-bottom:1px solid rgba(201,162,39,.14)}
+.hc-top svg{transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+.hours-card:hover .hc-top svg{transform:scale(1.18) rotate(-4deg)}
+.hc-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#846612;font-weight:700;margin-top:12px}
+.hc-body{padding:20px 24px 12px;flex:1}
+.hc-row{display:flex;justify-content:space-between;align-items:center;padding:11px 8px;border-bottom:1px solid rgba(58,40,16,.08);border-radius:4px;transition:background .2s,padding-left .25s}
+.hc-row:last-child{border-bottom:none}
+.hc-row:hover{background:rgba(201,162,39,.07);padding-left:14px}
+.hc-k{font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.72)}
+.hc-v{font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18;font-weight:500}
+.hc-closed{color:rgba(58,44,24,.45)!important;font-weight:400!important;font-style:italic}
+.hc-footer{padding:16px 24px 24px}
 .map-placeholder{position:relative;overflow:hidden;background:linear-gradient(145deg,#F7F7F4,#EFEFEA 45%,#F3F3EF);border:1px solid rgba(201,162,39,.12)}
 @keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}.wa-pulse{animation:pulseGreen 2.4s ease-in-out infinite}
 .footer-link{color:rgba(244,237,223,.62);text-decoration:none;transition:color .2s;font-size:12px}.footer-link:hover{color:#E8C84A}
@@ -146,16 +163,16 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 <!-- TICKER -->
 <div style="background:#EBEBE5;border-top:1px solid rgba(201,162,39,.14);border-bottom:1px solid rgba(201,162,39,.14);padding:14px 0;overflow:hidden">
   <div class="ticker-track">
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
-    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,162,39,.6)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:rgba(58,44,24,.7)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Dining</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Award-Winning Restaurant</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Spa</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Three Healing Traditions</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Hotel</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">18 Heritage Suites</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Heritage</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">George Town UNESCO Zone</span><span class="ticker-dot"></span></div>
+    <div class="ticker-item"><span style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(201,162,39,.95)">Open</span><span class="ticker-dot"></span><span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:rgba(58,44,24,.92)">Tuesday to Sunday · Noon to 3am</span><span class="ticker-dot"></span></div>
   </div>
 </div>
 
@@ -163,31 +180,68 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 <section style="background:#F5F5F1;padding:36px 0">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-    <!-- ROW 1: Image (left) + Opening Hours (right) -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="margin-bottom:32px">
-      <div>
-        <div class="ph" style="aspect-ratio:4/3"><div class="ph-g"></div><div class="ph-f"></div><div class="ph-b"><svg class="ph-ic" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><div class="ph-t">Building Exterior Photo<br>Jalan Sultan Ahmad Shah · Daytime</div></div></div>
+    <!-- OPENING HOURS CARDS -->
+    <div style="margin-bottom:48px">
+      <div class="reveal" style="text-align:center;margin-bottom:40px">
+        <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:16px">Opening Hours</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:10px">When to <em class="font-normal italic">Visit</em></h2>
+        <div class="gold-bar" style="margin:0 auto"></div>
       </div>
-      <div>
-        <p style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#846612;font-weight:500;margin-bottom:20px">Opening Hours</p>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.4rem);color:#3A2C18;line-height:1.15;font-weight:600;margin-bottom:24px">When to <em class="font-normal italic">Visit</em></h2>
-        <div style="margin-bottom:32px">
-          <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Restaurant</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Lunch</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">12:00pm – 3:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Dinner</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">6:30pm – 10:30pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Closed</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.72)">Mondays</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+
+        <!-- Restaurant Card -->
+        <div class="hours-card" style="animation-delay:.06s">
+          <div class="hc-top">
+            <svg width="40" height="40" fill="none" stroke="rgba(201,162,39,.75)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3z"/><path d="M18 22v-4"/>
+            </svg>
+            <div class="hc-label">Restaurant</div>
+          </div>
+          <div class="hc-body">
+            <div class="hc-row"><span class="hc-k">Lunch</span><span class="hc-v">12:00pm – 3:00pm</span></div>
+            <div class="hc-row"><span class="hc-k">Dinner</span><span class="hc-v">6:30pm – 10:30pm</span></div>
+            <div class="hc-row"><span class="hc-k">Closed</span><span class="hc-v hc-closed">Mondays</span></div>
+          </div>
+          <div class="hc-footer">
+            <a href="reservations.html" class="btn btn-gold" style="width:100%;justify-content:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:12px;text-decoration:none">Reserve a Table</a>
+          </div>
         </div>
-        <div style="margin-bottom:32px">
-          <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Spa</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Daily</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">10:00am – 10:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Last appointment</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">8:00pm</span></div>
+
+        <!-- Spa Card -->
+        <div class="hours-card" style="animation-delay:.16s">
+          <div class="hc-top">
+            <svg width="40" height="40" fill="none" stroke="rgba(201,162,39,.75)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10a8 8 0 10-16 0c0 6 8 10 8 10z"/><path d="M12 22V12"/><path d="M12 12c0 0-4-3-4-7 0 0 2 2 4 7z"/><path d="M12 12c0 0 4-3 4-7 0 0-2 2-4 7z"/>
+            </svg>
+            <div class="hc-label">Spa</div>
+          </div>
+          <div class="hc-body">
+            <div class="hc-row"><span class="hc-k">Daily</span><span class="hc-v">10:00am – 10:00pm</span></div>
+            <div class="hc-row"><span class="hc-k">Last appointment</span><span class="hc-v">8:00pm</span></div>
+          </div>
+          <div class="hc-footer">
+            <a href="spa.html" class="btn btn-gold" style="width:100%;justify-content:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:12px;text-decoration:none">Explore the Spa</a>
+          </div>
         </div>
-        <div>
-          <div style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,162,39,.55);margin-bottom:16px">Hotel</div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Front desk</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">24 hours, 7 days</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Check-in</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">From 3:00pm</span></div>
-          <div class="hours-row"><span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.76)">Check-out</span><span style="font-family:'Inter',sans-serif;font-size:13px;color:#3A2C18">By 12:00noon</span></div>
+
+        <!-- Hotel Card -->
+        <div class="hours-card" style="animation-delay:.26s">
+          <div class="hc-top">
+            <svg width="40" height="40" fill="none" stroke="rgba(201,162,39,.75)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="7.5" cy="15.5" r="5.5"/><path d="M13 15.5h7M17 12v7"/>
+            </svg>
+            <div class="hc-label">Hotel</div>
+          </div>
+          <div class="hc-body">
+            <div class="hc-row"><span class="hc-k">Front desk</span><span class="hc-v">24 hours, 7 days</span></div>
+            <div class="hc-row"><span class="hc-k">Check-in</span><span class="hc-v">From 3:00pm</span></div>
+            <div class="hc-row"><span class="hc-k">Check-out</span><span class="hc-v">By 12:00noon</span></div>
+          </div>
+          <div class="hc-footer">
+            <a href="hotel.html" class="btn btn-gold" style="width:100%;justify-content:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:12px;text-decoration:none">View Suites</a>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -306,7 +360,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
       <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Hours</h4><div style="font-family:'Inter',sans-serif;font-size:12px;color:rgba(244,237,223,.62);line-height:1.9">Restaurant: 12pm–10:30pm<br>Spa: 10am–10pm<br>Hotel: 24h front desk</div></div>
       <div><h4 style="font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#C9A227;margin-bottom:20px">Contact</h4><div style="display:flex;flex-direction:column;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:rgba(244,237,223,.62)"><div>15-17A, Jalan Sultan Ahmad Shah<br>George Town, Penang 10300</div><a href="tel:+60426110288" class="footer-link">+604-261 0288</a><a href="https://wa.me/60125151288" target="_blank" class="footer-link">+6012-515 1288 (WhatsApp)</a></div></div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.10);padding-top:24px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(244,237,223,.5)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p></div>
+    <div style="border-top:1px solid rgba(255,255,255,.10);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><p style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(244,237,223,.5)">© 2025 Deluxcious Heritage Hotel, Spa & Restaurant. All rights reserved.</p><a href="https://technextasia.com" target="_blank" rel="noopener" style="font-family:'Inter',sans-serif;font-size:10px;color:rgba(244,237,223,.35);text-decoration:none;white-space:nowrap">Powered by <span style="color:rgba(201,162,39,.7);font-weight:600">TechNext</span></a></div>
   </div>
 </footer>
 
