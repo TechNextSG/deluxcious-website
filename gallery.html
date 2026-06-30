@@ -253,7 +253,11 @@ body{animation:pageFadeIn .42s ease both}
 .lb-nav:disabled{opacity:.2;cursor:default;pointer-events:none}
 #lb-prev{left:14px}#lb-next{right:14px}
 @media(max-width:600px){.lb-nav{width:36px;height:36px}#lb-prev{left:6px}#lb-next{right:6px}}
-</style>
+
+/* filter-tab contrast on dark-s background */
+section.dark-s .filter-tab{border-color:rgba(255,255,255,.22);color:rgba(244,237,223,.65)}
+section.dark-s .filter-tab.active,section.dark-s .filter-tab:hover{background:rgba(201,162,39,.18);border-color:rgba(201,162,39,.65);color:#E8C84A}
+section.dark-s .filter-tab::after{background:#E8C84A}</style>
 </head>
 <body style="background:transparent">
 

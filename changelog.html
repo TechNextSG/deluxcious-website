@@ -43,6 +43,22 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   <div class="site-sub">Website Changelog</div>
   <div class="gold-bar"></div>
 
+  <!-- v2.11 -->
+  <div class="version-block">
+    <div class="version-header">
+      <span class="version-badge">v2.11</span>
+      <div>
+        <div class="version-title">UI Polish — Filter Tabs, Card Animation, Tasting Menu</div>
+        <div class="version-date">30 June 2026</div>
+      </div>
+    </div>
+    <ul class="change-list">
+      <li><span class="tag fix">Fix</span><strong>Gallery filter tabs on dark background:</strong> The All / Restaurant / Events / Venue filter tabs were rendering with dark text and invisible borders on the dark gallery section. Added explicit dark-section overrides: inactive tabs are now soft cream, active/hovered tabs glow gold (#E8C84A) with gold border.</li>
+      <li><span class="tag fix">Fix</span><strong>Direction card shimmer animation (Contact):</strong> The gold shimmer sweep on hover wasn't working because <code>.dir-card</code> was missing <code>position:relative;overflow:hidden</code>. The shimmer pseudo-element was positioned relative to the page instead of the card. Fixed.</li>
+      <li><span class="tag fix">Fix</span><strong>Tasting menu readability (Menu):</strong> Course numbers (01–07) were at 18% gold opacity — nearly invisible on the dark background. Raised to 62%. Step dividers changed from near-black to subtle gold (<code>rgba(201,162,39,.18)</code>) for legibility in dark sections.</li>
+    </ul>
+  </div>
+
   <!-- v2.10 -->
   <div class="version-block">
     <div class="version-header">
