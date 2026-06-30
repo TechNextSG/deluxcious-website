@@ -204,6 +204,32 @@ body{animation:pageFadeIn .42s ease both}
 .d6{transition-delay:.42s!important;animation-delay:.42s!important}
 .d7{transition-delay:.49s!important;animation-delay:.49s!important}
 .d8{transition-delay:.56s!important;animation-delay:.56s!important}
+
+/* ===== ICON OVERHAUL v2.8 ===== */
+.phil-icon{border:none!important;background:none!important;width:auto!important;height:auto!important;padding:0!important;margin-bottom:20px}
+.ach-item>div:first-child{border:none!important;background:none!important;width:auto!important;height:auto!important;padding:0!important}
+.phil-icon svg,.ach-item svg,.amenity-item svg,.benefit-item svg,.hc-top svg{stroke:#E0B840!important;filter:drop-shadow(0 0 6px rgba(201,162,39,.6)) drop-shadow(0 0 14px rgba(201,162,39,.22));transition:filter .35s,transform .35s}
+.pc-svg{filter:drop-shadow(0 0 6px rgba(201,162,39,.5)) drop-shadow(0 0 14px rgba(201,162,39,.18));transition:filter .45s,transform .45s}
+.phil-card:hover .phil-icon svg{filter:drop-shadow(0 0 14px rgba(232,200,74,.95)) drop-shadow(0 0 30px rgba(201,162,39,.5))!important;transform:scale(1.22) rotate(-8deg)!important}
+.amenity-item:hover svg{filter:drop-shadow(0 0 12px rgba(232,200,74,.9)) drop-shadow(0 0 26px rgba(201,162,39,.45))!important;transform:scale(1.18) translateY(-3px)!important}
+.ach-item:hover svg{filter:drop-shadow(0 0 12px rgba(232,200,74,.9)) drop-shadow(0 0 26px rgba(201,162,39,.45))!important;transform:scale(1.15)!important}
+.hours-card:hover .hc-top svg{filter:drop-shadow(0 0 14px rgba(232,200,74,.9)) drop-shadow(0 0 28px rgba(201,162,39,.4))!important}
+.pillar-card:hover .pc-svg{filter:drop-shadow(0 0 14px rgba(232,200,74,.9)) drop-shadow(0 0 28px rgba(201,162,39,.4))!important}
+/* ===== CARD INTERACTION v2.8 ===== */
+@keyframes cardShimmer{0%{left:-130%}100%{left:160%}}
+.room-card,.dish-card,.menu-card,.phil-card,.hours-card,.dir-card,.ach-item,.testimonial-card{cursor:pointer}
+.room-card::after,.dish-card::after,.menu-card::after,.phil-card::after,.hours-card::after,.dir-card::after{content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(201,162,39,.07),transparent);pointer-events:none}
+.room-card:hover::after,.dish-card:hover::after,.menu-card:hover::after,.phil-card:hover::after,.hours-card:hover::after,.dir-card:hover::after{animation:cardShimmer .7s ease forwards}
+.room-card:hover,.dish-card:hover,.menu-card:hover{transform:translateY(-8px)!important;box-shadow:0 24px 56px rgba(58,40,16,.24),0 0 0 1px rgba(201,162,39,.22),0 0 36px rgba(201,162,39,.08)!important;border-color:rgba(201,162,39,.68)!important}
+.phil-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 50px rgba(58,40,16,.2),0 0 0 1px rgba(201,162,39,.2),0 0 28px rgba(201,162,39,.07)!important;border-color:rgba(201,162,39,.62)!important}
+.testimonial-card:hover{transform:translateY(-6px)!important;box-shadow:0 18px 45px rgba(0,0,0,.3),0 0 0 1px rgba(201,162,39,.22)!important;border-color:rgba(201,162,39,.5)!important}
+.hours-card:hover{transform:translateY(-12px)!important;box-shadow:0 28px 60px rgba(58,40,16,.26),0 0 36px rgba(201,162,39,.14)!important;border-color:rgba(201,162,39,.72)!important}
+.dir-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 50px rgba(0,0,0,.28),0 0 0 1px rgba(201,162,39,.22)!important;border-color:rgba(201,162,39,.62)!important}
+.amenity-item:hover{transform:translateY(-6px)!important;box-shadow:0 14px 36px rgba(0,0,0,.25),0 0 0 1px rgba(201,162,39,.18)!important;border-color:rgba(201,162,39,.62)!important}
+.ach-item:hover{transform:translateY(-5px)!important;box-shadow:0 14px 36px rgba(0,0,0,.22)!important;border-color:rgba(201,162,39,.55)!important}
+.spa-exp:hover{transform:translateY(-7px)!important;box-shadow:0 24px 56px rgba(58,40,16,.2)!important}
+.pkg-card:hover{transform:translateY(-9px) scale(1.05)!important;border-color:rgba(201,162,39,.72)!important;box-shadow:0 18px 44px rgba(58,40,16,.2)!important}
+.benefit-item:hover{transform:translateY(-5px)!important;border-color:rgba(201,162,39,.65)!important;box-shadow:0 10px 28px rgba(58,40,16,.12)!important}
 </style>
 </head>
 <body style="background:transparent">
