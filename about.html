@@ -75,11 +75,11 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .nav-active{color:#E8C84A!important;text-shadow:0 0 12px rgba(232,200,74,.4),0 0 24px rgba(232,200,74,.15)}
 #nav.nav-light .nav-active{color:#C9A227!important;text-shadow:none;background:rgba(201,162,39,.1);padding:3px 8px;border-radius:2px}
 /* Timeline */
-.timeline-item{display:grid;grid-template-columns:80px 1fr;gap:24px;padding-bottom:40px;position:relative}
-.timeline-item::before{content:'';position:absolute;left:38px;top:28px;bottom:0;width:1px;background:rgba(201,162,39,.15)}
+.timeline-item{display:grid;grid-template-columns:80px 36px 1fr;gap:0;padding-bottom:52px;position:relative}
+.timeline-item::before{content:'';position:absolute;left:97px;top:23px;bottom:0;width:1px;background:linear-gradient(to bottom,rgba(201,162,39,.5) 0%,rgba(201,162,39,.12) 100%)}
 .timeline-item:last-child::before{display:none}
-.timeline-year{font-family:'Playfair Display',serif;font-size:1.5rem;color:#846612;font-weight:600;padding-top:2px}
-.timeline-dot{position:absolute;left:32px;top:8px;width:13px;height:13px;border-radius:50%;border:2px solid #C9A227;background:transparent}
+.timeline-year{font-family:'Playfair Display',serif;font-size:1.5rem;color:#846612;font-weight:600;text-align:right;padding-right:14px;padding-top:3px}
+.timeline-dot{width:14px;height:14px;border-radius:50%;border:2px solid #C9A227;background:#EBEBE5;margin:4px auto 0;position:relative;z-index:1;box-shadow:0 0 0 4px rgba(201,162,39,.1)}
 /* Philosophy cards */
 .phil-card{background:linear-gradient(145deg,#FFFFFF,#FAFAF7);border:1.5px solid rgba(201,162,39,.36);padding:28px;transition:border-color .3s,transform .3s}
 .phil-card:hover{border-color:rgba(201,162,39,.28);transform:translateY(-3px)}
@@ -219,24 +219,29 @@ h2.reveal.in-view{opacity:1;transform:none}
     </div>
     <div class="max-w-2xl mx-auto reveal d1">
       <div class="timeline-item">
-        <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">1880</div></div>
-        <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Original Construction</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.67);line-height:1.65">Built for a Straits Chinese merchant family. Straits Eclectic architecture, hand-laid mosaic floors, carved timber throughout.</p></div>
+        <div class="timeline-year">1880</div>
+        <div style="display:flex;justify-content:center"><div class="timeline-dot"></div></div>
+        <div style="padding:3px 0 0 20px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:#3A2C18;font-weight:500;margin-bottom:7px">Original Construction</div><p style="font-family:'Inter',sans-serif;font-size:13.5px;color:rgba(58,44,24,.67);line-height:1.7">Built for a Straits Chinese merchant family. Straits Eclectic architecture, hand-laid mosaic floors, carved timber throughout.</p></div>
       </div>
       <div class="timeline-item">
-        <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">1940</div></div>
-        <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Wartime & Post-War Transitions</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.67);line-height:1.65">The building served as temporary wartime accommodation during the Japanese occupation, then as a boarding house in the years that followed.</p></div>
+        <div class="timeline-year">1940</div>
+        <div style="display:flex;justify-content:center"><div class="timeline-dot"></div></div>
+        <div style="padding:3px 0 0 20px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:#3A2C18;font-weight:500;margin-bottom:7px">Wartime & Post-War Transitions</div><p style="font-family:'Inter',sans-serif;font-size:13.5px;color:rgba(58,44,24,.67);line-height:1.7">The building served as temporary wartime accommodation during the Japanese occupation, then as a boarding house in the years that followed.</p></div>
       </div>
       <div class="timeline-item">
-        <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2008</div></div>
-        <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">UNESCO Heritage Designation</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.67);line-height:1.65">George Town inscribed on the UNESCO World Heritage List. The building falls within the heritage core zone, increasing both its protection and significance.</p></div>
+        <div class="timeline-year">2008</div>
+        <div style="display:flex;justify-content:center"><div class="timeline-dot"></div></div>
+        <div style="padding:3px 0 0 20px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:#3A2C18;font-weight:500;margin-bottom:7px">UNESCO Heritage Designation</div><p style="font-family:'Inter',sans-serif;font-size:13.5px;color:rgba(58,44,24,.67);line-height:1.7">George Town inscribed on the UNESCO World Heritage List. The building falls within the heritage core zone, increasing both its protection and significance.</p></div>
       </div>
       <div class="timeline-item">
-        <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2014</div></div>
-        <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Restoration Begins</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.67);line-height:1.65">Five-year restoration project commissioned. Penang Heritage Trust consultants and master craftsmen engaged. Original structural survey identifies 94% of original fabric salvageable.</p></div>
+        <div class="timeline-year">2014</div>
+        <div style="display:flex;justify-content:center"><div class="timeline-dot"></div></div>
+        <div style="padding:3px 0 0 20px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:#3A2C18;font-weight:500;margin-bottom:7px">Restoration Begins</div><p style="font-family:'Inter',sans-serif;font-size:13.5px;color:rgba(58,44,24,.67);line-height:1.7">Five-year restoration project commissioned. Penang Heritage Trust consultants and master craftsmen engaged. Original structural survey identifies 94% of original fabric salvageable.</p></div>
       </div>
       <div class="timeline-item">
-        <div style="position:relative"><div class="timeline-dot"></div><div class="timeline-year">2019</div></div>
-        <div style="padding-top:2px"><div style="font-family:'Playfair Display',serif;font-size:16px;color:#3A2C18;margin-bottom:5px">Deluxcious Opens</div><p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(58,44,24,.67);line-height:1.65">18 heritage suites, three spa sanctuaries, and the restaurant open their doors. The building has its new purpose — one it was perhaps always suited for.</p></div>
+        <div class="timeline-year">2019</div>
+        <div style="display:flex;justify-content:center"><div class="timeline-dot"></div></div>
+        <div style="padding:3px 0 0 20px"><div style="font-family:'Playfair Display',serif;font-size:17px;color:#3A2C18;font-weight:500;margin-bottom:7px">Deluxcious Opens</div><p style="font-family:'Inter',sans-serif;font-size:13.5px;color:rgba(58,44,24,.67);line-height:1.7">18 heritage suites, three spa sanctuaries, and the restaurant open their doors. The building has its new purpose — one it was perhaps always suited for.</p></div>
       </div>
     </div>
   </div>
